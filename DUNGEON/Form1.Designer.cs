@@ -129,10 +129,6 @@
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // inventoryBindingSource
-            // 
-            this.inventoryBindingSource.DataSource = typeof(DUNGEON.Properties.Inventory);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
