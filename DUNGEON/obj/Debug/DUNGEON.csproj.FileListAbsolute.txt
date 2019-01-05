@@ -1,0 +1,10 @@
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\bin\Debug\DUNGEON.exe.config
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\bin\Debug\DUNGEON.exe
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\bin\Debug\DUNGEON.pdb
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.csprojAssemblyReference.cache
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.Form1.resources
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.Properties.Resources.resources
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.csproj.GenerateResource.cache
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.csproj.CoreCompileInputs.cache
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.exe
+C:\Users\Никита\source\repos\DUNGEON\DUNGEON\obj\Debug\DUNGEON.pdb
