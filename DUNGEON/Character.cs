@@ -32,6 +32,8 @@ namespace DUNGEON
         public float block = 0;
 
         public float luck = 0;
+
+        public float additionalHP = 0;
     }
 
     public class Enemy : Character
