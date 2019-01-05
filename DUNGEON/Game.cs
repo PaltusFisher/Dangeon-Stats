@@ -8,8 +8,8 @@ namespace DUNGEON
 {
     class Game
     {
-        public Hero hero;
-        public Inventory Inventory;
+        public static Hero hero;
+        public static Inventory Inventory;
 
         public Game()
         {

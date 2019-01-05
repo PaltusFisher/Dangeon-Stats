@@ -58,5 +58,14 @@ namespace DUNGEON
         {
 
         }
+
+        private void PlusAdditionalGold_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                Game.hero.additionalGold += 0.05f;
+                AdditionalGoldLabel.Text = Convert.ToString(Game.hero.additionalGold);
+            }
+        }
     }
 }

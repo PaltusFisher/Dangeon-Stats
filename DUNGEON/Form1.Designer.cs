@@ -37,7 +37,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button3 = new System.Windows.Forms.Button();
+            this.PlusAdditionalGold = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -45,7 +45,7 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.AdditionalGoldLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -63,6 +63,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,7 +115,7 @@
             this.textBox1.Location = new System.Drawing.Point(145, 90);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 14);
+            this.textBox1.Size = new System.Drawing.Size(62, 17);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -151,21 +152,22 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(304, 215);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 27);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // button3
+            // PlusAdditionalGold
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(732, 113);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(13, 14);
-            this.button3.TabIndex = 6;
-            this.button3.UseVisualStyleBackColor = false;
+            this.PlusAdditionalGold.BackColor = System.Drawing.Color.Transparent;
+            this.PlusAdditionalGold.FlatAppearance.BorderSize = 0;
+            this.PlusAdditionalGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusAdditionalGold.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusAdditionalGold.Location = new System.Drawing.Point(732, 113);
+            this.PlusAdditionalGold.Name = "PlusAdditionalGold";
+            this.PlusAdditionalGold.Size = new System.Drawing.Size(13, 14);
+            this.PlusAdditionalGold.TabIndex = 6;
+            this.PlusAdditionalGold.UseVisualStyleBackColor = false;
+            this.PlusAdditionalGold.Click += new System.EventHandler(this.PlusAdditionalGold_Click);
             // 
             // button4
             // 
@@ -251,13 +253,13 @@
             this.button10.TabIndex = 13;
             this.button10.UseVisualStyleBackColor = false;
             // 
-            // label3
+            // AdditionalGoldLabel
             // 
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(610, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
-            this.label3.TabIndex = 14;
+            this.AdditionalGoldLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AdditionalGoldLabel.Location = new System.Drawing.Point(610, 107);
+            this.AdditionalGoldLabel.Name = "AdditionalGoldLabel";
+            this.AdditionalGoldLabel.Size = new System.Drawing.Size(46, 20);
+            this.AdditionalGoldLabel.TabIndex = 14;
             // 
             // label4
             // 
@@ -395,12 +397,25 @@
             this.label20.Size = new System.Drawing.Size(26, 20);
             this.label20.TabIndex = 31;
             // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.Transparent;
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Location = new System.Drawing.Point(732, 225);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(13, 14);
+            this.button11.TabIndex = 32;
+            this.button11.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
+            this.Controls.Add(this.button11);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label18);
@@ -418,7 +433,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.AdditionalGoldLabel);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.button8);
@@ -426,7 +441,7 @@
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.PlusAdditionalGold);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -455,7 +470,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource inventoryBindingSource;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button PlusAdditionalGold;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
@@ -463,7 +478,7 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label AdditionalGoldLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -481,6 +496,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button button11;
     }
 }
 
