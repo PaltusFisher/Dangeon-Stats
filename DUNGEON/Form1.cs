@@ -65,7 +65,28 @@ namespace DUNGEON
             {
                 Game.hero.additionalGold += 0.05f;
                 AdditionalGoldLabel.Text = Convert.ToString(Game.hero.additionalGold);
+                AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
             }
+        }
+
+        private void PlusAdditionalHealth_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                Game.hero.additionalHP += 20;
+                Game.hero.maxHP += 20;
+                AdditionalHPLabel.Text = Convert.ToString(Game.hero.additionalHP);
+                AdditionalHPLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalHPLevel.Text) + 1);
+                UpdateHealth();
+            }
+        }
+
+        private void UpdateHealth()
+        {
+            HealthBar.Maximum = Game.hero.maxHP;
+            HealthBar.Value = Game.hero.currentHP;
+
+            HealthLable.Text = Convert.ToString(Game.hero.currentHP) + "/" + Convert.ToString(Game.hero.maxHP);
         }
     }
 }

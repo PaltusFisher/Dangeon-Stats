@@ -26,6 +26,8 @@ namespace DUNGEON
         public int maxEXP = 200;
         public int level = 0;
 
+        public int additionalHP = 0;
+
         public int gold = 0;
         public float additionalGold = 0;
 
