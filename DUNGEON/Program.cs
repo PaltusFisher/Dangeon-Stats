@@ -16,6 +16,9 @@ namespace DUNGEON
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            Game game = new Game();
+
             Application.Run(new Form1());
         }
     }

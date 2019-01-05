@@ -15,6 +15,8 @@ namespace DUNGEON
         public Form1()
         {
             InitializeComponent();
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,6 +45,16 @@ namespace DUNGEON
         }
 
         private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inventoryBindingSource_CurrentChanged(object sender, EventArgs e)
         {
 
         }
