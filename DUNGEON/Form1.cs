@@ -19,9 +19,28 @@ namespace DUNGEON
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DungeonButton_Click(object sender, EventArgs e)
         {
+            //test
+            LevelUp();
+            //
 
+        }
+
+        private void LevelUp()
+        {
+            LevelLabel.Text = Convert.ToString(Convert.ToInt16(LevelLabel.Text) + 1);
+            SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) + 1);
+
+            PlusAdditionalGold.Cursor = Cursors.Hand;
+            PlusAdditionalHP.Cursor = Cursors.Hand;
+            PlusAgility.Cursor = Cursors.Hand;
+            PlusBlock.Cursor = Cursors.Hand;
+            PlusCritAdditionalDamage.Cursor = Cursors.Hand;
+            PlusCritChance.Cursor = Cursors.Hand;
+            PlusDefence.Cursor = Cursors.Hand;
+            PlusLuck.Cursor = Cursors.Hand;
+            PlusPower.Cursor = Cursors.Hand;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,10 +58,7 @@ namespace DUNGEON
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            System.Windows.Forms.Application.Exit();
-        }
+        
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -61,23 +77,31 @@ namespace DUNGEON
 
         private void PlusAdditionalGold_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                Game.hero.additionalGold += 0.05f;
-                AdditionalGoldLabel.Text = Convert.ToString(Game.hero.additionalGold);
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.additionalGold += 0.1f;
+                AdditionalGoldLabel.Text = "+" + Convert.ToString(100 + Game.hero.additionalGold * 100) + "%";
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
+
+                PlusCursorsController();
             }
         }
 
-        private void PlusAdditionalHealth_Click(object sender, EventArgs e)
+        private void PlusAdditionalHP_Click(object sender, EventArgs e)
         {
-            if (true)
+            if (PlusCritChance.Cursor == Cursors.Hand)
             {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
                 Game.hero.additionalHP += 20;
                 Game.hero.maxHP += 20;
-                AdditionalHPLabel.Text = Convert.ToString(Game.hero.additionalHP);
+                AdditionalHPLabel.Text = "+" + Convert.ToString(Game.hero.additionalHP);
                 AdditionalHPLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalHPLevel.Text) + 1);
                 UpdateHealth();
+
+                PlusCursorsController();
             }
         }
 
@@ -87,6 +111,125 @@ namespace DUNGEON
             HealthBar.Value = Game.hero.currentHP;
 
             HealthLable.Text = Convert.ToString(Game.hero.currentHP) + "/" + Convert.ToString(Game.hero.maxHP);
+        }
+
+        private void PlusLuck_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.luck += 0.01f;
+                LuckLabel.Text = Convert.ToString(Game.hero.luck * 100) + "%";
+                LuckLevel.Text = Convert.ToString(Convert.ToInt16(LuckLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusDefence_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.defence += 1;
+                DefenceLabel.Text = Convert.ToString(Game.hero.defence);
+                DefenceLevel.Text = Convert.ToString(Convert.ToInt16(DefenceLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusBlock_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.block += 0.01f;
+                BlockLabel.Text = Convert.ToString(Game.hero.block * 100) + "%";
+                BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusPower_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.power += 2;
+                PowerLabel.Text = Convert.ToString(Game.hero.power);
+                PowerLevel.Text = Convert.ToString(Convert.ToInt16(PowerLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusAgility_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.agility += 0.05f;
+                AgilityLabel.Text = Convert.ToString(Game.hero.agility * 100) + "%";
+                AgilityLevel.Text = Convert.ToString(Convert.ToInt16(AgilityLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusCritAdditionalDamage_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.critAdditionalDamage += 0.2f;
+                CritAdditionalDamageLabel.Text = "+" + Convert.ToString(100 + Game.hero.critAdditionalDamage * 100) + "%";
+                CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusCritChance_Click(object sender, EventArgs e)
+        {
+            if (PlusCritChance.Cursor == Cursors.Hand)
+            {
+                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+
+                Game.hero.critChance += 0.05f;
+                CritChanceLabel.Text = Convert.ToString(Game.hero.critChance * 100) + "%";
+                CritChanceLevel.Text = Convert.ToString(Convert.ToInt16(CritChanceLevel.Text) + 1);
+
+                PlusCursorsController();
+            }
+        }
+
+        private void PlusCursorsController()
+        {
+            if (Convert.ToInt16(SkillPoints.Text) == 0)
+            {
+                PlusAdditionalGold.Cursor = Cursors.No;
+                PlusAdditionalHP.Cursor = Cursors.No;
+                PlusAgility.Cursor = Cursors.No;
+                PlusBlock.Cursor = Cursors.No;
+                PlusCritAdditionalDamage.Cursor = Cursors.No;
+                PlusCritChance.Cursor = Cursors.No;
+                PlusDefence.Cursor = Cursors.No;
+                PlusLuck.Cursor = Cursors.No;
+                PlusPower.Cursor = Cursors.No;
+            }
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
         }
     }
 }

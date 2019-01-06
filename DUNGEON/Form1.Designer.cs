@@ -30,40 +30,40 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.DungeonButton = new System.Windows.Forms.Button();
+            this.ExitButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.LevelLabel = new System.Windows.Forms.Label();
+            this.GoldLabel = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PlusAdditionalGold = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.PlusAdditionalHealth = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.PlusLuck = new System.Windows.Forms.Button();
+            this.PlusAdditionalHP = new System.Windows.Forms.Button();
+            this.PlusDefence = new System.Windows.Forms.Button();
+            this.PlusPower = new System.Windows.Forms.Button();
+            this.PlusAgility = new System.Windows.Forms.Button();
+            this.PlusCritChance = new System.Windows.Forms.Button();
+            this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.AdditionalGoldLabel = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.LuckLabel = new System.Windows.Forms.Label();
             this.AdditionalHPLabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.DefenceLabel = new System.Windows.Forms.Label();
+            this.BlockLabel = new System.Windows.Forms.Label();
+            this.PowerLabel = new System.Windows.Forms.Label();
+            this.AgilityLabel = new System.Windows.Forms.Label();
+            this.CritChanceLabel = new System.Windows.Forms.Label();
+            this.CritAdditionalDamageLabel = new System.Windows.Forms.Label();
             this.AdditionalGoldLevel = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.LuckLevel = new System.Windows.Forms.Label();
             this.AdditionalHPLevel = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
+            this.DefenceLevel = new System.Windows.Forms.Label();
+            this.BlockLevel = new System.Windows.Forms.Label();
+            this.PowerLevel = new System.Windows.Forms.Label();
+            this.AgilityLevel = new System.Windows.Forms.Label();
+            this.CritChanceLevel = new System.Windows.Forms.Label();
+            this.CritAdditionalDamageLevel = new System.Windows.Forms.Label();
+            this.PlusBlock = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -73,89 +73,92 @@
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.EXPLAbel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.SkillPoints = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // DungeonButton
             // 
-            this.button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Castellar", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button1.Location = new System.Drawing.Point(549, 512);
-            this.button1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(241, 86);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Отправиться в подземелье";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.DungeonButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.DungeonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DungeonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.DungeonButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DungeonButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
+            this.DungeonButton.FlatAppearance.BorderSize = 0;
+            this.DungeonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DungeonButton.Font = new System.Drawing.Font("Castellar", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DungeonButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.DungeonButton.Location = new System.Drawing.Point(549, 512);
+            this.DungeonButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.DungeonButton.Name = "DungeonButton";
+            this.DungeonButton.Size = new System.Drawing.Size(241, 86);
+            this.DungeonButton.TabIndex = 0;
+            this.DungeonButton.Text = "Отправиться в подземелье";
+            this.DungeonButton.UseVisualStyleBackColor = true;
+            this.DungeonButton.Click += new System.EventHandler(this.DungeonButton_Click);
             // 
-            // button2
+            // ExitButton
             // 
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.Cursor = System.Windows.Forms.Cursors.No;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(833, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(36, 45);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "x";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.ExitButton.BackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ExitButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ExitButton.FlatAppearance.BorderSize = 0;
+            this.ExitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ExitButton.ForeColor = System.Drawing.Color.Black;
+            this.ExitButton.Location = new System.Drawing.Point(842, 26);
+            this.ExitButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ExitButton.Name = "ExitButton";
+            this.ExitButton.Size = new System.Drawing.Size(18, 28);
+            this.ExitButton.TabIndex = 1;
+            this.ExitButton.Text = "x";
+            this.ExitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.ExitButton.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage;
+            this.ExitButton.UseVisualStyleBackColor = false;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // textBox1
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Wheat;
+            this.textBox1.BackColor = System.Drawing.Color.Tan;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Castellar", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(145, 90);
+            this.textBox1.Font = new System.Drawing.Font("Calibri Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Location = new System.Drawing.Point(133, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(62, 17);
+            this.textBox1.Size = new System.Drawing.Size(88, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // label1
+            // LevelLabel
             // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gold;
-            this.label1.Location = new System.Drawing.Point(257, 90);
-            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 20);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "0";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.LevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LevelLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LevelLabel.ForeColor = System.Drawing.Color.Gold;
+            this.LevelLabel.Location = new System.Drawing.Point(253, 88);
+            this.LevelLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.LevelLabel.Name = "LevelLabel";
+            this.LevelLabel.Size = new System.Drawing.Size(49, 24);
+            this.LevelLabel.TabIndex = 3;
+            this.LevelLabel.Text = "0";
+            this.LevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LevelLabel.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // GoldLabel
             // 
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gold;
-            this.label2.Location = new System.Drawing.Point(381, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 24);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "0";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.GoldLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GoldLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoldLabel.ForeColor = System.Drawing.Color.Gold;
+            this.GoldLabel.Location = new System.Drawing.Point(364, 88);
+            this.GoldLabel.Name = "GoldLabel";
+            this.GoldLabel.Size = new System.Drawing.Size(78, 24);
+            this.GoldLabel.TabIndex = 4;
+            this.GoldLabel.Text = "0";
+            this.GoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.GoldLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // comboBox1
             // 
@@ -163,290 +166,315 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(304, 215);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 27);
+            this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 5;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // PlusAdditionalGold
             // 
             this.PlusAdditionalGold.BackColor = System.Drawing.Color.Transparent;
-            this.PlusAdditionalGold.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlusAdditionalGold.Cursor = System.Windows.Forms.Cursors.No;
             this.PlusAdditionalGold.FlatAppearance.BorderSize = 0;
             this.PlusAdditionalGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusAdditionalGold.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusAdditionalGold.Location = new System.Drawing.Point(732, 113);
+            this.PlusAdditionalGold.Location = new System.Drawing.Point(776, 112);
             this.PlusAdditionalGold.Name = "PlusAdditionalGold";
             this.PlusAdditionalGold.Size = new System.Drawing.Size(13, 14);
             this.PlusAdditionalGold.TabIndex = 6;
             this.PlusAdditionalGold.UseVisualStyleBackColor = false;
             this.PlusAdditionalGold.Click += new System.EventHandler(this.PlusAdditionalGold_Click);
             // 
-            // button4
+            // PlusLuck
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(732, 144);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(13, 14);
-            this.button4.TabIndex = 7;
-            this.button4.UseVisualStyleBackColor = false;
+            this.PlusLuck.BackColor = System.Drawing.Color.Transparent;
+            this.PlusLuck.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusLuck.FlatAppearance.BorderSize = 0;
+            this.PlusLuck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusLuck.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusLuck.Location = new System.Drawing.Point(777, 140);
+            this.PlusLuck.Name = "PlusLuck";
+            this.PlusLuck.Size = new System.Drawing.Size(13, 14);
+            this.PlusLuck.TabIndex = 7;
+            this.PlusLuck.UseVisualStyleBackColor = false;
+            this.PlusLuck.Click += new System.EventHandler(this.PlusLuck_Click);
             // 
-            // PlusAdditionalHealth
+            // PlusAdditionalHP
             // 
-            this.PlusAdditionalHealth.BackColor = System.Drawing.Color.Transparent;
-            this.PlusAdditionalHealth.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.PlusAdditionalHealth.FlatAppearance.BorderSize = 0;
-            this.PlusAdditionalHealth.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlusAdditionalHealth.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusAdditionalHealth.Location = new System.Drawing.Point(732, 170);
-            this.PlusAdditionalHealth.Name = "PlusAdditionalHealth";
-            this.PlusAdditionalHealth.Size = new System.Drawing.Size(13, 14);
-            this.PlusAdditionalHealth.TabIndex = 8;
-            this.PlusAdditionalHealth.UseVisualStyleBackColor = false;
-            this.PlusAdditionalHealth.Click += new System.EventHandler(this.PlusAdditionalHealth_Click);
+            this.PlusAdditionalHP.BackColor = System.Drawing.Color.Transparent;
+            this.PlusAdditionalHP.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusAdditionalHP.FlatAppearance.BorderSize = 0;
+            this.PlusAdditionalHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusAdditionalHP.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusAdditionalHP.Location = new System.Drawing.Point(777, 170);
+            this.PlusAdditionalHP.Name = "PlusAdditionalHP";
+            this.PlusAdditionalHP.Size = new System.Drawing.Size(13, 14);
+            this.PlusAdditionalHP.TabIndex = 8;
+            this.PlusAdditionalHP.UseVisualStyleBackColor = false;
+            this.PlusAdditionalHP.Click += new System.EventHandler(this.PlusAdditionalHP_Click);
             // 
-            // button6
+            // PlusDefence
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(732, 197);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(13, 14);
-            this.button6.TabIndex = 9;
-            this.button6.UseVisualStyleBackColor = false;
+            this.PlusDefence.BackColor = System.Drawing.Color.Transparent;
+            this.PlusDefence.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusDefence.FlatAppearance.BorderSize = 0;
+            this.PlusDefence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusDefence.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusDefence.Location = new System.Drawing.Point(776, 195);
+            this.PlusDefence.Name = "PlusDefence";
+            this.PlusDefence.Size = new System.Drawing.Size(13, 14);
+            this.PlusDefence.TabIndex = 9;
+            this.PlusDefence.UseVisualStyleBackColor = false;
+            this.PlusDefence.Click += new System.EventHandler(this.PlusDefence_Click);
             // 
-            // button7
+            // PlusPower
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(732, 252);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(13, 14);
-            this.button7.TabIndex = 10;
-            this.button7.UseVisualStyleBackColor = false;
+            this.PlusPower.BackColor = System.Drawing.Color.Transparent;
+            this.PlusPower.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusPower.FlatAppearance.BorderSize = 0;
+            this.PlusPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusPower.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusPower.Location = new System.Drawing.Point(777, 253);
+            this.PlusPower.Name = "PlusPower";
+            this.PlusPower.Size = new System.Drawing.Size(13, 14);
+            this.PlusPower.TabIndex = 10;
+            this.PlusPower.UseVisualStyleBackColor = false;
+            this.PlusPower.Click += new System.EventHandler(this.PlusPower_Click);
             // 
-            // button8
+            // PlusAgility
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(732, 282);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(13, 14);
-            this.button8.TabIndex = 11;
-            this.button8.UseVisualStyleBackColor = false;
+            this.PlusAgility.BackColor = System.Drawing.Color.Transparent;
+            this.PlusAgility.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusAgility.FlatAppearance.BorderSize = 0;
+            this.PlusAgility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusAgility.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusAgility.Location = new System.Drawing.Point(777, 283);
+            this.PlusAgility.Name = "PlusAgility";
+            this.PlusAgility.Size = new System.Drawing.Size(13, 14);
+            this.PlusAgility.TabIndex = 11;
+            this.PlusAgility.UseVisualStyleBackColor = false;
+            this.PlusAgility.Click += new System.EventHandler(this.PlusAgility_Click);
             // 
-            // button9
+            // PlusCritChance
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(732, 309);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(13, 14);
-            this.button9.TabIndex = 12;
-            this.button9.UseVisualStyleBackColor = false;
+            this.PlusCritChance.BackColor = System.Drawing.Color.Transparent;
+            this.PlusCritChance.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusCritChance.FlatAppearance.BorderSize = 0;
+            this.PlusCritChance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusCritChance.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusCritChance.Location = new System.Drawing.Point(776, 310);
+            this.PlusCritChance.Name = "PlusCritChance";
+            this.PlusCritChance.Size = new System.Drawing.Size(13, 14);
+            this.PlusCritChance.TabIndex = 12;
+            this.PlusCritChance.UseVisualStyleBackColor = false;
+            this.PlusCritChance.Click += new System.EventHandler(this.PlusCritChance_Click);
             // 
-            // button10
+            // PlusCritAdditionalDamage
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(732, 340);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(13, 14);
-            this.button10.TabIndex = 13;
-            this.button10.UseVisualStyleBackColor = false;
+            this.PlusCritAdditionalDamage.BackColor = System.Drawing.Color.Transparent;
+            this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 0;
+            this.PlusCritAdditionalDamage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusCritAdditionalDamage.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusCritAdditionalDamage.Location = new System.Drawing.Point(776, 339);
+            this.PlusCritAdditionalDamage.Name = "PlusCritAdditionalDamage";
+            this.PlusCritAdditionalDamage.Size = new System.Drawing.Size(13, 14);
+            this.PlusCritAdditionalDamage.TabIndex = 13;
+            this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
+            this.PlusCritAdditionalDamage.Click += new System.EventHandler(this.PlusCritAdditionalDamage_Click);
             // 
             // AdditionalGoldLabel
             // 
             this.AdditionalGoldLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalGoldLabel.Location = new System.Drawing.Point(621, 107);
+            this.AdditionalGoldLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLabel.Location = new System.Drawing.Point(621, 111);
             this.AdditionalGoldLabel.Name = "AdditionalGoldLabel";
-            this.AdditionalGoldLabel.Size = new System.Drawing.Size(46, 20);
+            this.AdditionalGoldLabel.Size = new System.Drawing.Size(85, 20);
             this.AdditionalGoldLabel.TabIndex = 14;
-            this.AdditionalGoldLabel.Text = "0";
+            this.AdditionalGoldLabel.Text = "+100%";
             // 
-            // label4
+            // LuckLabel
             // 
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(621, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 20);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "0";
+            this.LuckLabel.BackColor = System.Drawing.Color.Transparent;
+            this.LuckLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLabel.Location = new System.Drawing.Point(621, 140);
+            this.LuckLabel.Name = "LuckLabel";
+            this.LuckLabel.Size = new System.Drawing.Size(85, 20);
+            this.LuckLabel.TabIndex = 15;
+            this.LuckLabel.Text = "0%";
             // 
             // AdditionalHPLabel
             // 
             this.AdditionalHPLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalHPLabel.Location = new System.Drawing.Point(621, 164);
+            this.AdditionalHPLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLabel.Location = new System.Drawing.Point(621, 169);
             this.AdditionalHPLabel.Name = "AdditionalHPLabel";
-            this.AdditionalHPLabel.Size = new System.Drawing.Size(46, 20);
+            this.AdditionalHPLabel.Size = new System.Drawing.Size(85, 20);
             this.AdditionalHPLabel.TabIndex = 16;
-            this.AdditionalHPLabel.Text = "0";
+            this.AdditionalHPLabel.Text = "+0";
             // 
-            // label6
+            // DefenceLabel
             // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(621, 191);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(46, 20);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "0";
+            this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DefenceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLabel.Location = new System.Drawing.Point(621, 195);
+            this.DefenceLabel.Name = "DefenceLabel";
+            this.DefenceLabel.Size = new System.Drawing.Size(85, 20);
+            this.DefenceLabel.TabIndex = 17;
+            this.DefenceLabel.Text = "0";
             // 
-            // label7
+            // BlockLabel
             // 
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(621, 218);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(46, 20);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "0";
+            this.BlockLabel.BackColor = System.Drawing.Color.Transparent;
+            this.BlockLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLabel.Location = new System.Drawing.Point(621, 223);
+            this.BlockLabel.Name = "BlockLabel";
+            this.BlockLabel.Size = new System.Drawing.Size(85, 20);
+            this.BlockLabel.TabIndex = 18;
+            this.BlockLabel.Text = "0%";
             // 
-            // label8
+            // PowerLabel
             // 
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(621, 252);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 20);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "0";
+            this.PowerLabel.BackColor = System.Drawing.Color.Transparent;
+            this.PowerLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLabel.Location = new System.Drawing.Point(621, 252);
+            this.PowerLabel.Name = "PowerLabel";
+            this.PowerLabel.Size = new System.Drawing.Size(85, 20);
+            this.PowerLabel.TabIndex = 19;
+            this.PowerLabel.Text = "5";
             // 
-            // label9
+            // AgilityLabel
             // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(621, 280);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 20);
-            this.label9.TabIndex = 20;
-            this.label9.Text = "0";
+            this.AgilityLabel.BackColor = System.Drawing.Color.Transparent;
+            this.AgilityLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLabel.Location = new System.Drawing.Point(621, 281);
+            this.AgilityLabel.Name = "AgilityLabel";
+            this.AgilityLabel.Size = new System.Drawing.Size(85, 20);
+            this.AgilityLabel.TabIndex = 20;
+            this.AgilityLabel.Text = "10%";
             // 
-            // label10
+            // CritChanceLabel
             // 
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(621, 309);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(46, 20);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "0";
+            this.CritChanceLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CritChanceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLabel.Location = new System.Drawing.Point(621, 309);
+            this.CritChanceLabel.Name = "CritChanceLabel";
+            this.CritChanceLabel.Size = new System.Drawing.Size(85, 20);
+            this.CritChanceLabel.TabIndex = 21;
+            this.CritChanceLabel.Text = "10%";
             // 
-            // label11
+            // CritAdditionalDamageLabel
             // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Location = new System.Drawing.Point(621, 334);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(46, 20);
-            this.label11.TabIndex = 22;
-            this.label11.Text = "0";
+            this.CritAdditionalDamageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.CritAdditionalDamageLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLabel.Location = new System.Drawing.Point(621, 338);
+            this.CritAdditionalDamageLabel.Name = "CritAdditionalDamageLabel";
+            this.CritAdditionalDamageLabel.Size = new System.Drawing.Size(85, 20);
+            this.CritAdditionalDamageLabel.TabIndex = 22;
+            this.CritAdditionalDamageLabel.Text = "+150%";
             // 
             // AdditionalGoldLevel
             // 
             this.AdditionalGoldLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalGoldLevel.Location = new System.Drawing.Point(673, 107);
+            this.AdditionalGoldLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLevel.Location = new System.Drawing.Point(704, 111);
             this.AdditionalGoldLevel.Name = "AdditionalGoldLevel";
             this.AdditionalGoldLevel.Size = new System.Drawing.Size(35, 20);
             this.AdditionalGoldLevel.TabIndex = 23;
             this.AdditionalGoldLevel.Text = "0";
             // 
-            // label13
+            // LuckLevel
             // 
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Location = new System.Drawing.Point(673, 138);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(35, 20);
-            this.label13.TabIndex = 24;
-            this.label13.Text = "0";
+            this.LuckLevel.BackColor = System.Drawing.Color.Transparent;
+            this.LuckLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLevel.Location = new System.Drawing.Point(704, 140);
+            this.LuckLevel.Name = "LuckLevel";
+            this.LuckLevel.Size = new System.Drawing.Size(35, 20);
+            this.LuckLevel.TabIndex = 24;
+            this.LuckLevel.Text = "0";
             // 
             // AdditionalHPLevel
             // 
             this.AdditionalHPLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalHPLevel.Location = new System.Drawing.Point(673, 164);
+            this.AdditionalHPLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLevel.Location = new System.Drawing.Point(704, 169);
             this.AdditionalHPLevel.Name = "AdditionalHPLevel";
             this.AdditionalHPLevel.Size = new System.Drawing.Size(35, 20);
             this.AdditionalHPLevel.TabIndex = 25;
             this.AdditionalHPLevel.Text = "0";
             // 
-            // label15
+            // DefenceLevel
             // 
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Location = new System.Drawing.Point(673, 191);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(35, 20);
-            this.label15.TabIndex = 26;
-            this.label15.Text = "0";
+            this.DefenceLevel.BackColor = System.Drawing.Color.Transparent;
+            this.DefenceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLevel.Location = new System.Drawing.Point(704, 195);
+            this.DefenceLevel.Name = "DefenceLevel";
+            this.DefenceLevel.Size = new System.Drawing.Size(35, 20);
+            this.DefenceLevel.TabIndex = 26;
+            this.DefenceLevel.Text = "0";
             // 
-            // label16
+            // BlockLevel
             // 
-            this.label16.BackColor = System.Drawing.Color.Transparent;
-            this.label16.Location = new System.Drawing.Point(673, 219);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(35, 20);
-            this.label16.TabIndex = 27;
-            this.label16.Text = "0";
+            this.BlockLevel.BackColor = System.Drawing.Color.Transparent;
+            this.BlockLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLevel.Location = new System.Drawing.Point(704, 223);
+            this.BlockLevel.Name = "BlockLevel";
+            this.BlockLevel.Size = new System.Drawing.Size(35, 20);
+            this.BlockLevel.TabIndex = 27;
+            this.BlockLevel.Text = "0";
             // 
-            // label17
+            // PowerLevel
             // 
-            this.label17.BackColor = System.Drawing.Color.Transparent;
-            this.label17.Location = new System.Drawing.Point(673, 252);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(35, 20);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "0";
+            this.PowerLevel.BackColor = System.Drawing.Color.Transparent;
+            this.PowerLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLevel.Location = new System.Drawing.Point(704, 252);
+            this.PowerLevel.Name = "PowerLevel";
+            this.PowerLevel.Size = new System.Drawing.Size(35, 20);
+            this.PowerLevel.TabIndex = 28;
+            this.PowerLevel.Text = "0";
             // 
-            // label18
+            // AgilityLevel
             // 
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Location = new System.Drawing.Point(673, 280);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(35, 20);
-            this.label18.TabIndex = 29;
-            this.label18.Text = "0";
+            this.AgilityLevel.BackColor = System.Drawing.Color.Transparent;
+            this.AgilityLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLevel.Location = new System.Drawing.Point(704, 281);
+            this.AgilityLevel.Name = "AgilityLevel";
+            this.AgilityLevel.Size = new System.Drawing.Size(35, 20);
+            this.AgilityLevel.TabIndex = 29;
+            this.AgilityLevel.Text = "0";
             // 
-            // label19
+            // CritChanceLevel
             // 
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Location = new System.Drawing.Point(673, 309);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(35, 20);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "0";
+            this.CritChanceLevel.BackColor = System.Drawing.Color.Transparent;
+            this.CritChanceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLevel.Location = new System.Drawing.Point(704, 309);
+            this.CritChanceLevel.Name = "CritChanceLevel";
+            this.CritChanceLevel.Size = new System.Drawing.Size(35, 20);
+            this.CritChanceLevel.TabIndex = 30;
+            this.CritChanceLevel.Text = "0";
             // 
-            // label20
+            // CritAdditionalDamageLevel
             // 
-            this.label20.BackColor = System.Drawing.Color.Transparent;
-            this.label20.Location = new System.Drawing.Point(673, 334);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(35, 20);
-            this.label20.TabIndex = 31;
-            this.label20.Text = "0";
+            this.CritAdditionalDamageLevel.BackColor = System.Drawing.Color.Transparent;
+            this.CritAdditionalDamageLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLevel.Location = new System.Drawing.Point(704, 338);
+            this.CritAdditionalDamageLevel.Name = "CritAdditionalDamageLevel";
+            this.CritAdditionalDamageLevel.Size = new System.Drawing.Size(35, 20);
+            this.CritAdditionalDamageLevel.TabIndex = 31;
+            this.CritAdditionalDamageLevel.Text = "0";
             // 
-            // button11
+            // PlusBlock
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(732, 225);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(13, 14);
-            this.button11.TabIndex = 32;
-            this.button11.UseVisualStyleBackColor = false;
+            this.PlusBlock.BackColor = System.Drawing.Color.Transparent;
+            this.PlusBlock.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusBlock.FlatAppearance.BorderSize = 0;
+            this.PlusBlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusBlock.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusBlock.Location = new System.Drawing.Point(776, 225);
+            this.PlusBlock.Name = "PlusBlock";
+            this.PlusBlock.Size = new System.Drawing.Size(13, 14);
+            this.PlusBlock.TabIndex = 32;
+            this.PlusBlock.UseVisualStyleBackColor = false;
+            this.PlusBlock.Click += new System.EventHandler(this.PlusBlock_Click);
             // 
             // comboBox2
             // 
@@ -454,7 +482,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(304, 273);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 27);
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
             this.comboBox2.TabIndex = 33;
             // 
             // comboBox3
@@ -463,7 +491,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(304, 331);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 27);
+            this.comboBox3.Size = new System.Drawing.Size(121, 24);
             this.comboBox3.TabIndex = 34;
             // 
             // comboBox4
@@ -472,7 +500,7 @@
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Location = new System.Drawing.Point(304, 387);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 27);
+            this.comboBox4.Size = new System.Drawing.Size(121, 24);
             this.comboBox4.TabIndex = 35;
             // 
             // comboBox5
@@ -481,7 +509,7 @@
             this.comboBox5.FormattingEnabled = true;
             this.comboBox5.Location = new System.Drawing.Point(304, 443);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 27);
+            this.comboBox5.Size = new System.Drawing.Size(121, 24);
             this.comboBox5.TabIndex = 36;
             // 
             // HealthBar
@@ -516,9 +544,9 @@
             // EXPLAbel
             // 
             this.EXPLAbel.BackColor = System.Drawing.Color.Transparent;
-            this.EXPLAbel.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EXPLAbel.ForeColor = System.Drawing.Color.White;
-            this.EXPLAbel.Location = new System.Drawing.Point(304, 161);
+            this.EXPLAbel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EXPLAbel.ForeColor = System.Drawing.Color.Gold;
+            this.EXPLAbel.Location = new System.Drawing.Point(304, 156);
             this.EXPLAbel.Name = "EXPLAbel";
             this.EXPLAbel.Size = new System.Drawing.Size(106, 22);
             this.EXPLAbel.TabIndex = 40;
@@ -529,12 +557,35 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(304, 113);
+            this.label3.Location = new System.Drawing.Point(300, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 21);
+            this.label3.Size = new System.Drawing.Size(39, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Gold;
+            this.label4.Location = new System.Drawing.Point(649, 358);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(134, 26);
+            this.label4.TabIndex = 42;
+            this.label4.Text = "Очки навыков:";
+            // 
+            // SkillPoints
+            // 
+            this.SkillPoints.BackColor = System.Drawing.Color.Transparent;
+            this.SkillPoints.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SkillPoints.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.SkillPoints.Location = new System.Drawing.Point(774, 359);
+            this.SkillPoints.Name = "SkillPoints";
+            this.SkillPoints.Size = new System.Drawing.Size(73, 26);
+            this.SkillPoints.TabIndex = 43;
+            this.SkillPoints.Text = "0";
             // 
             // Form1
             // 
@@ -542,6 +593,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
+            this.Controls.Add(this.SkillPoints);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.EXPLAbel);
             this.Controls.Add(this.progressBar1);
@@ -551,39 +604,40 @@
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.button11);
-            this.Controls.Add(this.label20);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
+            this.Controls.Add(this.PlusBlock);
+            this.Controls.Add(this.CritAdditionalDamageLevel);
+            this.Controls.Add(this.CritChanceLevel);
+            this.Controls.Add(this.AgilityLevel);
+            this.Controls.Add(this.PowerLevel);
+            this.Controls.Add(this.BlockLevel);
+            this.Controls.Add(this.DefenceLevel);
             this.Controls.Add(this.AdditionalHPLevel);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.LuckLevel);
             this.Controls.Add(this.AdditionalGoldLevel);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.Controls.Add(this.CritAdditionalDamageLabel);
+            this.Controls.Add(this.CritChanceLabel);
+            this.Controls.Add(this.AgilityLabel);
+            this.Controls.Add(this.PowerLabel);
+            this.Controls.Add(this.BlockLabel);
+            this.Controls.Add(this.DefenceLabel);
             this.Controls.Add(this.AdditionalHPLabel);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.LuckLabel);
             this.Controls.Add(this.AdditionalGoldLabel);
-            this.Controls.Add(this.button10);
-            this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.PlusAdditionalHealth);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.PlusCritAdditionalDamage);
+            this.Controls.Add(this.PlusCritChance);
+            this.Controls.Add(this.PlusAgility);
+            this.Controls.Add(this.PlusPower);
+            this.Controls.Add(this.PlusDefence);
+            this.Controls.Add(this.PlusAdditionalHP);
+            this.Controls.Add(this.PlusLuck);
             this.Controls.Add(this.PlusAdditionalGold);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.GoldLabel);
+            this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.ExitButton);
+            this.Controls.Add(this.DungeonButton);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Castellar", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
@@ -599,40 +653,40 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button DungeonButton;
+        private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label LevelLabel;
+        private System.Windows.Forms.Label GoldLabel;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.BindingSource inventoryBindingSource;
         private System.Windows.Forms.Button PlusAdditionalGold;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button PlusAdditionalHealth;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button PlusLuck;
+        private System.Windows.Forms.Button PlusAdditionalHP;
+        private System.Windows.Forms.Button PlusDefence;
+        private System.Windows.Forms.Button PlusPower;
+        private System.Windows.Forms.Button PlusAgility;
+        private System.Windows.Forms.Button PlusCritChance;
+        private System.Windows.Forms.Button PlusCritAdditionalDamage;
         private System.Windows.Forms.Label AdditionalGoldLabel;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label LuckLabel;
         private System.Windows.Forms.Label AdditionalHPLabel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label DefenceLabel;
+        private System.Windows.Forms.Label BlockLabel;
+        private System.Windows.Forms.Label PowerLabel;
+        private System.Windows.Forms.Label AgilityLabel;
+        private System.Windows.Forms.Label CritChanceLabel;
+        private System.Windows.Forms.Label CritAdditionalDamageLabel;
         private System.Windows.Forms.Label AdditionalGoldLevel;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label LuckLevel;
         private System.Windows.Forms.Label AdditionalHPLevel;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Label DefenceLevel;
+        private System.Windows.Forms.Label BlockLevel;
+        private System.Windows.Forms.Label PowerLevel;
+        private System.Windows.Forms.Label AgilityLevel;
+        private System.Windows.Forms.Label CritChanceLevel;
+        private System.Windows.Forms.Label CritAdditionalDamageLevel;
+        private System.Windows.Forms.Button PlusBlock;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -642,6 +696,8 @@
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label EXPLAbel;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label SkillPoints;
     }
 }
 
