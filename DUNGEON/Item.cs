@@ -19,6 +19,9 @@ namespace DUNGEON
             this.rang = rnd.Next(1, 5);
             this.name = name + Convert.ToString(this.rang);
         }
+
+        public virtual void Equip()
+        {}
     }
 
     public class Head : Item

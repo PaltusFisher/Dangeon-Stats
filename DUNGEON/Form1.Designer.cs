@@ -76,6 +76,7 @@
             this.GoldNeedToUpgradeLabel = new System.Windows.Forms.Label();
             this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.DangeonLevelLabel = new System.Windows.Forms.Label();
+            this.webVochila = new System.Windows.Forms.WebBrowser();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -659,6 +660,18 @@
             this.DangeonLevelLabel.TabIndex = 47;
             this.DangeonLevelLabel.Text = "0";
             // 
+            // webVochila
+            // 
+            this.webVochila.IsWebBrowserContextMenuEnabled = false;
+            this.webVochila.Location = new System.Drawing.Point(942, 664);
+            this.webVochila.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webVochila.Name = "webVochila";
+            this.webVochila.ScrollBarsEnabled = false;
+            this.webVochila.Size = new System.Drawing.Size(20, 20);
+            this.webVochila.TabIndex = 48;
+            this.webVochila.Url = new System.Uri("", System.UriKind.Relative);
+            this.webVochila.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -668,6 +681,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.webVochila);
             this.Controls.Add(this.DangeonLevelLabel);
             this.Controls.Add(this.PlusCritAdditionalDamage);
             this.Controls.Add(this.GoldNeedToUpgradeLabel);
@@ -777,6 +791,7 @@
         private System.Windows.Forms.Label GoldNeedToUpgradeLabel;
         private System.Windows.Forms.Button PlusCritAdditionalDamage;
         private System.Windows.Forms.Label DangeonLevelLabel;
+        private System.Windows.Forms.WebBrowser webVochila;
     }
 }
 

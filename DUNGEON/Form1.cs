@@ -235,6 +235,8 @@ namespace DUNGEON
                 AgilityLevel.Text = Convert.ToString(Convert.ToInt16(AgilityLevel.Text) + 1);
 
                 PlusCursorsController();
+
+                //webVochila.Navigate(new Uri("https://youtu.be/-vgPBeY18QU?t=80"));
             }
         }
 
