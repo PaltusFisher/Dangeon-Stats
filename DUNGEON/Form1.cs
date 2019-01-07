@@ -12,6 +12,7 @@ namespace DUNGEON
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,10 @@ namespace DUNGEON
         {
             //test
             LevelUp();
+
+            GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) + 50);
+            if (Convert.ToInt16(GoldLabel.Text) >= Convert.ToInt16(GoldNeedToUpgrateLabel.Text))
+                PlusDungeonLevel.Cursor = Cursors.Hand;
             //
 
         }
@@ -230,6 +235,20 @@ namespace DUNGEON
         private void ExitButton_Click(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
+        }
+
+        private void PlusDungeonLevel_Click(object sender, EventArgs e)
+        {
+            if (PlusDungeonLevel.Cursor == Cursors.Hand)
+            {
+                GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) - Convert.ToInt16(GoldNeedToUpgrateLabel.Text));
+                GoldNeedToUpgrateLabel.Text = Convert.ToString(Convert.ToInt16(GoldNeedToUpgrateLabel.Text) + Game.hero.additionalGoldNeedToUpgrate);
+
+                if (Convert.ToInt16(GoldLabel.Text) < Convert.ToInt16(GoldNeedToUpgrateLabel.Text))
+                    PlusDungeonLevel.Cursor = Cursors.No;
+
+               
+            }
         }
     }
 }

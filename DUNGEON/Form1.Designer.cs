@@ -75,6 +75,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SkillPoints = new System.Windows.Forms.Label();
+            this.PlusDungeonLevel = new System.Windows.Forms.Button();
+            this.GoldNeedToUpgrateLabel = new System.Windows.Forms.Label();
+            this.DungeonLevelLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,10 +92,10 @@
             this.DungeonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DungeonButton.Font = new System.Drawing.Font("Castellar", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DungeonButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.DungeonButton.Location = new System.Drawing.Point(549, 512);
+            this.DungeonButton.Location = new System.Drawing.Point(522, 416);
             this.DungeonButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.DungeonButton.Name = "DungeonButton";
-            this.DungeonButton.Size = new System.Drawing.Size(241, 86);
+            this.DungeonButton.Size = new System.Drawing.Size(136, 51);
             this.DungeonButton.TabIndex = 0;
             this.DungeonButton.Text = "Отправиться в подземелье";
             this.DungeonButton.UseVisualStyleBackColor = true;
@@ -587,12 +590,51 @@
             this.SkillPoints.TabIndex = 43;
             this.SkillPoints.Text = "0";
             // 
+            // PlusDungeonLevel
+            // 
+            this.PlusDungeonLevel.BackColor = System.Drawing.Color.Transparent;
+            this.PlusDungeonLevel.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusDungeonLevel.FlatAppearance.BorderSize = 0;
+            this.PlusDungeonLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusDungeonLevel.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusDungeonLevel.Location = new System.Drawing.Point(747, 491);
+            this.PlusDungeonLevel.Name = "PlusDungeonLevel";
+            this.PlusDungeonLevel.Size = new System.Drawing.Size(13, 14);
+            this.PlusDungeonLevel.TabIndex = 44;
+            this.PlusDungeonLevel.UseVisualStyleBackColor = false;
+            this.PlusDungeonLevel.Click += new System.EventHandler(this.PlusDungeonLevel_Click);
+            // 
+            // GoldNeedToUpgrateLabel
+            // 
+            this.GoldNeedToUpgrateLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GoldNeedToUpgrateLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoldNeedToUpgrateLabel.ForeColor = System.Drawing.Color.Gold;
+            this.GoldNeedToUpgrateLabel.Location = new System.Drawing.Point(801, 487);
+            this.GoldNeedToUpgrateLabel.Name = "GoldNeedToUpgrateLabel";
+            this.GoldNeedToUpgrateLabel.Size = new System.Drawing.Size(46, 24);
+            this.GoldNeedToUpgrateLabel.TabIndex = 45;
+            this.GoldNeedToUpgrateLabel.Text = "500";
+            this.GoldNeedToUpgrateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // DungeonLevelLabel
+            // 
+            this.DungeonLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DungeonLevelLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DungeonLevelLabel.Location = new System.Drawing.Point(744, 397);
+            this.DungeonLevelLabel.Name = "DungeonLevelLabel";
+            this.DungeonLevelLabel.Size = new System.Drawing.Size(35, 20);
+            this.DungeonLevelLabel.TabIndex = 46;
+            this.DungeonLevelLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
+            this.Controls.Add(this.DungeonLevelLabel);
+            this.Controls.Add(this.GoldNeedToUpgrateLabel);
+            this.Controls.Add(this.PlusDungeonLevel);
             this.Controls.Add(this.SkillPoints);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -639,6 +681,7 @@
             this.Controls.Add(this.DungeonButton);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Castellar", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
@@ -698,6 +741,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label SkillPoints;
+        private System.Windows.Forms.Button PlusDungeonLevel;
+        private System.Windows.Forms.Label GoldNeedToUpgrateLabel;
+        private System.Windows.Forms.Label DungeonLevelLabel;
     }
 }
 

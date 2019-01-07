@@ -34,6 +34,9 @@ namespace DUNGEON
         public float block = 0;
 
         public float luck = 0;
+
+        //
+        public int additionalGoldNeedToUpgrate = 100;
     }
 
     public class Enemy : Character
