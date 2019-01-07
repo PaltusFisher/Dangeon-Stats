@@ -29,8 +29,15 @@ namespace DUNGEON
 
         private void LevelUp()
         {
-            LevelLabel.Text = Convert.ToString(Convert.ToInt16(LevelLabel.Text) + 1);
-            SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) + 1);
+            LevelLabel.Text = Convert.ToString(++Game.hero.level);
+            SkillPoints.Text = Convert.ToString(++Game.skillPoints);
+
+            //Add in inventory
+            Game.Inventory.AddHead(new Item("head" + Convert.ToString(Game.Inventory.heads.Count)));
+            Game.Inventory.AddHead(new Item("head" + Convert.ToString(Game.Inventory.heads.Count)));
+            Game.Inventory.AddArmor(new Item("armor" + Convert.ToString(Game.Inventory.armors.Count)));
+            Game.Inventory.AddSword(new Item("sword" + Convert.ToString(Game.Inventory.swords.Count)));
+            UpdateInventory();
 
             PlusAdditionalGold.Cursor = Cursors.Hand;
             PlusAdditionalHP.Cursor = Cursors.Hand;
@@ -41,6 +48,18 @@ namespace DUNGEON
             PlusDefence.Cursor = Cursors.Hand;
             PlusLuck.Cursor = Cursors.Hand;
             PlusPower.Cursor = Cursors.Hand;
+        }
+
+        private void UpdateInventory()
+        {
+            HeadInventory.DataSource = null;
+            HeadInventory.DataSource = Game.Inventory.heads;
+            HeadInventory.DisplayMember = "name";
+            HeadInventory.ValueMember = "name";
+            ArmorInventory.DataSource = Game.Inventory.armors;
+            LegsInventory.DataSource = Game.Inventory.legs;
+            SwordsInventory.DataSource = Game.Inventory.swords;
+            ShieldsInventory.DataSource = Game.Inventory.shields;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -79,7 +98,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.additionalGold += 0.1f;
                 AdditionalGoldLabel.Text = "+" + Convert.ToString(100 + Game.hero.additionalGold * 100) + "%";
@@ -93,7 +112,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.additionalHP += 20;
                 Game.hero.maxHP += 20;
@@ -117,7 +136,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.luck += 0.01f;
                 LuckLabel.Text = Convert.ToString(Game.hero.luck * 100) + "%";
@@ -131,7 +150,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.defence += 1;
                 DefenceLabel.Text = Convert.ToString(Game.hero.defence);
@@ -145,7 +164,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.block += 0.01f;
                 BlockLabel.Text = Convert.ToString(Game.hero.block * 100) + "%";
@@ -159,7 +178,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.power += 2;
                 PowerLabel.Text = Convert.ToString(Game.hero.power);
@@ -173,7 +192,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.agility += 0.05f;
                 AgilityLabel.Text = Convert.ToString(Game.hero.agility * 100) + "%";
@@ -187,7 +206,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.critAdditionalDamage += 0.2f;
                 CritAdditionalDamageLabel.Text = "+" + Convert.ToString(100 + Game.hero.critAdditionalDamage * 100) + "%";
@@ -201,7 +220,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand)
             {
-                SkillPoints.Text = Convert.ToString(Convert.ToInt16(SkillPoints.Text) - 1);
+                MinusSkillPoints();
 
                 Game.hero.critChance += 0.05f;
                 CritChanceLabel.Text = Convert.ToString(Game.hero.critChance * 100) + "%";
@@ -213,7 +232,7 @@ namespace DUNGEON
 
         private void PlusCursorsController()
         {
-            if (Convert.ToInt16(SkillPoints.Text) == 0)
+            if (Game.skillPoints == 0)
             {
                 PlusAdditionalGold.Cursor = Cursors.No;
                 PlusAdditionalHP.Cursor = Cursors.No;
@@ -225,6 +244,11 @@ namespace DUNGEON
                 PlusLuck.Cursor = Cursors.No;
                 PlusPower.Cursor = Cursors.No;
             }
+        }
+
+        private void MinusSkillPoints()
+        {
+            SkillPoints.Text = Convert.ToString(--Game.skillPoints);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

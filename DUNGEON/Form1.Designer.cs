@@ -28,15 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.DungeonButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.LevelLabel = new System.Windows.Forms.Label();
             this.GoldLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.inventoryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.HeadInventory = new System.Windows.Forms.ComboBox();
             this.PlusAdditionalGold = new System.Windows.Forms.Button();
             this.PlusLuck = new System.Windows.Forms.Button();
             this.PlusAdditionalHP = new System.Windows.Forms.Button();
@@ -64,10 +62,10 @@
             this.CritChanceLevel = new System.Windows.Forms.Label();
             this.CritAdditionalDamageLevel = new System.Windows.Forms.Label();
             this.PlusBlock = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.ArmorInventory = new System.Windows.Forms.ComboBox();
+            this.LegsInventory = new System.Windows.Forms.ComboBox();
+            this.SwordsInventory = new System.Windows.Forms.ComboBox();
+            this.ShieldsInventory = new System.Windows.Forms.ComboBox();
             this.HealthBar = new System.Windows.Forms.ProgressBar();
             this.HealthLable = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -75,7 +73,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SkillPoints = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -128,7 +125,7 @@
             this.textBox1.Location = new System.Drawing.Point(133, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 24);
+            this.textBox1.Size = new System.Drawing.Size(88, 29);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -160,15 +157,16 @@
             this.GoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GoldLabel.Click += new System.EventHandler(this.label2_Click);
             // 
-            // comboBox1
+            // HeadInventory
             // 
-            this.comboBox1.DataSource = this.inventoryBindingSource;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(304, 215);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.HeadInventory.Font = new System.Drawing.Font("Castellar", 9.75F);
+            this.HeadInventory.FormattingEnabled = true;
+            this.HeadInventory.Location = new System.Drawing.Point(304, 215);
+            this.HeadInventory.Name = "HeadInventory";
+            this.HeadInventory.Size = new System.Drawing.Size(121, 27);
+            this.HeadInventory.TabIndex = 5;
+            this.HeadInventory.ValueMember = "name";
+            this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // PlusAdditionalGold
             // 
@@ -476,41 +474,45 @@
             this.PlusBlock.UseVisualStyleBackColor = false;
             this.PlusBlock.Click += new System.EventHandler(this.PlusBlock_Click);
             // 
-            // comboBox2
+            // ArmorInventory
             // 
-            this.comboBox2.DataSource = this.inventoryBindingSource;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(304, 273);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 33;
+            this.ArmorInventory.DisplayMember = "name";
+            this.ArmorInventory.FormattingEnabled = true;
+            this.ArmorInventory.Location = new System.Drawing.Point(304, 273);
+            this.ArmorInventory.Name = "ArmorInventory";
+            this.ArmorInventory.Size = new System.Drawing.Size(121, 27);
+            this.ArmorInventory.TabIndex = 33;
+            this.ArmorInventory.ValueMember = "name";
             // 
-            // comboBox3
+            // LegsInventory
             // 
-            this.comboBox3.DataSource = this.inventoryBindingSource;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(304, 331);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 34;
+            this.LegsInventory.DisplayMember = "name";
+            this.LegsInventory.FormattingEnabled = true;
+            this.LegsInventory.Location = new System.Drawing.Point(304, 331);
+            this.LegsInventory.Name = "LegsInventory";
+            this.LegsInventory.Size = new System.Drawing.Size(121, 27);
+            this.LegsInventory.TabIndex = 34;
+            this.LegsInventory.ValueMember = "name";
             // 
-            // comboBox4
+            // SwordsInventory
             // 
-            this.comboBox4.DataSource = this.inventoryBindingSource;
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(304, 387);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(121, 24);
-            this.comboBox4.TabIndex = 35;
+            this.SwordsInventory.DisplayMember = "name";
+            this.SwordsInventory.FormattingEnabled = true;
+            this.SwordsInventory.Location = new System.Drawing.Point(304, 387);
+            this.SwordsInventory.Name = "SwordsInventory";
+            this.SwordsInventory.Size = new System.Drawing.Size(121, 27);
+            this.SwordsInventory.TabIndex = 35;
+            this.SwordsInventory.ValueMember = "name";
             // 
-            // comboBox5
+            // ShieldsInventory
             // 
-            this.comboBox5.DataSource = this.inventoryBindingSource;
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(304, 443);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(121, 24);
-            this.comboBox5.TabIndex = 36;
+            this.ShieldsInventory.DisplayMember = "name";
+            this.ShieldsInventory.FormattingEnabled = true;
+            this.ShieldsInventory.Location = new System.Drawing.Point(304, 443);
+            this.ShieldsInventory.Name = "ShieldsInventory";
+            this.ShieldsInventory.Size = new System.Drawing.Size(121, 27);
+            this.ShieldsInventory.TabIndex = 36;
+            this.ShieldsInventory.ValueMember = "name";
             // 
             // HealthBar
             // 
@@ -559,9 +561,9 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(300, 112);
+            this.label3.Location = new System.Drawing.Point(304, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 23);
+            this.label3.Size = new System.Drawing.Size(51, 29);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -600,10 +602,10 @@
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.HealthLable);
             this.Controls.Add(this.HealthBar);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.comboBox3);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.ShieldsInventory);
+            this.Controls.Add(this.SwordsInventory);
+            this.Controls.Add(this.LegsInventory);
+            this.Controls.Add(this.ArmorInventory);
             this.Controls.Add(this.PlusBlock);
             this.Controls.Add(this.CritAdditionalDamageLevel);
             this.Controls.Add(this.CritChanceLevel);
@@ -631,7 +633,7 @@
             this.Controls.Add(this.PlusAdditionalHP);
             this.Controls.Add(this.PlusLuck);
             this.Controls.Add(this.PlusAdditionalGold);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.HeadInventory);
             this.Controls.Add(this.GoldLabel);
             this.Controls.Add(this.LevelLabel);
             this.Controls.Add(this.textBox1);
@@ -645,7 +647,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.inventoryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -658,8 +659,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label LevelLabel;
         private System.Windows.Forms.Label GoldLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.BindingSource inventoryBindingSource;
+        private System.Windows.Forms.ComboBox HeadInventory;
         private System.Windows.Forms.Button PlusAdditionalGold;
         private System.Windows.Forms.Button PlusLuck;
         private System.Windows.Forms.Button PlusAdditionalHP;
@@ -687,10 +687,10 @@
         private System.Windows.Forms.Label CritChanceLevel;
         private System.Windows.Forms.Label CritAdditionalDamageLevel;
         private System.Windows.Forms.Button PlusBlock;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox ArmorInventory;
+        private System.Windows.Forms.ComboBox LegsInventory;
+        private System.Windows.Forms.ComboBox SwordsInventory;
+        private System.Windows.Forms.ComboBox ShieldsInventory;
         private System.Windows.Forms.ProgressBar HealthBar;
         private System.Windows.Forms.Label HealthLable;
         private System.Windows.Forms.ProgressBar progressBar1;

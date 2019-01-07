@@ -8,11 +8,15 @@ namespace DUNGEON
 {
     class Game
     {
+        public static int skillPoints;
+
         public static Hero hero;
         public static Inventory Inventory;
 
         public Game()
         {
+            skillPoints = 0;
+
             hero = new Hero();
             Inventory = new Inventory();
         }

@@ -8,6 +8,11 @@ namespace DUNGEON
 {
     class Item
     {
-        public string name;
+        public string name { get; set; }
+
+        public Item(string name = "NullName")
+        {
+            this.name = name;
+        }
     }
 }
