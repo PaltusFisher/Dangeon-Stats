@@ -127,7 +127,7 @@
             this.textBox1.Location = new System.Drawing.Point(133, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 29);
+            this.textBox1.Size = new System.Drawing.Size(88, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -169,7 +169,7 @@
             this.HeadInventory.FormattingEnabled = true;
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(121, 27);
+            this.HeadInventory.Size = new System.Drawing.Size(121, 24);
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
             this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -280,7 +280,7 @@
             this.AdditionalGoldLabel.Name = "AdditionalGoldLabel";
             this.AdditionalGoldLabel.Size = new System.Drawing.Size(85, 20);
             this.AdditionalGoldLabel.TabIndex = 14;
-            this.AdditionalGoldLabel.Text = "+100%";
+            this.AdditionalGoldLabel.Text = "+0%";
             // 
             // LuckLabel
             // 
@@ -360,7 +360,7 @@
             this.CritAdditionalDamageLabel.Name = "CritAdditionalDamageLabel";
             this.CritAdditionalDamageLabel.Size = new System.Drawing.Size(85, 20);
             this.CritAdditionalDamageLabel.TabIndex = 22;
-            this.CritAdditionalDamageLabel.Text = "+150%";
+            this.CritAdditionalDamageLabel.Text = "150%";
             // 
             // AdditionalGoldLevel
             // 
@@ -475,7 +475,7 @@
             this.ArmorInventory.FormattingEnabled = true;
             this.ArmorInventory.Location = new System.Drawing.Point(304, 273);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(121, 27);
+            this.ArmorInventory.Size = new System.Drawing.Size(121, 24);
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
             // 
@@ -488,7 +488,7 @@
             this.LegsInventory.FormattingEnabled = true;
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(121, 27);
+            this.LegsInventory.Size = new System.Drawing.Size(121, 24);
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
             // 
@@ -501,7 +501,7 @@
             this.SwordsInventory.FormattingEnabled = true;
             this.SwordsInventory.Location = new System.Drawing.Point(304, 387);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(121, 27);
+            this.SwordsInventory.Size = new System.Drawing.Size(121, 24);
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
             // 
@@ -514,7 +514,7 @@
             this.ShieldsInventory.FormattingEnabled = true;
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 443);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(121, 27);
+            this.ShieldsInventory.Size = new System.Drawing.Size(121, 24);
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
             // 
@@ -567,7 +567,7 @@
             this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(304, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 29);
+            this.label3.Size = new System.Drawing.Size(39, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -631,6 +631,7 @@
             this.PlusCritAdditionalDamage.Size = new System.Drawing.Size(13, 14);
             this.PlusCritAdditionalDamage.TabIndex = 46;
             this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
+            this.PlusCritAdditionalDamage.Click += new System.EventHandler(this.PlusCritAdditionalDamage_Click);
             // 
             // Form1
             // 

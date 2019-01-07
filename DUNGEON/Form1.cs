@@ -23,6 +23,9 @@ namespace DUNGEON
         private void DungeonButton_Click(object sender, EventArgs e)
         {
             //test
+
+
+
             LevelUp();
 
             GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) + 50);
@@ -43,15 +46,22 @@ namespace DUNGEON
             Game.Inventory.AddSword(new Item("sword" + Convert.ToString(Game.Inventory.swords.Count)));
             UpdateInventory();
 
-            PlusAdditionalGold.Cursor = Cursors.Hand;
-            PlusAdditionalHP.Cursor = Cursors.Hand;
-            PlusAgility.Cursor = Cursors.Hand;
-            PlusBlock.Cursor = Cursors.Hand;
-            PlusCritAdditionalDamage.Cursor = Cursors.Hand;
-            PlusCritChance.Cursor = Cursors.Hand;
-            PlusDefence.Cursor = Cursors.Hand;
-            PlusLuck.Cursor = Cursors.Hand;
+            if (Game.hero.additionalGold < 3)
+                PlusAdditionalGold.Cursor = Cursors.Hand;            
+            if (Game.hero.agility < 1)
+                PlusAgility.Cursor = Cursors.Hand;
+            if (Game.hero.block < 0.4f)
+                PlusBlock.Cursor = Cursors.Hand;          
+            if (Game.hero.critAdditionalDamage < 4.1f)
+                PlusCritAdditionalDamage.Cursor = Cursors.Hand;
+            if (Game.hero.critChance < 0.6f)
+                PlusCritChance.Cursor = Cursors.Hand;
+            
+            if (Game.hero.luck < 1)
+                PlusLuck.Cursor = Cursors.Hand;
             PlusPower.Cursor = Cursors.Hand;
+            PlusDefence.Cursor = Cursors.Hand;
+            PlusAdditionalHP.Cursor = Cursors.Hand;
         }
 
         private void UpdateInventory()
@@ -110,7 +120,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.additionalGold += 0.1f;
-                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.additionalGold * 100)) + "%";
+                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(Game.hero.additionalGold * 100)) + "%";
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -218,7 +228,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.critAdditionalDamage += 0.2f;
-                CritAdditionalDamageLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+                CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
                 CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -278,5 +288,7 @@ namespace DUNGEON
                
             }
         }
+
+
     }
 }
