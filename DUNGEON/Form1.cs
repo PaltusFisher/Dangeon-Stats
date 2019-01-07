@@ -22,14 +22,18 @@ namespace DUNGEON
 
         private void DungeonButton_Click(object sender, EventArgs e)
         {
-            //test
+            //Up EXP
+            Game.hero.currentEXP += 20;
+
+            if (Game.hero.currentEXP >= Game.hero.maxEXP)
+                LevelUp();
+            else
+                UpdateEXP();
 
 
-
-            LevelUp();
-
-            GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) + 50);
-            if (Convert.ToInt16(GoldLabel.Text) >= Convert.ToInt16(GoldNeedToUpgradeLabel.Text))
+            Game.hero.gold += 50;
+            GoldLabel.Text = Convert.ToString(Game.hero.gold);
+            if (Game.hero.gold >= Game.dangeon.goldToUpgrade)
                 PlusDungeonLevel.Cursor = Cursors.Hand;
             //
 
@@ -40,24 +44,29 @@ namespace DUNGEON
             LevelLabel.Text = Convert.ToString(++Game.hero.level);
             SkillPoints.Text = Convert.ToString(++Game.skillPoints);
 
-            //Add in inventory
-            Game.Inventory.AddHead(new Item("head" + Convert.ToString(Game.Inventory.heads.Count)));
-            Game.Inventory.AddArmor(new Item("armor" + Convert.ToString(Game.Inventory.armors.Count)));
-            Game.Inventory.AddSword(new Item("sword" + Convert.ToString(Game.Inventory.swords.Count)));
-            UpdateInventory();
+            Game.hero.currentEXP -= Game.hero.maxEXP;
+            Game.hero.maxEXP += 50 * Game.hero.level;
+            UpdateEXP();
 
-            if (Game.hero.additionalGold < 3)
+            //Add in inventory
+            Game.inventory.AddHead(new Item("head "));
+            Game.inventory.AddArmor(new Item("armor "));
+            Game.inventory.AddLeg(new Item("legs "));
+            Game.inventory.AddSword(new Item("sword "));
+            Game.inventory.AddShield(new Item("shield "));
+            UpdateInventory();
+            //Boundaries
+            //if (Game.hero.additionalGold < 3)
                 PlusAdditionalGold.Cursor = Cursors.Hand;            
-            if (Game.hero.agility < 1)
+            //if (Game.hero.agility < 1)
                 PlusAgility.Cursor = Cursors.Hand;
-            if (Game.hero.block < 0.4f)
+            //if (Game.hero.block < 0.4f)
                 PlusBlock.Cursor = Cursors.Hand;          
-            if (Game.hero.critAdditionalDamage < 4.1f)
+            //if (Game.hero.critAdditionalDamage < 4.1f)
                 PlusCritAdditionalDamage.Cursor = Cursors.Hand;
-            if (Game.hero.critChance < 0.6f)
+            //if (Game.hero.critChance < 0.6f)
                 PlusCritChance.Cursor = Cursors.Hand;
-            
-            if (Game.hero.luck < 1)
+            //if (Game.hero.luck < 1)
                 PlusLuck.Cursor = Cursors.Hand;
             PlusPower.Cursor = Cursors.Hand;
             PlusDefence.Cursor = Cursors.Hand;
@@ -66,11 +75,11 @@ namespace DUNGEON
 
         private void UpdateInventory()
         {
-            UpdateInventoryDataSource(HeadInventory, Game.Inventory.heads);
-            UpdateInventoryDataSource(ArmorInventory, Game.Inventory.armors);
-            UpdateInventoryDataSource(LegsInventory, Game.Inventory.legs);
-            UpdateInventoryDataSource(SwordsInventory, Game.Inventory.swords);
-            UpdateInventoryDataSource(ShieldsInventory, Game.Inventory.shields);
+            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);
+            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);
+            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);
+            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);
+            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);
         }
 
         private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
@@ -149,6 +158,14 @@ namespace DUNGEON
             HealthBar.Value = Game.hero.currentHP;
 
             HealthLable.Text = Convert.ToString(Game.hero.currentHP) + "/" + Convert.ToString(Game.hero.maxHP);
+        }
+
+        private void UpdateEXP()
+        {
+            EXPBar.Maximum = Game.hero.maxEXP;
+            EXPBar.Value = Game.hero.currentEXP;
+
+            EXPLabel.Text = Convert.ToString(Game.hero.currentEXP) + "/" + Convert.ToString(Game.hero.maxEXP);
         }
 
         private void PlusLuck_Click(object sender, EventArgs e)
@@ -279,10 +296,13 @@ namespace DUNGEON
         {
             if (PlusDungeonLevel.Cursor == Cursors.Hand)
             {
-                GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) - Convert.ToInt16(GoldNeedToUpgradeLabel.Text));
-                GoldNeedToUpgradeLabel.Text = Convert.ToString(Convert.ToInt16(GoldNeedToUpgradeLabel.Text) + Game.hero.additionalGoldNeedToUpgrate);
+                Game.hero.gold -= Game.dangeon.goldToUpgrade;
+                GoldLabel.Text = Convert.ToString(Game.hero.gold);
+                Game.dangeon.UpgradeDangeon();
+                GoldNeedToUpgradeLabel.Text = Convert.ToString(Game.dangeon.goldToUpgrade);
+                DangeonLevelLabel.Text = Convert.ToString(Game.dangeon.level);
 
-                if (Convert.ToInt16(GoldLabel.Text) < Convert.ToInt16(GoldNeedToUpgradeLabel.Text))
+                if (Game.hero.gold < Game.dangeon.goldToUpgrade)
                     PlusDungeonLevel.Cursor = Cursors.No;
 
                

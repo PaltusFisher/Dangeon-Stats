@@ -11,14 +11,17 @@ namespace DUNGEON
         public static int skillPoints;
 
         public static Hero hero;
-        public static Inventory Inventory;
+        public static Inventory inventory;
+
+        public static Dangeon dangeon;
 
         public Game()
         {
             skillPoints = 0;
 
             hero = new Hero();
-            Inventory = new Inventory();
+            inventory = new Inventory();
+            dangeon = new Dangeon();
         }
     }
 }

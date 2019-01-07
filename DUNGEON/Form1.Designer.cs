@@ -67,14 +67,15 @@
             this.ShieldsInventory = new System.Windows.Forms.ComboBox();
             this.HealthBar = new System.Windows.Forms.ProgressBar();
             this.HealthLable = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.EXPLAbel = new System.Windows.Forms.Label();
+            this.EXPBar = new System.Windows.Forms.ProgressBar();
+            this.EXPLabel = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SkillPoints = new System.Windows.Forms.Label();
             this.PlusDungeonLevel = new System.Windows.Forms.Button();
             this.GoldNeedToUpgradeLabel = new System.Windows.Forms.Label();
             this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
+            this.DangeonLevelLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -127,7 +128,7 @@
             this.textBox1.Location = new System.Drawing.Point(133, 87);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 24);
+            this.textBox1.Size = new System.Drawing.Size(88, 29);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -169,7 +170,8 @@
             this.HeadInventory.FormattingEnabled = true;
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(121, 24);
+            this.HeadInventory.Size = new System.Drawing.Size(121, 27);
+            this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
             this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -483,7 +485,8 @@
             this.ArmorInventory.FormattingEnabled = true;
             this.ArmorInventory.Location = new System.Drawing.Point(304, 273);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(121, 24);
+            this.ArmorInventory.Size = new System.Drawing.Size(121, 27);
+            this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
             // 
@@ -496,7 +499,8 @@
             this.LegsInventory.FormattingEnabled = true;
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(121, 24);
+            this.LegsInventory.Size = new System.Drawing.Size(121, 27);
+            this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
             // 
@@ -509,7 +513,8 @@
             this.SwordsInventory.FormattingEnabled = true;
             this.SwordsInventory.Location = new System.Drawing.Point(304, 387);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(121, 24);
+            this.SwordsInventory.Size = new System.Drawing.Size(121, 27);
+            this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
             // 
@@ -522,7 +527,8 @@
             this.ShieldsInventory.FormattingEnabled = true;
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 443);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(121, 24);
+            this.ShieldsInventory.Size = new System.Drawing.Size(121, 27);
+            this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
             // 
@@ -548,24 +554,24 @@
             this.HealthLable.Text = "100/100";
             this.HealthLable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // progressBar1
+            // EXPBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(304, 135);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(106, 23);
-            this.progressBar1.TabIndex = 39;
+            this.EXPBar.Location = new System.Drawing.Point(304, 135);
+            this.EXPBar.Name = "EXPBar";
+            this.EXPBar.Size = new System.Drawing.Size(106, 23);
+            this.EXPBar.TabIndex = 39;
             // 
-            // EXPLAbel
+            // EXPLabel
             // 
-            this.EXPLAbel.BackColor = System.Drawing.Color.Transparent;
-            this.EXPLAbel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EXPLAbel.ForeColor = System.Drawing.Color.Gold;
-            this.EXPLAbel.Location = new System.Drawing.Point(304, 156);
-            this.EXPLAbel.Name = "EXPLAbel";
-            this.EXPLAbel.Size = new System.Drawing.Size(106, 22);
-            this.EXPLAbel.TabIndex = 40;
-            this.EXPLAbel.Text = "0/100";
-            this.EXPLAbel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.EXPLabel.BackColor = System.Drawing.Color.Transparent;
+            this.EXPLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EXPLabel.ForeColor = System.Drawing.Color.Gold;
+            this.EXPLabel.Location = new System.Drawing.Point(304, 156);
+            this.EXPLabel.Name = "EXPLabel";
+            this.EXPLabel.Size = new System.Drawing.Size(106, 22);
+            this.EXPLabel.TabIndex = 40;
+            this.EXPLabel.Text = "0/100";
+            this.EXPLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
@@ -575,7 +581,7 @@
             this.label3.ForeColor = System.Drawing.Color.Gold;
             this.label3.Location = new System.Drawing.Point(304, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 23);
+            this.label3.Size = new System.Drawing.Size(51, 29);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -609,7 +615,7 @@
             this.PlusDungeonLevel.FlatAppearance.BorderSize = 2;
             this.PlusDungeonLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusDungeonLevel.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusDungeonLevel.Location = new System.Drawing.Point(523, 486);
+            this.PlusDungeonLevel.Location = new System.Drawing.Point(522, 486);
             this.PlusDungeonLevel.Name = "PlusDungeonLevel";
             this.PlusDungeonLevel.Size = new System.Drawing.Size(238, 24);
             this.PlusDungeonLevel.TabIndex = 44;
@@ -643,6 +649,16 @@
             this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
             this.PlusCritAdditionalDamage.Click += new System.EventHandler(this.PlusCritAdditionalDamage_Click);
             // 
+            // DangeonLevelLabel
+            // 
+            this.DangeonLevelLabel.BackColor = System.Drawing.Color.Transparent;
+            this.DangeonLevelLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DangeonLevelLabel.Location = new System.Drawing.Point(751, 394);
+            this.DangeonLevelLabel.Name = "DangeonLevelLabel";
+            this.DangeonLevelLabel.Size = new System.Drawing.Size(26, 20);
+            this.DangeonLevelLabel.TabIndex = 47;
+            this.DangeonLevelLabel.Text = "0";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
@@ -652,14 +668,15 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.DangeonLevelLabel);
             this.Controls.Add(this.PlusCritAdditionalDamage);
             this.Controls.Add(this.GoldNeedToUpgradeLabel);
             this.Controls.Add(this.PlusDungeonLevel);
             this.Controls.Add(this.SkillPoints);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.EXPLAbel);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.EXPLabel);
+            this.Controls.Add(this.EXPBar);
             this.Controls.Add(this.HealthLable);
             this.Controls.Add(this.HealthBar);
             this.Controls.Add(this.ShieldsInventory);
@@ -751,14 +768,15 @@
         private System.Windows.Forms.ComboBox ShieldsInventory;
         private System.Windows.Forms.ProgressBar HealthBar;
         private System.Windows.Forms.Label HealthLable;
-        private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label EXPLAbel;
+        private System.Windows.Forms.ProgressBar EXPBar;
+        private System.Windows.Forms.Label EXPLabel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label SkillPoints;
         private System.Windows.Forms.Button PlusDungeonLevel;
         private System.Windows.Forms.Label GoldNeedToUpgradeLabel;
         private System.Windows.Forms.Button PlusCritAdditionalDamage;
+        private System.Windows.Forms.Label DangeonLevelLabel;
     }
 }
 

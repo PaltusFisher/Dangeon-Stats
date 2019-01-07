@@ -23,20 +23,18 @@ namespace DUNGEON
     public class Hero : Character
     {
         public int currentEXP = 0;
-        public int maxEXP = 200;
+        public int maxEXP = 100;
         public int level = 0;
 
         public int additionalHP = 0;
 
         public int gold = 0;
+
         public float additionalGold = 0;
 
         public float block = 0;
 
         public float luck = 0;
-
-        //
-        public int additionalGoldNeedToUpgrate = 100;
     }
 
     public class Enemy : Character
