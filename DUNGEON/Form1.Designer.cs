@@ -320,7 +320,7 @@
             this.DefenceLabel.Name = "DefenceLabel";
             this.DefenceLabel.Size = new System.Drawing.Size(85, 20);
             this.DefenceLabel.TabIndex = 17;
-            this.DefenceLabel.Text = "0";
+            this.DefenceLabel.Text = "2";
             // 
             // BlockLabel
             // 
@@ -340,7 +340,7 @@
             this.PowerLabel.Name = "PowerLabel";
             this.PowerLabel.Size = new System.Drawing.Size(85, 20);
             this.PowerLabel.TabIndex = 19;
-            this.PowerLabel.Text = "5";
+            this.PowerLabel.Text = "10";
             // 
             // AgilityLabel
             // 
@@ -735,7 +735,7 @@
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Dangeon & Stats";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

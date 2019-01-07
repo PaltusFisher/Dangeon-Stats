@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DUNGEON
 {
-    class Inventory
+    public class Inventory
     {
         public List<Item> heads = new List<Item>();
         public List<Item> armors = new List<Item>();

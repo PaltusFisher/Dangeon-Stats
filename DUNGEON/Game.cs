@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DUNGEON
 {
-    class Game
+    public static class Game
     {
         public static int skillPoints;
 
@@ -15,13 +16,58 @@ namespace DUNGEON
 
         public static Dangeon dangeon;
 
-        public Game()
-        {
-            skillPoints = 0;
+        public static List<Enemy> enemies;
 
+        public static void GameInitiate()
+        {
             hero = new Hero();
             inventory = new Inventory();
             dangeon = new Dangeon();
+        }
+
+        public static void EnterDangeon()
+        {
+            CreateEnemies();
+
+            foreach (Enemy enemy in enemies)
+            {
+                //first move
+                if (hero.agility >= enemy.agility)
+                    hero.Attack(enemy);
+                //continue battle
+                bool areAlive = true;
+                while (areAlive)
+                {
+                    //enemy attacks
+                    enemy.Attack(hero);
+                    if (hero.IsDead())
+                        areAlive = false;
+                    //hero attacks
+                    hero.Attack(enemy);
+                    if (enemy.IsDead())
+                        areAlive = false;
+                }
+
+                //check hero
+                if (hero.IsDead())
+                {
+                    GameOver();
+                    break;
+                }
+            }
+        }
+
+        private static void CreateEnemies()
+        {
+            enemies = new List<Enemy>();
+
+            //Test
+            enemies.Add(new Enemy());
+        }
+
+        private static void GameOver()
+        {
+            MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
         }
     }
 }

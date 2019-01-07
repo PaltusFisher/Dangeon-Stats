@@ -22,6 +22,10 @@ namespace DUNGEON
 
         private void DungeonButton_Click(object sender, EventArgs e)
         {
+            //Enter
+            Game.EnterDangeon();
+            UpdateHealth();
+
             //Up EXP
             Game.hero.currentEXP += 20;
 
@@ -41,8 +45,11 @@ namespace DUNGEON
 
         private void LevelUp()
         {
+            Game.hero.RestoreHealth();
+            UpdateHealth();
+
             LevelLabel.Text = Convert.ToString(++Game.hero.level);
-            SkillPoints.Text = Convert.ToString(++Game.skillPoints);
+            SkillPoints.Text = Convert.ToString(++Game.hero.skillPoints);
 
             Game.hero.currentEXP -= Game.hero.maxEXP;
             Game.hero.maxEXP += 50 * Game.hero.level;
@@ -286,7 +293,7 @@ namespace DUNGEON
 
         private void MinusSkillPoints()
         {
-            SkillPoints.Text = Convert.ToString(--Game.skillPoints);
+            SkillPoints.Text = Convert.ToString(--Game.hero.skillPoints);
         }
 
         private void ExitButton_Click(object sender, EventArgs e)

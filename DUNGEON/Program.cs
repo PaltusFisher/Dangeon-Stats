@@ -17,8 +17,8 @@ namespace DUNGEON
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            
-            Game game = new Game();
+
+            Game.GameInitiate();
 
             Application.Run(new Form1());
         }
