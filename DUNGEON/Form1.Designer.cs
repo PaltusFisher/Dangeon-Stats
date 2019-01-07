@@ -80,21 +80,21 @@
             // DungeonButton
             // 
             this.DungeonButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.DungeonButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.DungeonButton.BackColor = System.Drawing.Color.Maroon;
             this.DungeonButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.DungeonButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DungeonButton.FlatAppearance.BorderColor = System.Drawing.Color.Lime;
-            this.DungeonButton.FlatAppearance.BorderSize = 0;
+            this.DungeonButton.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.DungeonButton.FlatAppearance.BorderSize = 2;
             this.DungeonButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DungeonButton.Font = new System.Drawing.Font("Castellar", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DungeonButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.DungeonButton.Location = new System.Drawing.Point(549, 512);
+            this.DungeonButton.Font = new System.Drawing.Font("Castellar", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DungeonButton.ForeColor = System.Drawing.Color.Gold;
+            this.DungeonButton.Location = new System.Drawing.Point(555, 603);
             this.DungeonButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.DungeonButton.Name = "DungeonButton";
-            this.DungeonButton.Size = new System.Drawing.Size(241, 86);
+            this.DungeonButton.Size = new System.Drawing.Size(244, 40);
             this.DungeonButton.TabIndex = 0;
             this.DungeonButton.Text = "Отправиться в подземелье";
-            this.DungeonButton.UseVisualStyleBackColor = true;
+            this.DungeonButton.UseVisualStyleBackColor = false;
             this.DungeonButton.Click += new System.EventHandler(this.DungeonButton_Click);
             // 
             // ExitButton
@@ -161,7 +161,10 @@
             // 
             // HeadInventory
             // 
+            this.HeadInventory.BackColor = System.Drawing.Color.Gold;
             this.HeadInventory.DisplayMember = "name";
+            this.HeadInventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.HeadInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.HeadInventory.Font = new System.Drawing.Font("Castellar", 9.75F);
             this.HeadInventory.FormattingEnabled = true;
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
@@ -465,7 +468,10 @@
             // 
             // ArmorInventory
             // 
+            this.ArmorInventory.BackColor = System.Drawing.Color.Gold;
             this.ArmorInventory.DisplayMember = "name";
+            this.ArmorInventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ArmorInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ArmorInventory.FormattingEnabled = true;
             this.ArmorInventory.Location = new System.Drawing.Point(304, 273);
             this.ArmorInventory.Name = "ArmorInventory";
@@ -475,7 +481,10 @@
             // 
             // LegsInventory
             // 
+            this.LegsInventory.BackColor = System.Drawing.Color.Gold;
             this.LegsInventory.DisplayMember = "name";
+            this.LegsInventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.LegsInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.LegsInventory.FormattingEnabled = true;
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Name = "LegsInventory";
@@ -485,7 +494,10 @@
             // 
             // SwordsInventory
             // 
+            this.SwordsInventory.BackColor = System.Drawing.Color.Gold;
             this.SwordsInventory.DisplayMember = "name";
+            this.SwordsInventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SwordsInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SwordsInventory.FormattingEnabled = true;
             this.SwordsInventory.Location = new System.Drawing.Point(304, 387);
             this.SwordsInventory.Name = "SwordsInventory";
@@ -495,7 +507,10 @@
             // 
             // ShieldsInventory
             // 
+            this.ShieldsInventory.BackColor = System.Drawing.Color.Gold;
             this.ShieldsInventory.DisplayMember = "name";
+            this.ShieldsInventory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ShieldsInventory.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.ShieldsInventory.FormattingEnabled = true;
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 443);
             this.ShieldsInventory.Name = "ShieldsInventory";
@@ -585,9 +600,9 @@
             this.PlusDungeonLevel.FlatAppearance.BorderSize = 0;
             this.PlusDungeonLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusDungeonLevel.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusDungeonLevel.Location = new System.Drawing.Point(745, 491);
+            this.PlusDungeonLevel.Location = new System.Drawing.Point(523, 491);
             this.PlusDungeonLevel.Name = "PlusDungeonLevel";
-            this.PlusDungeonLevel.Size = new System.Drawing.Size(13, 14);
+            this.PlusDungeonLevel.Size = new System.Drawing.Size(235, 19);
             this.PlusDungeonLevel.TabIndex = 44;
             this.PlusDungeonLevel.UseVisualStyleBackColor = false;
             this.PlusDungeonLevel.Click += new System.EventHandler(this.PlusDungeonLevel_Click);

@@ -39,7 +39,6 @@ namespace DUNGEON
 
             //Add in inventory
             Game.Inventory.AddHead(new Item("head" + Convert.ToString(Game.Inventory.heads.Count)));
-            Game.Inventory.AddHead(new Item("head" + Convert.ToString(Game.Inventory.heads.Count)));
             Game.Inventory.AddArmor(new Item("armor" + Convert.ToString(Game.Inventory.armors.Count)));
             Game.Inventory.AddSword(new Item("sword" + Convert.ToString(Game.Inventory.swords.Count)));
             UpdateInventory();
@@ -57,14 +56,19 @@ namespace DUNGEON
 
         private void UpdateInventory()
         {
-            HeadInventory.DataSource = null;
-            HeadInventory.DataSource = Game.Inventory.heads;
-            HeadInventory.DisplayMember = "name";
-            HeadInventory.ValueMember = "name";
-            ArmorInventory.DataSource = Game.Inventory.armors;
-            LegsInventory.DataSource = Game.Inventory.legs;
-            SwordsInventory.DataSource = Game.Inventory.swords;
-            ShieldsInventory.DataSource = Game.Inventory.shields;
+            UpdateInventoryDataSource(HeadInventory, Game.Inventory.heads);
+            UpdateInventoryDataSource(ArmorInventory, Game.Inventory.armors);
+            UpdateInventoryDataSource(LegsInventory, Game.Inventory.legs);
+            UpdateInventoryDataSource(SwordsInventory, Game.Inventory.swords);
+            UpdateInventoryDataSource(ShieldsInventory, Game.Inventory.shields);
+        }
+
+        private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
+        {
+            box.DataSource = null;
+            box.DataSource = source;
+            box.DisplayMember = "name";
+            box.ValueMember = "name";
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -106,7 +110,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.additionalGold += 0.1f;
-                AdditionalGoldLabel.Text = "+" + Convert.ToString(100 + Game.hero.additionalGold * 100) + "%";
+                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.additionalGold * 100)) + "%";
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -144,7 +148,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.luck += 0.01f;
-                LuckLabel.Text = Convert.ToString(Game.hero.luck * 100) + "%";
+                LuckLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.luck * 100)) + "%";
                 LuckLevel.Text = Convert.ToString(Convert.ToInt16(LuckLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -172,7 +176,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.block += 0.01f;
-                BlockLabel.Text = Convert.ToString(Game.hero.block * 100) + "%";
+                BlockLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.block * 100)) + "%";
                 BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -200,7 +204,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.agility += 0.05f;
-                AgilityLabel.Text = Convert.ToString(Game.hero.agility * 100) + "%";
+                AgilityLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.agility * 100)) + "%";
                 AgilityLevel.Text = Convert.ToString(Convert.ToInt16(AgilityLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -214,7 +218,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.critAdditionalDamage += 0.2f;
-                CritAdditionalDamageLabel.Text = "+" + Convert.ToString(100 + Game.hero.critAdditionalDamage * 100) + "%";
+                CritAdditionalDamageLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
                 CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -228,7 +232,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.critChance += 0.05f;
-                CritChanceLabel.Text = Convert.ToString(Game.hero.critChance * 100) + "%";
+                CritChanceLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.critChance * 100)) + "%";
                 CritChanceLevel.Text = Convert.ToString(Convert.ToInt16(CritChanceLevel.Text) + 1);
 
                 PlusCursorsController();

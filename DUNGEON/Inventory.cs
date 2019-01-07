@@ -16,23 +16,23 @@ namespace DUNGEON
 
         public void AddHead(Item head)
         {
-            heads.Add(head);
+            heads.Insert(0, head);
         }
         public void AddArmor(Item armor)
         {
-            armors.Add(armor);
+            armors.Insert(0, armor);
         }
         public void AddLeg(Item leg)
         {
-            legs.Add(leg);
+            legs.Insert(0, leg);
         }
         public void AddSword(Item sword)
         {
-            swords.Add(sword);
+            swords.Insert(0, sword);
         }
         public void AddShield(Item shield)
         {
-            shields.Add(shield);
+            shields.Insert(0, shield);
         }
     }
 }
