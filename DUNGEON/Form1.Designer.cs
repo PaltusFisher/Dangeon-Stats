@@ -178,7 +178,8 @@
             // 
             this.PlusAdditionalGold.BackColor = System.Drawing.Color.Transparent;
             this.PlusAdditionalGold.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusAdditionalGold.FlatAppearance.BorderSize = 0;
+            this.PlusAdditionalGold.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusAdditionalGold.FlatAppearance.BorderSize = 2;
             this.PlusAdditionalGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusAdditionalGold.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlusAdditionalGold.Location = new System.Drawing.Point(776, 112);
@@ -192,10 +193,11 @@
             // 
             this.PlusLuck.BackColor = System.Drawing.Color.Transparent;
             this.PlusLuck.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusLuck.FlatAppearance.BorderSize = 0;
+            this.PlusLuck.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusLuck.FlatAppearance.BorderSize = 2;
             this.PlusLuck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusLuck.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusLuck.Location = new System.Drawing.Point(777, 140);
+            this.PlusLuck.Location = new System.Drawing.Point(776, 140);
             this.PlusLuck.Name = "PlusLuck";
             this.PlusLuck.Size = new System.Drawing.Size(13, 14);
             this.PlusLuck.TabIndex = 7;
@@ -206,10 +208,11 @@
             // 
             this.PlusAdditionalHP.BackColor = System.Drawing.Color.Transparent;
             this.PlusAdditionalHP.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusAdditionalHP.FlatAppearance.BorderSize = 0;
+            this.PlusAdditionalHP.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusAdditionalHP.FlatAppearance.BorderSize = 2;
             this.PlusAdditionalHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusAdditionalHP.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusAdditionalHP.Location = new System.Drawing.Point(777, 170);
+            this.PlusAdditionalHP.Location = new System.Drawing.Point(776, 169);
             this.PlusAdditionalHP.Name = "PlusAdditionalHP";
             this.PlusAdditionalHP.Size = new System.Drawing.Size(13, 14);
             this.PlusAdditionalHP.TabIndex = 8;
@@ -220,7 +223,8 @@
             // 
             this.PlusDefence.BackColor = System.Drawing.Color.Transparent;
             this.PlusDefence.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusDefence.FlatAppearance.BorderSize = 0;
+            this.PlusDefence.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusDefence.FlatAppearance.BorderSize = 2;
             this.PlusDefence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusDefence.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlusDefence.Location = new System.Drawing.Point(776, 195);
@@ -234,10 +238,11 @@
             // 
             this.PlusPower.BackColor = System.Drawing.Color.Transparent;
             this.PlusPower.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusPower.FlatAppearance.BorderSize = 0;
+            this.PlusPower.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusPower.FlatAppearance.BorderSize = 2;
             this.PlusPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusPower.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusPower.Location = new System.Drawing.Point(777, 253);
+            this.PlusPower.Location = new System.Drawing.Point(776, 253);
             this.PlusPower.Name = "PlusPower";
             this.PlusPower.Size = new System.Drawing.Size(13, 14);
             this.PlusPower.TabIndex = 10;
@@ -248,10 +253,11 @@
             // 
             this.PlusAgility.BackColor = System.Drawing.Color.Transparent;
             this.PlusAgility.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusAgility.FlatAppearance.BorderSize = 0;
+            this.PlusAgility.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusAgility.FlatAppearance.BorderSize = 2;
             this.PlusAgility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusAgility.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusAgility.Location = new System.Drawing.Point(777, 283);
+            this.PlusAgility.Location = new System.Drawing.Point(776, 281);
             this.PlusAgility.Name = "PlusAgility";
             this.PlusAgility.Size = new System.Drawing.Size(13, 14);
             this.PlusAgility.TabIndex = 11;
@@ -262,7 +268,8 @@
             // 
             this.PlusCritChance.BackColor = System.Drawing.Color.Transparent;
             this.PlusCritChance.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusCritChance.FlatAppearance.BorderSize = 0;
+            this.PlusCritChance.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusCritChance.FlatAppearance.BorderSize = 2;
             this.PlusCritChance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusCritChance.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlusCritChance.Location = new System.Drawing.Point(776, 310);
@@ -280,7 +287,7 @@
             this.AdditionalGoldLabel.Name = "AdditionalGoldLabel";
             this.AdditionalGoldLabel.Size = new System.Drawing.Size(85, 20);
             this.AdditionalGoldLabel.TabIndex = 14;
-            this.AdditionalGoldLabel.Text = "+100%";
+            this.AdditionalGoldLabel.Text = "+0%";
             // 
             // LuckLabel
             // 
@@ -360,7 +367,7 @@
             this.CritAdditionalDamageLabel.Name = "CritAdditionalDamageLabel";
             this.CritAdditionalDamageLabel.Size = new System.Drawing.Size(85, 20);
             this.CritAdditionalDamageLabel.TabIndex = 22;
-            this.CritAdditionalDamageLabel.Text = "+150%";
+            this.CritAdditionalDamageLabel.Text = "150%";
             // 
             // AdditionalGoldLevel
             // 
@@ -456,7 +463,8 @@
             // 
             this.PlusBlock.BackColor = System.Drawing.Color.Transparent;
             this.PlusBlock.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusBlock.FlatAppearance.BorderSize = 0;
+            this.PlusBlock.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusBlock.FlatAppearance.BorderSize = 2;
             this.PlusBlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusBlock.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PlusBlock.Location = new System.Drawing.Point(776, 225);
@@ -597,12 +605,13 @@
             // 
             this.PlusDungeonLevel.BackColor = System.Drawing.Color.Transparent;
             this.PlusDungeonLevel.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusDungeonLevel.FlatAppearance.BorderSize = 0;
+            this.PlusDungeonLevel.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusDungeonLevel.FlatAppearance.BorderSize = 2;
             this.PlusDungeonLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusDungeonLevel.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusDungeonLevel.Location = new System.Drawing.Point(523, 491);
+            this.PlusDungeonLevel.Location = new System.Drawing.Point(523, 486);
             this.PlusDungeonLevel.Name = "PlusDungeonLevel";
-            this.PlusDungeonLevel.Size = new System.Drawing.Size(235, 19);
+            this.PlusDungeonLevel.Size = new System.Drawing.Size(238, 24);
             this.PlusDungeonLevel.TabIndex = 44;
             this.PlusDungeonLevel.UseVisualStyleBackColor = false;
             this.PlusDungeonLevel.Click += new System.EventHandler(this.PlusDungeonLevel_Click);
@@ -623,21 +632,26 @@
             // 
             this.PlusCritAdditionalDamage.BackColor = System.Drawing.Color.Transparent;
             this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 0;
+            this.PlusCritAdditionalDamage.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
+            this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 2;
             this.PlusCritAdditionalDamage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PlusCritAdditionalDamage.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusCritAdditionalDamage.Location = new System.Drawing.Point(777, 341);
+            this.PlusCritAdditionalDamage.Location = new System.Drawing.Point(776, 339);
             this.PlusCritAdditionalDamage.Name = "PlusCritAdditionalDamage";
             this.PlusCritAdditionalDamage.Size = new System.Drawing.Size(13, 14);
             this.PlusCritAdditionalDamage.TabIndex = 46;
             this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
+            this.PlusCritAdditionalDamage.Click += new System.EventHandler(this.PlusCritAdditionalDamage_Click);
             // 
             // Form1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.Color.Gold;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
+            this.ControlBox = false;
             this.Controls.Add(this.PlusCritAdditionalDamage);
             this.Controls.Add(this.GoldNeedToUpgradeLabel);
             this.Controls.Add(this.PlusDungeonLevel);
@@ -686,7 +700,7 @@
             this.Controls.Add(this.DungeonButton);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Castellar", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

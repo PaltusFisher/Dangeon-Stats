@@ -110,7 +110,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.additionalGold += 0.1f;
-                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.additionalGold * 100)) + "%";
+                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(Game.hero.additionalGold * 100)) + "%";
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -218,7 +218,7 @@ namespace DUNGEON
                 MinusSkillPoints();
 
                 Game.hero.critAdditionalDamage += 0.2f;
-                CritAdditionalDamageLabel.Text = "+" + Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+                CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
                 CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
 
                 PlusCursorsController();
