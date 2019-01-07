@@ -42,7 +42,6 @@
             this.PlusPower = new System.Windows.Forms.Button();
             this.PlusAgility = new System.Windows.Forms.Button();
             this.PlusCritChance = new System.Windows.Forms.Button();
-            this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.AdditionalGoldLabel = new System.Windows.Forms.Label();
             this.LuckLabel = new System.Windows.Forms.Label();
             this.AdditionalHPLabel = new System.Windows.Forms.Label();
@@ -73,6 +72,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.SkillPoints = new System.Windows.Forms.Label();
+            this.PlusDungeonLevel = new System.Windows.Forms.Button();
+            this.GoldNeedToUpgradeLabel = new System.Windows.Forms.Label();
+            this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -106,10 +108,10 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(842, 26);
+            this.ExitButton.Location = new System.Drawing.Point(839, 22);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(18, 28);
+            this.ExitButton.Size = new System.Drawing.Size(23, 44);
             this.ExitButton.TabIndex = 1;
             this.ExitButton.Text = "x";
             this.ExitButton.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -159,6 +161,7 @@
             // 
             // HeadInventory
             // 
+            this.HeadInventory.DisplayMember = "name";
             this.HeadInventory.Font = new System.Drawing.Font("Castellar", 9.75F);
             this.HeadInventory.FormattingEnabled = true;
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
@@ -265,20 +268,6 @@
             this.PlusCritChance.TabIndex = 12;
             this.PlusCritChance.UseVisualStyleBackColor = false;
             this.PlusCritChance.Click += new System.EventHandler(this.PlusCritChance_Click);
-            // 
-            // PlusCritAdditionalDamage
-            // 
-            this.PlusCritAdditionalDamage.BackColor = System.Drawing.Color.Transparent;
-            this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.No;
-            this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 0;
-            this.PlusCritAdditionalDamage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PlusCritAdditionalDamage.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusCritAdditionalDamage.Location = new System.Drawing.Point(776, 339);
-            this.PlusCritAdditionalDamage.Name = "PlusCritAdditionalDamage";
-            this.PlusCritAdditionalDamage.Size = new System.Drawing.Size(13, 14);
-            this.PlusCritAdditionalDamage.TabIndex = 13;
-            this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
-            this.PlusCritAdditionalDamage.Click += new System.EventHandler(this.PlusCritAdditionalDamage_Click);
             // 
             // AdditionalGoldLabel
             // 
@@ -589,12 +578,54 @@
             this.SkillPoints.TabIndex = 43;
             this.SkillPoints.Text = "0";
             // 
+            // PlusDungeonLevel
+            // 
+            this.PlusDungeonLevel.BackColor = System.Drawing.Color.Transparent;
+            this.PlusDungeonLevel.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusDungeonLevel.FlatAppearance.BorderSize = 0;
+            this.PlusDungeonLevel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusDungeonLevel.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusDungeonLevel.Location = new System.Drawing.Point(745, 491);
+            this.PlusDungeonLevel.Name = "PlusDungeonLevel";
+            this.PlusDungeonLevel.Size = new System.Drawing.Size(13, 14);
+            this.PlusDungeonLevel.TabIndex = 44;
+            this.PlusDungeonLevel.UseVisualStyleBackColor = false;
+            this.PlusDungeonLevel.Click += new System.EventHandler(this.PlusDungeonLevel_Click);
+            // 
+            // GoldNeedToUpgradeLabel
+            // 
+            this.GoldNeedToUpgradeLabel.BackColor = System.Drawing.Color.Transparent;
+            this.GoldNeedToUpgradeLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoldNeedToUpgradeLabel.ForeColor = System.Drawing.Color.Gold;
+            this.GoldNeedToUpgradeLabel.Location = new System.Drawing.Point(806, 486);
+            this.GoldNeedToUpgradeLabel.Name = "GoldNeedToUpgradeLabel";
+            this.GoldNeedToUpgradeLabel.Size = new System.Drawing.Size(78, 24);
+            this.GoldNeedToUpgradeLabel.TabIndex = 45;
+            this.GoldNeedToUpgradeLabel.Text = "500";
+            this.GoldNeedToUpgradeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // PlusCritAdditionalDamage
+            // 
+            this.PlusCritAdditionalDamage.BackColor = System.Drawing.Color.Transparent;
+            this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 0;
+            this.PlusCritAdditionalDamage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlusCritAdditionalDamage.Font = new System.Drawing.Font("", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlusCritAdditionalDamage.Location = new System.Drawing.Point(777, 341);
+            this.PlusCritAdditionalDamage.Name = "PlusCritAdditionalDamage";
+            this.PlusCritAdditionalDamage.Size = new System.Drawing.Size(13, 14);
+            this.PlusCritAdditionalDamage.TabIndex = 46;
+            this.PlusCritAdditionalDamage.UseVisualStyleBackColor = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
+            this.Controls.Add(this.PlusCritAdditionalDamage);
+            this.Controls.Add(this.GoldNeedToUpgradeLabel);
+            this.Controls.Add(this.PlusDungeonLevel);
             this.Controls.Add(this.SkillPoints);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -625,7 +656,6 @@
             this.Controls.Add(this.AdditionalHPLabel);
             this.Controls.Add(this.LuckLabel);
             this.Controls.Add(this.AdditionalGoldLabel);
-            this.Controls.Add(this.PlusCritAdditionalDamage);
             this.Controls.Add(this.PlusCritChance);
             this.Controls.Add(this.PlusAgility);
             this.Controls.Add(this.PlusPower);
@@ -667,7 +697,6 @@
         private System.Windows.Forms.Button PlusPower;
         private System.Windows.Forms.Button PlusAgility;
         private System.Windows.Forms.Button PlusCritChance;
-        private System.Windows.Forms.Button PlusCritAdditionalDamage;
         private System.Windows.Forms.Label AdditionalGoldLabel;
         private System.Windows.Forms.Label LuckLabel;
         private System.Windows.Forms.Label AdditionalHPLabel;
@@ -698,6 +727,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label SkillPoints;
+        private System.Windows.Forms.Button PlusDungeonLevel;
+        private System.Windows.Forms.Label GoldNeedToUpgradeLabel;
+        private System.Windows.Forms.Button PlusCritAdditionalDamage;
     }
 }
 

@@ -26,7 +26,7 @@ namespace DUNGEON
             LevelUp();
 
             GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) + 50);
-            if (Convert.ToInt16(GoldLabel.Text) >= Convert.ToInt16(GoldNeedToUpgrateLabel.Text))
+            if (Convert.ToInt16(GoldLabel.Text) >= Convert.ToInt16(GoldNeedToUpgradeLabel.Text))
                 PlusDungeonLevel.Cursor = Cursors.Hand;
             //
 
@@ -265,10 +265,10 @@ namespace DUNGEON
         {
             if (PlusDungeonLevel.Cursor == Cursors.Hand)
             {
-                GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) - Convert.ToInt16(GoldNeedToUpgrateLabel.Text));
-                GoldNeedToUpgrateLabel.Text = Convert.ToString(Convert.ToInt16(GoldNeedToUpgrateLabel.Text) + Game.hero.additionalGoldNeedToUpgrate);
+                GoldLabel.Text = Convert.ToString(Convert.ToInt16(GoldLabel.Text) - Convert.ToInt16(GoldNeedToUpgradeLabel.Text));
+                GoldNeedToUpgradeLabel.Text = Convert.ToString(Convert.ToInt16(GoldNeedToUpgradeLabel.Text) + Game.hero.additionalGoldNeedToUpgrate);
 
-                if (Convert.ToInt16(GoldLabel.Text) < Convert.ToInt16(GoldNeedToUpgrateLabel.Text))
+                if (Convert.ToInt16(GoldLabel.Text) < Convert.ToInt16(GoldNeedToUpgradeLabel.Text))
                     PlusDungeonLevel.Cursor = Cursors.No;
 
                
