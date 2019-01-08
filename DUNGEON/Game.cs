@@ -41,7 +41,8 @@ namespace DUNGEON
                 while (areAlive)
                 {
                     //enemy attacks
-                    enemy.Attack(hero);
+                    if (!hero.Block())
+                        enemy.Attack(hero);
                     if (hero.IsDead())
                         areAlive = false;
                     //hero attacks
@@ -65,6 +66,8 @@ namespace DUNGEON
 
             //Test
             enemies.Add(new Enemy());
+            enemies[0].UpFromHero(hero);
+            enemies[0].UpFromDangeon(dangeon);
         }
 
         private static void GameOver()

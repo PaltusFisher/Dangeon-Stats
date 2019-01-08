@@ -32,7 +32,7 @@ namespace DUNGEON
             if (Game.hero.currentEXP >= Game.hero.maxEXP)
                 LevelUp();
             else
-                UpdateEXP();
+                UpdateEXP(); 
 
 
             Game.hero.gold += 50;
@@ -209,8 +209,8 @@ namespace DUNGEON
             {
                 MinusSkillPoints();
 
-                Game.hero.block += 0.01f;
-                BlockLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.block * 100)) + "%";
+                Game.hero.block += 1;
+                BlockLabel.Text = Convert.ToString(Game.hero.block) + "%";
                 BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -237,8 +237,8 @@ namespace DUNGEON
             {
                 MinusSkillPoints();
 
-                Game.hero.agility += 0.05f;
-                AgilityLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.agility * 100)) + "%";
+                Game.hero.agility += 5;
+                AgilityLabel.Text = Convert.ToString(Game.hero.agility) + "%";
                 AgilityLevel.Text = Convert.ToString(Convert.ToInt16(AgilityLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -267,8 +267,8 @@ namespace DUNGEON
             {
                 MinusSkillPoints();
 
-                Game.hero.critChance += 0.05f;
-                CritChanceLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.critChance * 100)) + "%";
+                Game.hero.critChance += 5;
+                CritChanceLabel.Text = Convert.ToString(Game.hero.critChance) + "%";
                 CritChanceLevel.Text = Convert.ToString(Convert.ToInt16(CritChanceLevel.Text) + 1);
 
                 PlusCursorsController();
