@@ -40,7 +40,7 @@ namespace DUNGEON
         public int skillPoints = 0;
 
         public int currentEXP = 0;
-        public int maxEXP = 100;
+        public int maxEXP = 50;
         public int level = 0;
 
         public int additionalHP = 0;

@@ -52,7 +52,7 @@ namespace DUNGEON
             SkillPoints.Text = Convert.ToString(++Game.hero.skillPoints);
 
             Game.hero.currentEXP -= Game.hero.maxEXP;
-            Game.hero.maxEXP += 50 * Game.hero.level;
+            Game.hero.maxEXP += 20 * Game.hero.level;
             UpdateEXP();
 
             //Add in inventory
@@ -277,7 +277,7 @@ namespace DUNGEON
 
         private void PlusCursorsController()
         {
-            if (Game.skillPoints == 0)
+            if (Game.hero.skillPoints == 0)
             {
                 PlusAdditionalGold.Cursor = Cursors.No;
                 PlusAdditionalHP.Cursor = Cursors.No;

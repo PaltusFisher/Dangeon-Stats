@@ -9,7 +9,7 @@ namespace DUNGEON
 {
     public static class Game
     {
-        public static int skillPoints;
+       // public static int skillPoints;
 
         public static Hero hero;
         public static Inventory inventory;
@@ -32,8 +32,10 @@ namespace DUNGEON
             foreach (Enemy enemy in enemies)
             {
                 //first move
-                if (hero.agility >= enemy.agility)
+                if (hero.agility > enemy.agility)
                     hero.Attack(enemy);
+                
+               
                 //continue battle
                 bool areAlive = true;
                 while (areAlive)
@@ -67,7 +69,10 @@ namespace DUNGEON
 
         private static void GameOver()
         {
-            MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
+            DialogResult result = MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
+            if (result == DialogResult.OK)
+                System.Windows.Forms.Application.Exit();
+            //потом заменить на выбор yes no для рестарта игры
         }
     }
 }
