@@ -15,6 +15,20 @@ namespace DUNGEON
         public Form2()
         {
             InitializeComponent();
+            //
+            Game.enemies.Add(new Enemy());
+            Game.enemies[0].UpFromHero(Game.hero);
+            Game.enemies[0].UpFromDangeon(Game.dangeon);
+            //
+
+            this.EnemyHPLabel.Text = Convert.ToString(Game.enemies[0].maxHP);
+            this.EnemyPowerLabel.Text = Convert.ToString(Game.enemies[0].power);
+            this.EnemyDefenceLabel.Text = Convert.ToString(Game.enemies[0].defence);
+            this.EnemyAgilityLabel.Text = Convert.ToString(Game.enemies[0].agility);
+            this.EnemyCritAdditionalDamageLabel.Text = Convert.ToString(Game.enemies[0].critAdditionalDamage);
+            this.EnemyCritChanceLabel.Text = Convert.ToString(Game.enemies[0].critChance);
+
+            Game.enemies.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)

@@ -216,7 +216,7 @@ namespace DUNGEON
             {
                 MinusSkillPoints(); 
 
-                Game.hero.block += 20;
+                Game.hero.block += 3;
                 BlockLabel.Text = Convert.ToString(Game.hero.block) + "%";
                 BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
 
@@ -325,9 +325,13 @@ namespace DUNGEON
             }
         }
 
+        Form2 newForm;
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 newForm = new Form2();
+            if (newForm != null)
+                newForm.Close();
+
+            newForm = new Form2();
             newForm.Show();
         }
     }
