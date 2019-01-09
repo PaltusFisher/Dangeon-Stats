@@ -29,3 +29,4 @@ C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csproj.Cor
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.exe
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.pdb
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Form2.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Form2.resources
