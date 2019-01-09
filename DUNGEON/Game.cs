@@ -58,6 +58,8 @@ namespace DUNGEON
                     break;
                 }
             }
+            //clear enemy list
+            enemies.Clear();
         }
 
         private static void CreateEnemies()
