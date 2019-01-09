@@ -23,6 +23,7 @@ namespace DUNGEON
             hero = new Hero();
             inventory = new Inventory();
             dangeon = new Dangeon();
+            enemies = new List<Enemy>();
         }
 
         public static void EnterDangeon()
@@ -59,12 +60,11 @@ namespace DUNGEON
                 }
             }
             enemies.Clear();
-
         }
 
         private static void CreateEnemies()
         {
-            enemies = new List<Enemy>();
+            
 
             //Test
             enemies.Add(new Enemy());

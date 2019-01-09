@@ -78,27 +78,27 @@ namespace DUNGEON
         public Enemy()
         {
             defence = 1;
-            maxHP = 16;
+            maxHP = 11;
             currentHP = maxHP;
             power = 3;
             agility = 0;
-            critChance = 10;
+            critChance = 5;
             critAdditionalDamage = 0.1f;
         }
 
         public void UpFromHero(Hero hero)
         {
-            maxHP += 2 * hero.level;
+            maxHP += 1 * hero.level;
             currentHP = maxHP;
-            defence += 1 * hero.level;
+            defence += hero.level;
             power += 1 * hero.level;
         }
 
         public void UpFromDangeon(Dangeon dangeon)
         {
-            maxHP += 4 * dangeon.level;
+            maxHP += 2 * dangeon.level;
             currentHP = maxHP;
-            defence += 2 * dangeon.level;
+            defence += 1 * dangeon.level;
             power += 2 * dangeon.level;
             agility += 10 * dangeon.level;
             critChance += 4 * dangeon.level;

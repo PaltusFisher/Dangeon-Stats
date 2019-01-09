@@ -127,10 +127,10 @@
             this.textBox1.BackColor = System.Drawing.Color.Tan;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Calibri Light", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Location = new System.Drawing.Point(132, 83);
+            this.textBox1.Location = new System.Drawing.Point(132, 86);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 29);
+            this.textBox1.Size = new System.Drawing.Size(88, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -174,7 +174,7 @@
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Margin = new System.Windows.Forms.Padding(2);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(122, 27);
+            this.HeadInventory.Size = new System.Drawing.Size(122, 24);
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
@@ -516,7 +516,7 @@
             this.ArmorInventory.Location = new System.Drawing.Point(304, 272);
             this.ArmorInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(122, 27);
+            this.ArmorInventory.Size = new System.Drawing.Size(122, 24);
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
@@ -531,7 +531,7 @@
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(122, 27);
+            this.LegsInventory.Size = new System.Drawing.Size(122, 24);
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
@@ -546,7 +546,7 @@
             this.SwordsInventory.Location = new System.Drawing.Point(304, 388);
             this.SwordsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(122, 27);
+            this.SwordsInventory.Size = new System.Drawing.Size(122, 24);
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
@@ -561,7 +561,7 @@
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 442);
             this.ShieldsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(122, 27);
+            this.ShieldsInventory.Size = new System.Drawing.Size(122, 24);
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
@@ -620,7 +620,7 @@
             this.label3.Location = new System.Drawing.Point(304, 104);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 29);
+            this.label3.Size = new System.Drawing.Size(39, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 

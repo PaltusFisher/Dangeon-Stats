@@ -35,7 +35,7 @@ namespace DUNGEON
                 UpdateEXP(); 
 
 
-            Game.hero.gold += 30 + 10 * Game.dangeon.level;
+            Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Game.hero.additionalGold + 1));
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
             if (Game.hero.gold >= Game.dangeon.goldToUpgrade)
                 PlusDungeonLevel.Cursor = Cursors.Hand;
