@@ -23,9 +23,12 @@ namespace DUNGEON
 
         public void Attack(Character opponent)
         {
+            int _damage = 0;
             if (rnd.Next(1, 101) <= critChance)
-                power += Convert.ToInt16(power * critAdditionalDamage);
-            int _damage = power - opponent.defence;
+                _damage += Convert.ToInt16(power * critAdditionalDamage);// + power - opponent.defence;
+            else
+                _damage += power - opponent.defence;
+            // int _damage = power - opponent.defence;
             if (_damage > 0)
                 opponent.currentHP -= _damage;
         }

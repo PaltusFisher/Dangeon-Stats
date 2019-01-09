@@ -8,7 +8,7 @@ namespace DUNGEON
 {
     public class Dangeon
     {
-        public int level = 0;
+        public  int level = 0;
 
         public int goldToUpgrade = 500;
         public int additionalCost = 100;

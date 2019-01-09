@@ -27,7 +27,7 @@ namespace DUNGEON
             UpdateHealth();
 
             //Up EXP
-            Game.hero.currentEXP += 20;
+            Game.hero.currentEXP += 20 + 5 * Game.dangeon.level;
 
             if (Game.hero.currentEXP >= Game.hero.maxEXP)
                 LevelUp();
@@ -35,7 +35,7 @@ namespace DUNGEON
                 UpdateEXP(); 
 
 
-            Game.hero.gold += 50;
+            Game.hero.gold += 30 + 10 * Game.dangeon.level;
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
             if (Game.hero.gold >= Game.dangeon.goldToUpgrade)
                 PlusDungeonLevel.Cursor = Cursors.Hand;
@@ -52,7 +52,7 @@ namespace DUNGEON
             SkillPoints.Text = Convert.ToString(++Game.hero.skillPoints);
 
             Game.hero.currentEXP -= Game.hero.maxEXP;
-            Game.hero.maxEXP += 20 * Game.hero.level;
+            Game.hero.maxEXP += 10 * Game.hero.level;
             UpdateEXP();
 
             //Add in inventory
@@ -62,18 +62,19 @@ namespace DUNGEON
             Game.inventory.AddSword(new Item("sword "));
             Game.inventory.AddShield(new Item("shield "));
             UpdateInventory();
+
             //Boundaries
-            //if (Game.hero.additionalGold < 3)
+            if (Game.hero.additionalGold < 3)
                 PlusAdditionalGold.Cursor = Cursors.Hand;            
-            //if (Game.hero.agility < 1)
+            if (Game.hero.agility < 100)
                 PlusAgility.Cursor = Cursors.Hand;
-            //if (Game.hero.block < 0.4f)
+            if (Game.hero.block < 40)
                 PlusBlock.Cursor = Cursors.Hand;          
-            //if (Game.hero.critAdditionalDamage < 4.1f)
+            if (Game.hero.critAdditionalDamage < 4.1f)
                 PlusCritAdditionalDamage.Cursor = Cursors.Hand;
-            //if (Game.hero.critChance < 0.6f)
+            if (Game.hero.critChance < 60)
                 PlusCritChance.Cursor = Cursors.Hand;
-            //if (Game.hero.luck < 1)
+            if (Game.hero.luck < 1)
                 PlusLuck.Cursor = Cursors.Hand;
             PlusPower.Cursor = Cursors.Hand;
             PlusDefence.Cursor = Cursors.Hand;
@@ -131,7 +132,7 @@ namespace DUNGEON
 
         private void PlusAdditionalGold_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.additionalGold < 3)
             {
                 MinusSkillPoints();
 
@@ -162,7 +163,10 @@ namespace DUNGEON
         private void UpdateHealth()
         {
             HealthBar.Maximum = Game.hero.maxHP;
-            HealthBar.Value = Game.hero.currentHP;
+            if (Game.hero.currentHP < 0)
+                HealthBar.Value = 0;
+            else
+                HealthBar.Value = Game.hero.currentHP;
 
             HealthLable.Text = Convert.ToString(Game.hero.currentHP) + "/" + Convert.ToString(Game.hero.maxHP);
         }
@@ -177,7 +181,7 @@ namespace DUNGEON
 
         private void PlusLuck_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.luck < 1)
             {
                 MinusSkillPoints();
 
@@ -205,11 +209,11 @@ namespace DUNGEON
 
         private void PlusBlock_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.block < 40)
             {
-                MinusSkillPoints();
+                MinusSkillPoints(); 
 
-                Game.hero.block += 1;
+                Game.hero.block += 20;
                 BlockLabel.Text = Convert.ToString(Game.hero.block) + "%";
                 BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
 
@@ -233,7 +237,7 @@ namespace DUNGEON
 
         private void PlusAgility_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.agility < 100)
             {
                 MinusSkillPoints();
 
@@ -249,7 +253,7 @@ namespace DUNGEON
 
         private void PlusCritAdditionalDamage_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.critAdditionalDamage < 4.1f)
             {
                 MinusSkillPoints();
 
@@ -263,7 +267,7 @@ namespace DUNGEON
 
         private void PlusCritChance_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.critChance < 60)
             {
                 MinusSkillPoints();
 
