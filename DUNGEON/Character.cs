@@ -8,7 +8,7 @@ namespace DUNGEON
 {
     public class Character
     {
-        public /*static*/ Random rnd = new Random();
+        public Random rnd = new Random();
 
         public int defence = 2;
 
@@ -53,7 +53,9 @@ namespace DUNGEON
 
         public float additionalGold = 0;
 
+        public float luck = 0;
         public int block = 0;
+
         public bool Block()
         {
             if (rnd.Next(1, 101) <= block)
@@ -61,7 +63,6 @@ namespace DUNGEON
             return false;
         }
 
-        public float luck = 0;
 
         public void RestoreHealth()
         {
