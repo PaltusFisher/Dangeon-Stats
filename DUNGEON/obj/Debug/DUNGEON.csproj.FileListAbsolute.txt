@@ -28,3 +28,4 @@ C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csproj.Gen
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csproj.CoreCompileInputs.cache
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.exe
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.pdb
+C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Form2.resources

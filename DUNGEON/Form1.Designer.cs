@@ -77,6 +77,7 @@
             this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.DangeonLevelLabel = new System.Windows.Forms.Label();
             this.webVochila = new System.Windows.Forms.WebBrowser();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -129,7 +130,7 @@
             this.textBox1.Location = new System.Drawing.Point(132, 88);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 29);
+            this.textBox1.Size = new System.Drawing.Size(88, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -138,7 +139,7 @@
             // 
             this.LevelLabel.BackColor = System.Drawing.Color.Transparent;
             this.LevelLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LevelLabel.ForeColor = System.Drawing.Color.Gold;
+            this.LevelLabel.ForeColor = System.Drawing.Color.SaddleBrown;
             this.LevelLabel.Location = new System.Drawing.Point(252, 88);
             this.LevelLabel.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.LevelLabel.Name = "LevelLabel";
@@ -152,7 +153,7 @@
             // 
             this.GoldLabel.BackColor = System.Drawing.Color.Transparent;
             this.GoldLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoldLabel.ForeColor = System.Drawing.Color.Gold;
+            this.GoldLabel.ForeColor = System.Drawing.Color.SaddleBrown;
             this.GoldLabel.Location = new System.Drawing.Point(364, 88);
             this.GoldLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GoldLabel.Name = "GoldLabel";
@@ -173,7 +174,7 @@
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Margin = new System.Windows.Forms.Padding(2);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(122, 27);
+            this.HeadInventory.Size = new System.Drawing.Size(122, 24);
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
@@ -515,7 +516,7 @@
             this.ArmorInventory.Location = new System.Drawing.Point(304, 272);
             this.ArmorInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(122, 27);
+            this.ArmorInventory.Size = new System.Drawing.Size(122, 24);
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
@@ -530,7 +531,7 @@
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(122, 27);
+            this.LegsInventory.Size = new System.Drawing.Size(122, 24);
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
@@ -545,7 +546,7 @@
             this.SwordsInventory.Location = new System.Drawing.Point(304, 388);
             this.SwordsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(122, 27);
+            this.SwordsInventory.Size = new System.Drawing.Size(122, 24);
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
@@ -560,7 +561,7 @@
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 442);
             this.ShieldsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(122, 27);
+            this.ShieldsInventory.Size = new System.Drawing.Size(122, 24);
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
@@ -601,7 +602,7 @@
             // 
             this.EXPLabel.BackColor = System.Drawing.Color.Transparent;
             this.EXPLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EXPLabel.ForeColor = System.Drawing.Color.Gold;
+            this.EXPLabel.ForeColor = System.Drawing.Color.SaddleBrown;
             this.EXPLabel.Location = new System.Drawing.Point(304, 156);
             this.EXPLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EXPLabel.Name = "EXPLabel";
@@ -615,11 +616,11 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.ForeColor = System.Drawing.Color.Gold;
-            this.label3.Location = new System.Drawing.Point(304, 104);
+            this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.label3.Location = new System.Drawing.Point(304, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 29);
+            this.label3.Size = new System.Drawing.Size(39, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -627,7 +628,7 @@
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gold;
+            this.label4.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label4.Location = new System.Drawing.Point(649, 358);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
@@ -658,7 +659,7 @@
             this.PlusDungeonLevel.Location = new System.Drawing.Point(522, 486);
             this.PlusDungeonLevel.Margin = new System.Windows.Forms.Padding(2);
             this.PlusDungeonLevel.Name = "PlusDungeonLevel";
-            this.PlusDungeonLevel.Size = new System.Drawing.Size(238, 24);
+            this.PlusDungeonLevel.Size = new System.Drawing.Size(241, 24);
             this.PlusDungeonLevel.TabIndex = 44;
             this.PlusDungeonLevel.UseVisualStyleBackColor = false;
             this.PlusDungeonLevel.Click += new System.EventHandler(this.PlusDungeonLevel_Click);
@@ -668,8 +669,8 @@
             this.GoldNeedToUpgradeLabel.BackColor = System.Drawing.Color.Transparent;
             this.GoldNeedToUpgradeLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GoldNeedToUpgradeLabel.Font = new System.Drawing.Font("Castellar", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoldNeedToUpgradeLabel.ForeColor = System.Drawing.Color.Gold;
-            this.GoldNeedToUpgradeLabel.Location = new System.Drawing.Point(796, 486);
+            this.GoldNeedToUpgradeLabel.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.GoldNeedToUpgradeLabel.Location = new System.Drawing.Point(765, 486);
             this.GoldNeedToUpgradeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GoldNeedToUpgradeLabel.Name = "GoldNeedToUpgradeLabel";
             this.GoldNeedToUpgradeLabel.Size = new System.Drawing.Size(65, 24);
@@ -697,7 +698,7 @@
             // 
             this.DangeonLevelLabel.BackColor = System.Drawing.Color.Transparent;
             this.DangeonLevelLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DangeonLevelLabel.Location = new System.Drawing.Point(749, 394);
+            this.DangeonLevelLabel.Location = new System.Drawing.Point(749, 397);
             this.DangeonLevelLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DangeonLevelLabel.Name = "DangeonLevelLabel";
             this.DangeonLevelLabel.Size = new System.Drawing.Size(40, 26);
@@ -717,6 +718,20 @@
             this.webVochila.Url = new System.Uri("", System.UriKind.Relative);
             this.webVochila.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(499, 605);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(34, 34);
+            this.button1.TabIndex = 49;
+            this.button1.Text = "?";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -725,6 +740,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.webVochila);
             this.Controls.Add(this.DangeonLevelLabel);
             this.Controls.Add(this.PlusCritAdditionalDamage);
@@ -837,6 +853,7 @@
         private System.Windows.Forms.Button PlusCritAdditionalDamage;
         private System.Windows.Forms.Label DangeonLevelLabel;
         private System.Windows.Forms.WebBrowser webVochila;
+        private System.Windows.Forms.Button button1;
     }
 }
 
