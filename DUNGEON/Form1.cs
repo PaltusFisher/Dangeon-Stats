@@ -162,6 +162,9 @@ namespace DUNGEON
 
         private void UpdateHealth()
         {
+            //check minus HP
+            if (Game.hero.currentHP < 0)
+                Game.hero.currentHP = 0;
             HealthBar.Maximum = Game.hero.maxHP;
             if (Game.hero.currentHP < 0)
                 HealthBar.Value = 0;
