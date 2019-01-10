@@ -1,0 +1,13 @@
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\bin\Release\DUNGEON.exe.config
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\bin\Release\DUNGEON.exe
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\bin\Release\DUNGEON.pdb
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\bin\Release\DUNGEON.exe.CodeAnalysisLog.xml
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\bin\Release\DUNGEON.exe.lastcodeanalysissucceeded
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.csprojAssemblyReference.cache
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.Form1.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.Form2.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.Properties.Resources.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.csproj.GenerateResource.cache
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.csproj.CoreCompileInputs.cache
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.exe
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.pdb
