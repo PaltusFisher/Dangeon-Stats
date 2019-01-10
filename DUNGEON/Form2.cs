@@ -17,8 +17,8 @@ namespace DUNGEON
             InitializeComponent();
             //
             Game.enemies.Add(new Enemy());
-            Game.enemies[0].UpFromHero(Game.hero);
-            Game.enemies[0].UpFromDangeon(Game.dangeon);
+            Game.enemies[0].UpEnemy(Game.hero);
+            Game.enemies[0].UpEnemy(Game.dangeon);
             //
 
             this.EnemyHPLabel.Text = Convert.ToString(Game.enemies[0].maxHP);

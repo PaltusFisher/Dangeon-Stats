@@ -68,8 +68,8 @@ namespace DUNGEON
 
             //Test
             enemies.Add(new Enemy());
-            enemies[0].UpFromHero(hero);
-            enemies[0].UpFromDangeon(dangeon);
+            enemies[0].UpEnemy(hero);
+            enemies[0].UpEnemy(dangeon);
         }
 
         private static void GameOver()

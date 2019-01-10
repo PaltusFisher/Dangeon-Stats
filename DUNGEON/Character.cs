@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DUNGEON
 {
@@ -44,6 +45,13 @@ namespace DUNGEON
 
     public class Hero : Character
     {
+        //equipment
+        private Head _head = null;
+        private Armor _armor = null;
+        private Legs _legs = null;
+        private Sword _sword = null;
+        private Shield _shield = null;
+
         public int skillPoints = 0;
 
         public int currentEXP = 0;
@@ -66,10 +74,75 @@ namespace DUNGEON
             return false;
         }
 
-
         public void RestoreHealth()
         {
             currentHP = maxHP;
+        }
+
+        public void EquipItem(Item item)
+        {
+            //equip selected item
+            if (item.type == "Head")
+            {
+                UnEquip(_head);
+                _head = new Head(item);
+                UdateEquipment(_head);
+            }
+            else if (item.type == "Armor")
+            {
+                UnEquip(_armor);
+                _armor = new Armor(item);
+                UdateEquipment(_armor);
+            }
+            else if (item.type == "Legs")
+            {
+                UnEquip(_legs);
+                _legs = new Legs(item);
+                UdateEquipment(_legs);
+            }
+            else if (item.type == "Sword")
+            {
+                UnEquip(_sword);
+                _sword = new Sword(item);
+                UdateEquipment(_sword);
+            }
+            else if (item.type == "Shield")
+            {
+                UnEquip(_shield);
+                _shield = new Shield(item);
+                UdateEquipment(_shield);
+            }
+        }
+
+        private void UnEquip(Item item)
+        {
+            if (item != null)
+            {
+                this.additionalGold -= item.additionalGold;
+                this.luck -= item.luck;
+                this.additionalHP -= item.HP;
+                this.maxHP -= item.HP;
+                this.defence -= item.defence;
+                this.block -= item.blockChance;
+                this.power -= item.power;
+                this.agility -= item.agility;
+                this.critChance -= item.critChance;
+                this.critAdditionalDamage -= item.critDamage;
+            }
+        }
+
+        private void UdateEquipment(Item item)
+        {
+            this.additionalGold += item.additionalGold;
+            this.luck += item.luck;
+            this.additionalHP += item.HP;
+            this.maxHP += item.HP;
+            this.defence += item.defence;
+            this.block += item.blockChance;
+            this.power += item.power;
+            this.agility += item.agility;
+            this.critChance += item.critChance;
+            this.critAdditionalDamage += item.critDamage;
         }
     }
 
@@ -86,19 +159,19 @@ namespace DUNGEON
             critAdditionalDamage = 0.1f;
         }
 
-        public void UpFromHero(Hero hero)
+        public void UpEnemy(Hero hero)
         {
-            maxHP += 1 * hero.level;
+            maxHP += hero.level;
             currentHP = maxHP;
             defence += hero.level;
-            power += 1 * hero.level;
+            power += hero.level;
         }
 
-        public void UpFromDangeon(Dangeon dangeon)
+        public void UpEnemy(Dangeon dangeon)
         {
             maxHP += 2 * dangeon.level;
             currentHP = maxHP;
-            defence += 1 * dangeon.level;
+            defence += dangeon.level;
             power += 2 * dangeon.level;
             agility += 10 * dangeon.level;
             critChance += 4 * dangeon.level;

@@ -178,7 +178,7 @@
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
-            this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.HeadInventory_SelectedIndexChanged);
             // 
             // PlusAdditionalGold
             // 
@@ -520,6 +520,7 @@
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
+            this.ArmorInventory.SelectedIndexChanged += new System.EventHandler(this.ArmorInventory_SelectedIndexChanged);
             // 
             // LegsInventory
             // 
@@ -535,6 +536,7 @@
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
+            this.LegsInventory.SelectedIndexChanged += new System.EventHandler(this.LegsInventory_SelectedIndexChanged);
             // 
             // SwordsInventory
             // 
@@ -550,6 +552,7 @@
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
+            this.SwordsInventory.SelectedIndexChanged += new System.EventHandler(this.SwordsInventory_SelectedIndexChanged);
             // 
             // ShieldsInventory
             // 
@@ -565,6 +568,7 @@
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
+            this.ShieldsInventory.SelectedIndexChanged += new System.EventHandler(this.ShieldsInventory_SelectedIndexChanged);
             // 
             // HealthBar
             // 

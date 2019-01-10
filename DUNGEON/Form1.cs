@@ -56,11 +56,11 @@ namespace DUNGEON
             UpdateEXP();
 
             //Add in inventory
-            Game.inventory.AddHead(new Item("head "));
-            Game.inventory.AddArmor(new Item("armor "));
-            Game.inventory.AddLeg(new Item("legs "));
-            Game.inventory.AddSword(new Item("sword "));
-            Game.inventory.AddShield(new Item("shield "));
+            Game.inventory.AddHead(new Head("head "));
+            Game.inventory.AddArmor(new Armor("armor "));
+            Game.inventory.AddLeg(new Legs("legs "));
+            Game.inventory.AddSword(new Sword("sword "));
+            Game.inventory.AddShield(new Shield("shield "));
             UpdateInventory();
 
             //Boundaries
@@ -83,11 +83,11 @@ namespace DUNGEON
 
         private void UpdateInventory()
         {
-            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);
-            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);
-            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);
-            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);
-            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);
+            UpdateInventoryDataSource(HeadInventory, new List<Item>(Game.inventory.heads));
+            UpdateInventoryDataSource(ArmorInventory, new List<Item>(Game.inventory.armors));
+            UpdateInventoryDataSource(LegsInventory, new List<Item>(Game.inventory.legs));
+            UpdateInventoryDataSource(SwordsInventory, new List<Item>(Game.inventory.swords));
+            UpdateInventoryDataSource(ShieldsInventory, new List<Item>(Game.inventory.shields));
         }
 
         private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
@@ -116,11 +116,6 @@ namespace DUNGEON
         
 
         private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -333,6 +328,84 @@ namespace DUNGEON
 
             newForm = new Form2();
             newForm.Show();
+        }
+
+        private void HeadInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.heads)
+                if (item.Equals(HeadInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
+        }
+
+        private void UpdateLabeles()
+        {
+            //additional gold
+            AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(Game.hero.additionalGold * 100)) + "%";
+            //luck
+            LuckLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.luck * 100)) + "%";
+            //health
+            AdditionalHPLabel.Text = "+" + Convert.ToString(Game.hero.additionalHP);
+            UpdateHealth();
+            //defence
+            DefenceLabel.Text = Convert.ToString(Game.hero.defence);
+            //block
+            BlockLabel.Text = Convert.ToString(Game.hero.block) + "%";
+            //power
+            PowerLabel.Text = Convert.ToString(Game.hero.power);
+            //agility
+            AgilityLabel.Text = Convert.ToString(Game.hero.agility) + "%";
+            //crit chance
+            CritChanceLabel.Text = Convert.ToString(Game.hero.critChance) + "%";
+            //crit damage
+            CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+        }
+
+        private void ArmorInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.armors)
+                if (item.Equals(ArmorInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
+        }
+
+        private void LegsInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.legs)
+                if (item.Equals(LegsInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
+        }
+
+        private void SwordsInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.swords)
+                if (item.Equals(SwordsInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
+        }
+
+        private void ShieldsInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.shields)
+                if (item.Equals(ShieldsInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
         }
     }
 }
