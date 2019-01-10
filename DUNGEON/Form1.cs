@@ -88,29 +88,37 @@ namespace DUNGEON
 
         private void UpdateInventory(int k)
         {
+
             switch (k)
             {
                 case 1:
-                    UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);break;
+                    UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);break;
                 case 2:
-                    UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);break;
+                    UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);break;
                 case 3:
-                    UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);break;
+                    UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);break;
                 case 4:
-                    UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);break;
+                    UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);break;
                 case 5:
-                    UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);break;
+                    UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);break;
             }   
+
+           /* UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);
+            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);
+            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);
+            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);
+            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);*/
+
         }
 
-        private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
+        private void UpdateInventoryDataSource(ComboBox box, List<Item> source, Object item)
         {
             box.DataSource = null;
             box.DataSource = source;
             box.DisplayMember = "name";
             box.ValueMember = "name";
-            if (source.Count > 1)
-                box.SelectedIndex++;
+            if (item != null)
+                box.SelectedItem = item;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
