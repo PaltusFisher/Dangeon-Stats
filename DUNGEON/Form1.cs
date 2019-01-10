@@ -20,6 +20,8 @@ namespace DUNGEON
 
         }
 
+        public Random rnd = new Random();
+
         private void DungeonButton_Click(object sender, EventArgs e)
         {
             //Enter
@@ -32,8 +34,18 @@ namespace DUNGEON
             if (Game.hero.currentEXP >= Game.hero.maxEXP)
                 LevelUp();
             else
-                UpdateEXP(); 
+                UpdateEXP();
 
+            int k = rnd.Next(1, 6);
+            switch (k)
+            {
+                case 1: Game.inventory.AddHead(new Head("head ")); break;
+                case 2: Game.inventory.AddArmor(new Armor("armor ")); break;
+                case 3: Game.inventory.AddLeg(new Legs("legs ")); break;
+                case 4: Game.inventory.AddSword(new Sword("sword ")); break;
+                case 5: Game.inventory.AddShield(new Shield("shield ")); break;
+            }
+            UpdateInventory(k);
 
             Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Game.hero.additionalGold + 1));
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
@@ -55,14 +67,7 @@ namespace DUNGEON
             Game.hero.maxEXP += 10 * Game.hero.level;
             UpdateEXP();
 
-            //Add in inventory
-            Game.inventory.AddHead(new Head("head "));
-            Game.inventory.AddArmor(new Armor("armor "));
-            Game.inventory.AddLeg(new Legs("legs "));
-            Game.inventory.AddSword(new Sword("sword "));
-            Game.inventory.AddShield(new Shield("shield "));
-            UpdateInventory();
-
+            
             //Boundaries
             if (Game.hero.additionalGold < 3)
                 PlusAdditionalGold.Cursor = Cursors.Hand;            
@@ -81,13 +86,21 @@ namespace DUNGEON
             PlusAdditionalHP.Cursor = Cursors.Hand;
         }
 
-        private void UpdateInventory()
+        private void UpdateInventory(int k)
         {
-            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);
-            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);
-            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);
-            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);
-            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);
+            switch (k)
+            {
+                case 1:
+                    UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);break;
+                case 2:
+                    UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);break;
+                case 3:
+                    UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);break;
+                case 4:
+                    UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);break;
+                case 5:
+                    UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);break;
+            }   
         }
 
         private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
