@@ -8,29 +8,29 @@ namespace DUNGEON
 {
     public class Inventory
     {
-        public List<Head> heads = new List<Head>();
-        public List<Armor> armors = new List<Armor>();
-        public List<Legs> legs = new List<Legs>();
-        public List<Sword> swords = new List<Sword>();
-        public List<Shield> shields = new List<Shield>();
+        public List<Item> heads = new List<Item>();
+        public List<Item> armors = new List<Item>();
+        public List<Item> legs = new List<Item>();
+        public List<Item> swords = new List<Item>();
+        public List<Item> shields = new List<Item>();
 
-        public void AddHead(Head head)
+        public void AddHead(Item head)
         {
             heads.Add(head);
         }
-        public void AddArmor(Armor armor)
+        public void AddArmor(Item armor)
         {
             armors.Add(armor);
         }
-        public void AddLeg(Legs leg)
+        public void AddLeg(Item leg)
         {
             legs.Add(leg);
         }
-        public void AddSword(Sword sword)
+        public void AddSword(Item sword)
         {
             swords.Add(sword);
         }
-        public void AddShield(Shield shield)
+        public void AddShield(Item shield)
         {
             shields.Add(shield);
         }

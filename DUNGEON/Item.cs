@@ -10,74 +10,74 @@ namespace DUNGEON
     {
         public string name { get; set; }
 
-        public string type { get; }
-
         public int rang { get; }
 
         //additional stats
-        public int additionalGold = 0;
-        public int luck = 0;
-        public int HP = 1;
-        public int defence = 0;
-        public int blockChance = 0;
-        public int power = 1;
-        public int agility = 0;
-        public int critChance = 0;
-        public int critDamage = 0;
+        public float additionalGold { get; protected set; }
+        public float luck { get; protected set; }
+        public int HP { get; protected set; }
+        public int defence { get; protected set; }
+        public int blockChance { get; protected set; }
+        public int power { get; protected set; }
+        public int agility { get; protected set; }
+        public int critChance { get; protected set; }
+        public int critDamage { get; protected set; }
 
-        public static Random rnd = new Random();
+        private static Random rnd = new Random();
 
-        public Item(string name = "NullName", string type = "null")
+        public Item(string name = "NullName")
         {
             this.rang = rnd.Next(1, 5);
             this.name = name + Convert.ToString(this.rang);
-            this.type = type;
+            SetStats(rnd);
         }
-        public Item(Item item)
+
+        protected virtual void SetStats(Random rnd)
         {
-            this.rang = item.rang;
-            this.name = item.name;
-            this.type = item.type;
+            additionalGold = rnd.Next(10 / rang);
+            luck = rnd.Next(10 / rang);
+            HP = rnd.Next(10 / rang);
+            defence = rnd.Next(10 / rang);
+            blockChance = rnd.Next(50 / rang);
+            power = rnd.Next(30 / rang);
+            agility = rnd.Next(50 / rang);
+            critChance = rnd.Next(50 / rang);
+            critDamage = rnd.Next(4 / rang);
         }
     }
 
     public class Head : Item
     {
-        public Head(Item item) : base(item)
+        public Head(string name) : base(name)
         { }
-        public Head(string name) : base(name, "Head")
-        { }
+
+        protected override void SetStats(Random rnd)
+        {
+            base.SetStats(rnd);
+        }
     }
 
     public class Armor : Item
     {
-        public Armor(Item item) : base(item)
-        { }
-        public Armor(string name) : base(name, "Armor")
+        public Armor(string name) : base(name)
         { }
     }
 
     public class Legs : Item
     {
-        public Legs(Item item) : base(item)
-        { }
-        public Legs(string name) : base(name, "Legs")
+        public Legs(string name) : base(name)
         { }
     }
 
     public class Sword : Item
     {
-        public Sword(Item item) : base(item)
-        { }
-        public Sword(string name) : base(name, "Sword")
+        public Sword(string name) : base(name)
         { }
     }
 
     public class Shield : Item
     {
-        public Shield(Item item) : base(item)
-        { }
-        public Shield(string name) : base(name, "Shield")
+        public Shield(string name) : base(name)
         { }
     }
 }

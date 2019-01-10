@@ -46,11 +46,11 @@ namespace DUNGEON
     public class Hero : Character
     {
         //equipment
-        private Head _head = null;
-        private Armor _armor = null;
-        private Legs _legs = null;
-        private Sword _sword = null;
-        private Shield _shield = null;
+        public Head _head { get; private set; } = null;
+        public Armor _armor { get; private set; } = null;
+        public Legs _legs { get; private set; } = null;
+        public Sword _sword { get; private set; } = null;
+        public Shield _shield { get; private set; } = null;
 
         public int skillPoints = 0;
 
@@ -82,34 +82,34 @@ namespace DUNGEON
         public void EquipItem(Item item)
         {
             //equip selected item
-            if (item.type == "Head")
+            if (item.GetType() == typeof(Head))
             {
                 UnEquip(_head);
-                _head = new Head(item);
+                _head = (Head)item;
                 UdateEquipment(_head);
             }
-            else if (item.type == "Armor")
+            else if (item.GetType() == typeof(Armor))
             {
                 UnEquip(_armor);
-                _armor = new Armor(item);
+                _armor = (Armor)item;
                 UdateEquipment(_armor);
             }
-            else if (item.type == "Legs")
+            else if (item.GetType() == typeof(Legs))
             {
                 UnEquip(_legs);
-                _legs = new Legs(item);
+                _legs = (Legs)item;
                 UdateEquipment(_legs);
             }
-            else if (item.type == "Sword")
+            else if (item.GetType() == typeof(Sword))
             {
                 UnEquip(_sword);
-                _sword = new Sword(item);
+                _sword = (Sword)item;
                 UdateEquipment(_sword);
             }
-            else if (item.type == "Shield")
+            else if (item.GetType() == typeof(Shield))
             {
                 UnEquip(_shield);
-                _shield = new Shield(item);
+                _shield = (Shield)item;
                 UdateEquipment(_shield);
             }
         }

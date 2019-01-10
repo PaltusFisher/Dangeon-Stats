@@ -83,11 +83,11 @@ namespace DUNGEON
 
         private void UpdateInventory()
         {
-            UpdateInventoryDataSource(HeadInventory, new List<Item>(Game.inventory.heads));
-            UpdateInventoryDataSource(ArmorInventory, new List<Item>(Game.inventory.armors));
-            UpdateInventoryDataSource(LegsInventory, new List<Item>(Game.inventory.legs));
-            UpdateInventoryDataSource(SwordsInventory, new List<Item>(Game.inventory.swords));
-            UpdateInventoryDataSource(ShieldsInventory, new List<Item>(Game.inventory.shields));
+            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);
+            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);
+            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);
+            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);
+            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);
         }
 
         private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
@@ -96,6 +96,8 @@ namespace DUNGEON
             box.DataSource = source;
             box.DisplayMember = "name";
             box.ValueMember = "name";
+            if (source.Count > 1)
+                box.SelectedIndex++;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -160,6 +162,8 @@ namespace DUNGEON
             //check minus HP
             if (Game.hero.currentHP < 0)
                 Game.hero.currentHP = 0;
+            if (Game.hero.currentHP > Game.hero.maxHP)
+                Game.hero.currentHP = Game.hero.maxHP;
             HealthBar.Maximum = Game.hero.maxHP;
             if (Game.hero.currentHP < 0)
                 HealthBar.Value = 0;
@@ -330,17 +334,6 @@ namespace DUNGEON
             newForm.Show();
         }
 
-        private void HeadInventory_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            foreach (var item in Game.inventory.heads)
-                if (item.Equals(HeadInventory.SelectedItem))
-                {
-                    Game.hero.EquipItem(item);
-                    break;
-                }
-            UpdateLabeles();
-        }
-
         private void UpdateLabeles()
         {
             //additional gold
@@ -362,6 +355,17 @@ namespace DUNGEON
             CritChanceLabel.Text = Convert.ToString(Game.hero.critChance) + "%";
             //crit damage
             CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+        }
+
+        private void HeadInventory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in Game.inventory.heads)
+                if (item.Equals(HeadInventory.SelectedItem))
+                {
+                    Game.hero.EquipItem(item);
+                    break;
+                }
+            UpdateLabeles();
         }
 
         private void ArmorInventory_SelectedIndexChanged(object sender, EventArgs e)
