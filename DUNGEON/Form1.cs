@@ -83,21 +83,21 @@ namespace DUNGEON
 
         private void UpdateInventory()
         {
-            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads);
-            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors);
-            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs);
-            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords);
-            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields);
+            UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);
+            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);
+            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);
+            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);
+            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);
         }
 
-        private void UpdateInventoryDataSource(ComboBox box, List<Item> source)
+        private void UpdateInventoryDataSource(ComboBox box, List<Item> source, Object item)
         {
             box.DataSource = null;
             box.DataSource = source;
             box.DisplayMember = "name";
             box.ValueMember = "name";
-            if (source.Count > 1)
-                box.SelectedIndex++;
+            if (item != null)
+                box.SelectedItem = item;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
