@@ -36,8 +36,8 @@ namespace DUNGEON
             else
                 UpdateEXP();
 
-            int k = rnd.Next(1, 6);
-            switch (k)
+            int random_koef = rnd.Next(1, 6);
+            switch (random_koef)
             {
                 case 1: Game.inventory.AddHead(new Head("head ")); break;
                 case 2: Game.inventory.AddArmor(new Armor("armor ")); break;
@@ -45,7 +45,7 @@ namespace DUNGEON
                 case 4: Game.inventory.AddSword(new Sword("sword ")); break;
                 case 5: Game.inventory.AddShield(new Shield("shield ")); break;
             }
-            UpdateInventory(k);
+            UpdateInventory(random_koef);
 
             Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Game.hero.additionalGold + 1));
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
