@@ -400,7 +400,7 @@ namespace DUNGEON
                 PowerLabel.ForeColor = Color.Green;
         }
         private void UnColorGreen(Item item)
-        {           
+        {
             AdditionalHPLabel.ForeColor = Color.Black;           
             AgilityLabel.ForeColor = Color.Black;           
             AdditionalGoldLabel.ForeColor = Color.Black;            
@@ -410,6 +410,24 @@ namespace DUNGEON
             DefenceLabel.ForeColor = Color.Black;
             LuckLabel.ForeColor = Color.Black;
             PowerLabel.ForeColor = Color.Black;
+            /*if (item.HP > 0)
+                AdditionalHPLabel.ForeColor = Color.Black;
+            if (item.agility > 0)
+                AgilityLabel.ForeColor = Color.Black;
+            if (item.additionalGold > 0)
+                AdditionalGoldLabel.ForeColor = Color.Black;
+            if (item.blockChance > 0)
+                BlockLabel.ForeColor = Color.Black;
+            if (item.critChance > 0)
+                CritChanceLabel.ForeColor = Color.Black;
+            if (item.critDamage > 0)
+                CritAdditionalDamageLabel.ForeColor = Color.Black;
+            if (item.defence > 0)
+                DefenceLabel.ForeColor = Color.Black;
+            if (item.luck > 0)
+                LuckLabel.ForeColor = Color.Black;
+            if (item.power > 0)
+                PowerLabel.ForeColor = Color.Black;*/
         }
 
         private void HeadInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -432,6 +450,7 @@ namespace DUNGEON
                 {
                     UnColorGreen(item);
                     Game.hero.EquipItem(item);
+
                     ColorGreen(item);
                     break;
                 }

@@ -13,8 +13,8 @@ namespace DUNGEON
         public int rang { get; }
 
         //additional stats
-        public float additionalGold { get; protected set; }
-        public float luck { get; protected set; }
+        public int additionalGold { get; protected set; }
+        public int luck { get; protected set; }
         public int HP { get; protected set; }
         public int defence { get; protected set; }
         public int blockChance { get; protected set; }
@@ -37,15 +37,15 @@ namespace DUNGEON
         {
             switch (countStats)
             {
-                case 1: additionalGold = rnd.Next(10 / rang); break;
-                case 2: luck = rnd.Next(10 / rang); break;
-                case 3: HP = rnd.Next(10 / rang); break;
-                case 4: defence = rnd.Next(10 / rang); break;
-                case 5: blockChance = rnd.Next(50 / rang); break;
-                case 6: power = rnd.Next(30 / rang); break;
-                case 7: agility = rnd.Next(50 / rang); break;
-                case 8: critChance = rnd.Next(50 / rang); break;
-                case 9: critDamage = rnd.Next(4 / rang); break;
+                case 1: additionalGold = rnd.Next(1, 10 * (Game.dangeon.level + 1)); break;
+                case 2: luck = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 3: HP = rnd.Next(1, 20 * (Game.dangeon.level + 1)); break;
+                case 4: defence = rnd.Next(1, 4 * (Game.dangeon.level + 1)); break;
+                case 5: blockChance = rnd.Next(1, 3 * (Game.dangeon.level + 1)); break;
+                case 6: power = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 7: agility = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 8: critChance = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 9: critDamage = rnd.Next(1, 20 * (Game.dangeon.level + 1)); break;
             }
         }
     }

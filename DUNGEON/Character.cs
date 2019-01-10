@@ -118,8 +118,8 @@ namespace DUNGEON
         {
             if (item != null)
             {
-                this.additionalGold -= item.additionalGold;
-                this.luck -= item.luck;
+                this.additionalGold -= Convert.ToSingle(item.additionalGold) / 100;
+                this.luck -= Convert.ToSingle(item.luck) / 100;
                 this.additionalHP -= item.HP;
                 this.maxHP -= item.HP;
                 this.defence -= item.defence;
@@ -127,14 +127,14 @@ namespace DUNGEON
                 this.power -= item.power;
                 this.agility -= item.agility;
                 this.critChance -= item.critChance;
-                this.critAdditionalDamage -= item.critDamage;
+                this.critAdditionalDamage -= Convert.ToSingle(item.critDamage) / 100;
             }
         }
 
         private void UdateEquipment(Item item)
         {
-            this.additionalGold += item.additionalGold;
-            this.luck += item.luck;
+            this.additionalGold += Convert.ToSingle(item.additionalGold) / 100;
+            this.luck += Convert.ToSingle(item.luck) / 100;
             this.additionalHP += item.HP;
             this.maxHP += item.HP;
             this.defence += item.defence;
@@ -142,7 +142,7 @@ namespace DUNGEON
             this.power += item.power;
             this.agility += item.agility;
             this.critChance += item.critChance;
-            this.critAdditionalDamage += item.critDamage;
+            this.critAdditionalDamage += Convert.ToSingle(item.critDamage) / 100;
         }
     }
 
