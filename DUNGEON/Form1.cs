@@ -378,12 +378,48 @@ namespace DUNGEON
             CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
         }
 
+        private void ColorGreen(Item item)
+        {
+            if (item.HP > 0)
+                AdditionalHPLabel.ForeColor = Color.Green;
+            if (item.agility > 0)
+                AgilityLabel.ForeColor = Color.Green;
+            if (item.additionalGold > 0)
+                AdditionalGoldLabel.ForeColor = Color.Green;
+            if (item.blockChance > 0)
+                BlockLabel.ForeColor = Color.Green;
+            if (item.critChance > 0)
+                CritChanceLabel.ForeColor = Color.Green;
+            if (item.critDamage > 0)
+                CritAdditionalDamageLabel.ForeColor = Color.Green;
+            if (item.defence > 0)
+                DefenceLabel.ForeColor = Color.Green;
+            if (item.luck > 0)
+                LuckLabel.ForeColor = Color.Green;
+            if (item.power > 0)
+                PowerLabel.ForeColor = Color.Green;
+        }
+        private void UnColorGreen(Item item)
+        {           
+            AdditionalHPLabel.ForeColor = Color.Black;           
+            AgilityLabel.ForeColor = Color.Black;           
+            AdditionalGoldLabel.ForeColor = Color.Black;            
+            BlockLabel.ForeColor = Color.Black;
+            CritChanceLabel.ForeColor = Color.Black;
+            CritAdditionalDamageLabel.ForeColor = Color.Black;
+            DefenceLabel.ForeColor = Color.Black;
+            LuckLabel.ForeColor = Color.Black;
+            PowerLabel.ForeColor = Color.Black;
+        }
+
         private void HeadInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in Game.inventory.heads)
+            foreach (Item item in Game.inventory.heads)
                 if (item.Equals(HeadInventory.SelectedItem))
                 {
+                    UnColorGreen(item);
                     Game.hero.EquipItem(item);
+                    ColorGreen(item);
                     break;
                 }
             UpdateLabeles();
@@ -391,10 +427,12 @@ namespace DUNGEON
 
         private void ArmorInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in Game.inventory.armors)
+            foreach (Item item in Game.inventory.armors)
                 if (item.Equals(ArmorInventory.SelectedItem))
                 {
+                    UnColorGreen(item);
                     Game.hero.EquipItem(item);
+                    ColorGreen(item);
                     break;
                 }
             UpdateLabeles();
@@ -402,10 +440,12 @@ namespace DUNGEON
 
         private void LegsInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in Game.inventory.legs)
+            foreach (Item item in Game.inventory.legs)
                 if (item.Equals(LegsInventory.SelectedItem))
                 {
+                    UnColorGreen(item);
                     Game.hero.EquipItem(item);
+                    ColorGreen(item);
                     break;
                 }
             UpdateLabeles();
@@ -413,21 +453,25 @@ namespace DUNGEON
 
         private void SwordsInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in Game.inventory.swords)
+            foreach (Item item in Game.inventory.swords)
                 if (item.Equals(SwordsInventory.SelectedItem))
                 {
+                    UnColorGreen(item);
                     Game.hero.EquipItem(item);
-                    break;
+                    ColorGreen(item);
+                    break; 
                 }
             UpdateLabeles();
         }
 
         private void ShieldsInventory_SelectedIndexChanged(object sender, EventArgs e)
         {
-            foreach (var item in Game.inventory.shields)
+            foreach (Item item in Game.inventory.shields)
                 if (item.Equals(ShieldsInventory.SelectedItem))
                 {
+                    UnColorGreen(item);
                     Game.hero.EquipItem(item);
+                    ColorGreen(item);
                     break;
                 }
             UpdateLabeles();

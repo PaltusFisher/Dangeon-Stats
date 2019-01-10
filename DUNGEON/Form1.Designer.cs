@@ -296,6 +296,7 @@
             // 
             this.AdditionalGoldLabel.BackColor = System.Drawing.Color.Transparent;
             this.AdditionalGoldLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLabel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalGoldLabel.Location = new System.Drawing.Point(621, 111);
             this.AdditionalGoldLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdditionalGoldLabel.Name = "AdditionalGoldLabel";
@@ -307,6 +308,7 @@
             // 
             this.LuckLabel.BackColor = System.Drawing.Color.Transparent;
             this.LuckLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLabel.ForeColor = System.Drawing.Color.Black;
             this.LuckLabel.Location = new System.Drawing.Point(621, 140);
             this.LuckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LuckLabel.Name = "LuckLabel";
@@ -318,6 +320,7 @@
             // 
             this.AdditionalHPLabel.BackColor = System.Drawing.Color.Transparent;
             this.AdditionalHPLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLabel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalHPLabel.Location = new System.Drawing.Point(621, 169);
             this.AdditionalHPLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdditionalHPLabel.Name = "AdditionalHPLabel";
@@ -329,6 +332,7 @@
             // 
             this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
             this.DefenceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLabel.ForeColor = System.Drawing.Color.Black;
             this.DefenceLabel.Location = new System.Drawing.Point(621, 195);
             this.DefenceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DefenceLabel.Name = "DefenceLabel";
@@ -340,6 +344,7 @@
             // 
             this.BlockLabel.BackColor = System.Drawing.Color.Transparent;
             this.BlockLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLabel.ForeColor = System.Drawing.Color.Black;
             this.BlockLabel.Location = new System.Drawing.Point(621, 222);
             this.BlockLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BlockLabel.Name = "BlockLabel";
@@ -351,6 +356,7 @@
             // 
             this.PowerLabel.BackColor = System.Drawing.Color.Transparent;
             this.PowerLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLabel.ForeColor = System.Drawing.Color.Black;
             this.PowerLabel.Location = new System.Drawing.Point(621, 252);
             this.PowerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PowerLabel.Name = "PowerLabel";
@@ -362,6 +368,7 @@
             // 
             this.AgilityLabel.BackColor = System.Drawing.Color.Transparent;
             this.AgilityLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLabel.ForeColor = System.Drawing.Color.Black;
             this.AgilityLabel.Location = new System.Drawing.Point(621, 281);
             this.AgilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AgilityLabel.Name = "AgilityLabel";
@@ -373,6 +380,7 @@
             // 
             this.CritChanceLabel.BackColor = System.Drawing.Color.Transparent;
             this.CritChanceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLabel.ForeColor = System.Drawing.Color.Black;
             this.CritChanceLabel.Location = new System.Drawing.Point(621, 309);
             this.CritChanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CritChanceLabel.Name = "CritChanceLabel";
@@ -384,6 +392,7 @@
             // 
             this.CritAdditionalDamageLabel.BackColor = System.Drawing.Color.Transparent;
             this.CritAdditionalDamageLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLabel.ForeColor = System.Drawing.Color.Black;
             this.CritAdditionalDamageLabel.Location = new System.Drawing.Point(621, 338);
             this.CritAdditionalDamageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CritAdditionalDamageLabel.Name = "CritAdditionalDamageLabel";

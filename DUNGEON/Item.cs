@@ -29,20 +29,24 @@ namespace DUNGEON
         {
             this.rang = rnd.Next(1, 5);
             this.name = name + Convert.ToString(this.rang);
-            SetStats(rnd);
+            for (int kolvo = rang; kolvo < 5; kolvo++)
+                SetStats(rnd, rnd.Next(1, 10));
         }
-
-        protected virtual void SetStats(Random rnd)
+        
+        protected virtual void SetStats(Random rnd, int countStats)
         {
-            additionalGold = rnd.Next(10 / rang);
-            luck = rnd.Next(10 / rang);
-            HP = rnd.Next(10 / rang);
-            defence = rnd.Next(10 / rang);
-            blockChance = rnd.Next(50 / rang);
-            power = rnd.Next(30 / rang);
-            agility = rnd.Next(50 / rang);
-            critChance = rnd.Next(50 / rang);
-            critDamage = rnd.Next(4 / rang);
+            switch (countStats)
+            {
+                case 1: additionalGold = rnd.Next(10 / rang); break;
+                case 2: luck = rnd.Next(10 / rang); break;
+                case 3: HP = rnd.Next(10 / rang); break;
+                case 4: defence = rnd.Next(10 / rang); break;
+                case 5: blockChance = rnd.Next(50 / rang); break;
+                case 6: power = rnd.Next(30 / rang); break;
+                case 7: agility = rnd.Next(50 / rang); break;
+                case 8: critChance = rnd.Next(50 / rang); break;
+                case 9: critDamage = rnd.Next(4 / rang); break;
+            }
         }
     }
 
@@ -51,9 +55,10 @@ namespace DUNGEON
         public Head(string name) : base(name)
         { }
 
-        protected override void SetStats(Random rnd)
+        protected override void SetStats(Random rnd, int countStats)
         {
-            base.SetStats(rnd);
+            base.SetStats(rnd, countStats);
+            
         }
     }
 
@@ -61,23 +66,46 @@ namespace DUNGEON
     {
         public Armor(string name) : base(name)
         { }
+
+        protected override void SetStats(Random rnd, int countStats)
+        {
+            base.SetStats(rnd, countStats);
+           
+        }
     }
 
     public class Legs : Item
     {
         public Legs(string name) : base(name)
         { }
+
+        protected override void SetStats(Random rnd, int countStats)
+        {
+            base.SetStats(rnd, countStats);
+           
+        }
     }
 
     public class Sword : Item
     {
         public Sword(string name) : base(name)
         { }
+
+        protected override void SetStats(Random rnd, int countStats)
+        {
+            base.SetStats(rnd, countStats);
+           
+        }
     }
 
     public class Shield : Item
     {
         public Shield(string name) : base(name)
         { }
+        protected override void SetStats(Random rnd, int countStats)
+        {
+            base.SetStats(rnd, countStats);
+
+        }
     }
 }
