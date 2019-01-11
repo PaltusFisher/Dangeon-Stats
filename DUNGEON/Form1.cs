@@ -39,11 +39,26 @@ namespace DUNGEON
             int random_koef = rnd.Next(1, 6);
             switch (random_koef)
             {
-                case 1: Game.inventory.AddHead(new Head("headк ")); break;
-                case 2: Game.inventory.AddArmor(new Armor("armor ")); break;
-                case 3: Game.inventory.AddLeg(new Legs("legs ")); break;
-                case 4: Game.inventory.AddSword(new Sword("sword ")); break;
-                case 5: Game.inventory.AddShield(new Shield("shield ")); break;
+                case 1:
+                    Game.inventory.AddHead(new Head("head "));
+                    NewHeadLabel.Visible = true;
+                    break;
+                case 2:
+                    Game.inventory.AddArmor(new Armor("armor "));
+                    NewArmorLabel.Visible = true;
+                    break;
+                case 3:
+                    Game.inventory.AddLeg(new Legs("legs "));
+                    NewLegsLabel.Visible = true;
+                    break;
+                case 4:
+                    Game.inventory.AddSword(new Sword("sword "));
+                    NewSwordLabel.Visible = true;
+                    break;
+                case 5:
+                    Game.inventory.AddShield(new Shield("shield "));
+                    NewShieldLabel.Visible = true;
+                    break;
             }
             UpdateInventory(random_koef);
 
@@ -69,11 +84,11 @@ namespace DUNGEON
 
             //Boundaries
             if (Game.hero.additionalGold < 500)
-                PlusAdditionalGold.Cursor = Cursors.Hand;            
+                PlusAdditionalGold.Cursor = Cursors.Hand;
             if (Game.hero.agility < 100)
                 PlusAgility.Cursor = Cursors.Hand;
             if (Game.hero.block < 40)
-                PlusBlock.Cursor = Cursors.Hand;          
+                PlusBlock.Cursor = Cursors.Hand;
             if (Game.hero.critAdditionalDamage < 450)
                 PlusCritAdditionalDamage.Cursor = Cursors.Hand;
             if (Game.hero.critChance < 60)
@@ -91,22 +106,22 @@ namespace DUNGEON
             switch (k)
             {
                 case 1:
-                    UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);break;
+                    UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head); break;
                 case 2:
-                    UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);break;
+                    UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor); break;
                 case 3:
-                    UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);break;
+                    UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs); break;
                 case 4:
-                    UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);break;
+                    UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword); break;
                 case 5:
-                    UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);break;
-            }   
+                    UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield); break;
+            }
 
-           /* UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);
-            UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);
-            UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);
-            UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);
-            UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);*/
+            /* UpdateInventoryDataSource(HeadInventory, Game.inventory.heads, Game.hero._head);
+             UpdateInventoryDataSource(ArmorInventory, Game.inventory.armors, Game.hero._armor);
+             UpdateInventoryDataSource(LegsInventory, Game.inventory.legs, Game.hero._legs);
+             UpdateInventoryDataSource(SwordsInventory, Game.inventory.swords, Game.hero._sword);
+             UpdateInventoryDataSource(ShieldsInventory, Game.inventory.shields, Game.hero._shield);*/
 
         }
 
@@ -118,33 +133,6 @@ namespace DUNGEON
             box.ValueMember = "name";
             if (item != null)
                 box.SelectedItem = item;
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void inventoryBindingSource_CurrentChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void PlusAdditionalGold_Click(object sender, EventArgs e)
@@ -233,7 +221,7 @@ namespace DUNGEON
         {
             if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.block < 40)
             {
-                MinusSkillPoints(); 
+                MinusSkillPoints();
 
                 Game.hero.block += 3;
                 BlockLabel.Text = Convert.ToString(Game.hero.block) + "%";
@@ -340,7 +328,7 @@ namespace DUNGEON
                 if (Game.hero.gold < Game.dangeon.goldToUpgrade)
                     PlusDungeonLevel.Cursor = Cursors.No;
 
-               
+
             }
         }
 
@@ -400,9 +388,9 @@ namespace DUNGEON
         }
         private void UnColorGreen(Item item)
         {
-            AdditionalHPLabel.ForeColor = Color.Black;           
-            AgilityLabel.ForeColor = Color.Black;           
-            AdditionalGoldLabel.ForeColor = Color.Black;            
+            AdditionalHPLabel.ForeColor = Color.Black;
+            AgilityLabel.ForeColor = Color.Black;
+            AdditionalGoldLabel.ForeColor = Color.Black;
             BlockLabel.ForeColor = Color.Black;
             CritChanceLabel.ForeColor = Color.Black;
             CritAdditionalDamageLabel.ForeColor = Color.Black;
@@ -477,7 +465,7 @@ namespace DUNGEON
                     UnColorGreen(item);
                     Game.hero.EquipItem(item);
                     ColorGreen(item);
-                    break; 
+                    break;
                 }
             UpdateLabeles();
         }
@@ -493,6 +481,81 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+        }
+
+        private void ClearInventory(ComboBox box, List<Item> data)
+        {
+                //delete all unused objects
+                Item _currItem = null;
+                foreach (Item item in data)
+                    if (item.Equals(box.SelectedItem))
+                    {
+                        _currItem = item;
+                        break;
+                    }
+                data.Clear();
+                data.Add(_currItem);
+                UpdateInventoryDataSource(box, data, box.SelectedItem);
+        }
+
+        private void HeadInventory_MouseDown(object sender, MouseEventArgs e)
+        {
+            //delete all unused objects
+            if (e.Button == MouseButtons.Right)
+                ClearInventory(HeadInventory, Game.inventory.heads);
+        }
+
+        private void ArmorInventory_MouseDown(object sender, MouseEventArgs e)
+        {
+            //delete all unused objects
+            if (e.Button == MouseButtons.Right)
+                ClearInventory(ArmorInventory, Game.inventory.armors);
+        }
+
+        private void LegsInventory_MouseDown(object sender, MouseEventArgs e)
+        {
+            //delete all unused objects
+            if (e.Button == MouseButtons.Right)
+                ClearInventory(LegsInventory, Game.inventory.legs);
+        }
+
+        private void SwordsInventory_MouseDown(object sender, MouseEventArgs e)
+        {
+            //delete all unused objects
+            if (e.Button == MouseButtons.Right)
+                ClearInventory(SwordsInventory, Game.inventory.swords);
+        }
+
+        private void ShieldsInventory_MouseDown(object sender, MouseEventArgs e)
+        {
+            //delete all unused objects
+            if (e.Button == MouseButtons.Right)
+                ClearInventory(ShieldsInventory, Game.inventory.shields);
+        }
+
+        private void HeadInventory_DropDown(object sender, EventArgs e)
+        {
+            NewHeadLabel.Visible = false;
+        }
+
+        private void ArmorInventory_DropDown(object sender, EventArgs e)
+        {
+            NewArmorLabel.Visible = false;
+        }
+
+        private void LegsInventory_DropDown(object sender, EventArgs e)
+        {
+            NewLegsLabel.Visible = false;
+        }
+
+        private void SwordsInventory_DropDown(object sender, EventArgs e)
+        {
+            NewSwordLabel.Visible = false;
+        }
+
+        private void ShieldsInventory_DropDown(object sender, EventArgs e)
+        {
+            NewShieldLabel.Visible = false;
         }
     }
 }
