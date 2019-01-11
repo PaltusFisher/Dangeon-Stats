@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace DUNGEON
 {
     public static class Game
     {
+        public static SoundPlayer soundPlayer;
+
        // public static int skillPoints;
 
         public static Hero hero;
@@ -24,6 +27,8 @@ namespace DUNGEON
             inventory = new Inventory();
             dangeon = new Dangeon();
             enemies = new List<Enemy>();
+            soundPlayer = new SoundPlayer(@"Dungeon.wav");
+            soundPlayer.PlayLooping();
         }
 
         public static void EnterDangeon()

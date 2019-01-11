@@ -7,13 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace DUNGEON
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
 
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
 
@@ -332,13 +333,13 @@ namespace DUNGEON
             }
         }
 
-        Form2 newForm;
+        EnemyStatsWindow newForm;
         private void button1_Click(object sender, EventArgs e)
         {
             if (newForm != null)
                 newForm.Close();
 
-            newForm = new Form2();
+            newForm = new EnemyStatsWindow();
             newForm.Show();
         }
 
