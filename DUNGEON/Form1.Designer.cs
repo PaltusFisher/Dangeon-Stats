@@ -78,6 +78,11 @@
             this.DangeonLevelLabel = new System.Windows.Forms.Label();
             this.webVochila = new System.Windows.Forms.WebBrowser();
             this.button1 = new System.Windows.Forms.Button();
+            this.NewShieldLabel = new System.Windows.Forms.Label();
+            this.NewSwordLabel = new System.Windows.Forms.Label();
+            this.NewLegsLabel = new System.Windows.Forms.Label();
+            this.NewArmorLabel = new System.Windows.Forms.Label();
+            this.NewHeadLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -133,7 +138,6 @@
             this.textBox1.Size = new System.Drawing.Size(88, 29);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // LevelLabel
             // 
@@ -147,7 +151,6 @@
             this.LevelLabel.TabIndex = 3;
             this.LevelLabel.Text = "0";
             this.LevelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LevelLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // GoldLabel
             // 
@@ -161,7 +164,6 @@
             this.GoldLabel.TabIndex = 4;
             this.GoldLabel.Text = "0";
             this.GoldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.GoldLabel.Click += new System.EventHandler(this.label2_Click);
             // 
             // HeadInventory
             // 
@@ -178,7 +180,9 @@
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
+            this.HeadInventory.DropDown += new System.EventHandler(this.HeadInventory_DropDown);
             this.HeadInventory.SelectedIndexChanged += new System.EventHandler(this.HeadInventory_SelectedIndexChanged);
+            this.HeadInventory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeadInventory_MouseDown);
             // 
             // PlusAdditionalGold
             // 
@@ -538,7 +542,9 @@
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
+            this.ArmorInventory.DropDown += new System.EventHandler(this.ArmorInventory_DropDown);
             this.ArmorInventory.SelectedIndexChanged += new System.EventHandler(this.ArmorInventory_SelectedIndexChanged);
+            this.ArmorInventory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArmorInventory_MouseDown);
             // 
             // LegsInventory
             // 
@@ -554,7 +560,9 @@
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
+            this.LegsInventory.DropDown += new System.EventHandler(this.LegsInventory_DropDown);
             this.LegsInventory.SelectedIndexChanged += new System.EventHandler(this.LegsInventory_SelectedIndexChanged);
+            this.LegsInventory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LegsInventory_MouseDown);
             // 
             // SwordsInventory
             // 
@@ -570,7 +578,9 @@
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
+            this.SwordsInventory.DropDown += new System.EventHandler(this.SwordsInventory_DropDown);
             this.SwordsInventory.SelectedIndexChanged += new System.EventHandler(this.SwordsInventory_SelectedIndexChanged);
+            this.SwordsInventory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SwordsInventory_MouseDown);
             // 
             // ShieldsInventory
             // 
@@ -586,7 +596,9 @@
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
+            this.ShieldsInventory.DropDown += new System.EventHandler(this.ShieldsInventory_DropDown);
             this.ShieldsInventory.SelectedIndexChanged += new System.EventHandler(this.ShieldsInventory_SelectedIndexChanged);
+            this.ShieldsInventory.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ShieldsInventory_MouseDown);
             // 
             // HealthBar
             // 
@@ -754,6 +766,76 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // NewShieldLabel
+            // 
+            this.NewShieldLabel.BackColor = System.Drawing.Color.LimeGreen;
+            this.NewShieldLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewShieldLabel.Font = new System.Drawing.Font("Castellar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewShieldLabel.ForeColor = System.Drawing.Color.White;
+            this.NewShieldLabel.Location = new System.Drawing.Point(443, 442);
+            this.NewShieldLabel.Name = "NewShieldLabel";
+            this.NewShieldLabel.Size = new System.Drawing.Size(19, 26);
+            this.NewShieldLabel.TabIndex = 50;
+            this.NewShieldLabel.Text = "!";
+            this.NewShieldLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NewShieldLabel.Visible = false;
+            // 
+            // NewSwordLabel
+            // 
+            this.NewSwordLabel.BackColor = System.Drawing.Color.LimeGreen;
+            this.NewSwordLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewSwordLabel.Font = new System.Drawing.Font("Castellar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewSwordLabel.ForeColor = System.Drawing.Color.White;
+            this.NewSwordLabel.Location = new System.Drawing.Point(443, 389);
+            this.NewSwordLabel.Name = "NewSwordLabel";
+            this.NewSwordLabel.Size = new System.Drawing.Size(19, 26);
+            this.NewSwordLabel.TabIndex = 51;
+            this.NewSwordLabel.Text = "!";
+            this.NewSwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NewSwordLabel.Visible = false;
+            // 
+            // NewLegsLabel
+            // 
+            this.NewLegsLabel.BackColor = System.Drawing.Color.LimeGreen;
+            this.NewLegsLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewLegsLabel.Font = new System.Drawing.Font("Castellar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewLegsLabel.ForeColor = System.Drawing.Color.White;
+            this.NewLegsLabel.Location = new System.Drawing.Point(443, 332);
+            this.NewLegsLabel.Name = "NewLegsLabel";
+            this.NewLegsLabel.Size = new System.Drawing.Size(19, 26);
+            this.NewLegsLabel.TabIndex = 52;
+            this.NewLegsLabel.Text = "!";
+            this.NewLegsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NewLegsLabel.Visible = false;
+            // 
+            // NewArmorLabel
+            // 
+            this.NewArmorLabel.BackColor = System.Drawing.Color.LimeGreen;
+            this.NewArmorLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewArmorLabel.Font = new System.Drawing.Font("Castellar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewArmorLabel.ForeColor = System.Drawing.Color.White;
+            this.NewArmorLabel.Location = new System.Drawing.Point(443, 273);
+            this.NewArmorLabel.Name = "NewArmorLabel";
+            this.NewArmorLabel.Size = new System.Drawing.Size(19, 26);
+            this.NewArmorLabel.TabIndex = 53;
+            this.NewArmorLabel.Text = "!";
+            this.NewArmorLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NewArmorLabel.Visible = false;
+            // 
+            // NewHeadLabel
+            // 
+            this.NewHeadLabel.BackColor = System.Drawing.Color.LimeGreen;
+            this.NewHeadLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NewHeadLabel.Font = new System.Drawing.Font("Castellar", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewHeadLabel.ForeColor = System.Drawing.Color.White;
+            this.NewHeadLabel.Location = new System.Drawing.Point(442, 216);
+            this.NewHeadLabel.Name = "NewHeadLabel";
+            this.NewHeadLabel.Size = new System.Drawing.Size(19, 26);
+            this.NewHeadLabel.TabIndex = 54;
+            this.NewHeadLabel.Text = "!";
+            this.NewHeadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NewHeadLabel.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -762,6 +844,11 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.NewHeadLabel);
+            this.Controls.Add(this.NewArmorLabel);
+            this.Controls.Add(this.NewLegsLabel);
+            this.Controls.Add(this.NewSwordLabel);
+            this.Controls.Add(this.NewShieldLabel);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.webVochila);
             this.Controls.Add(this.DangeonLevelLabel);
@@ -819,7 +906,6 @@
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dangeon & Stats";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -876,6 +962,11 @@
         private System.Windows.Forms.Label DangeonLevelLabel;
         private System.Windows.Forms.WebBrowser webVochila;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label NewShieldLabel;
+        private System.Windows.Forms.Label NewSwordLabel;
+        private System.Windows.Forms.Label NewLegsLabel;
+        private System.Windows.Forms.Label NewArmorLabel;
+        private System.Windows.Forms.Label NewHeadLabel;
     }
 }
 
