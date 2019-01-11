@@ -20,7 +20,7 @@ namespace DUNGEON
 
             Game.GameInitiate();
 
-            Application.Run(new Form1());
+            Application.Run(new MainWindow());
         }
     }
 }

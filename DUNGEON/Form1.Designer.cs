@@ -1,6 +1,6 @@
 ﻿namespace DUNGEON
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
             this.DungeonButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -77,7 +77,7 @@
             this.PlusCritAdditionalDamage = new System.Windows.Forms.Button();
             this.DangeonLevelLabel = new System.Windows.Forms.Label();
             this.webVochila = new System.Windows.Forms.WebBrowser();
-            this.button1 = new System.Windows.Forms.Button();
+            this.EnemyStatsButton = new System.Windows.Forms.Button();
             this.NewShieldLabel = new System.Windows.Forms.Label();
             this.NewSwordLabel = new System.Windows.Forms.Label();
             this.NewLegsLabel = new System.Windows.Forms.Label();
@@ -752,19 +752,19 @@
             this.webVochila.Url = new System.Uri("", System.UriKind.Relative);
             this.webVochila.Visible = false;
             // 
-            // button1
+            // EnemyStatsButton
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(499, 605);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(34, 34);
-            this.button1.TabIndex = 49;
-            this.button1.Text = "?";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.EnemyStatsButton.BackColor = System.Drawing.Color.Transparent;
+            this.EnemyStatsButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EnemyStatsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EnemyStatsButton.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EnemyStatsButton.Location = new System.Drawing.Point(499, 605);
+            this.EnemyStatsButton.Name = "EnemyStatsButton";
+            this.EnemyStatsButton.Size = new System.Drawing.Size(34, 34);
+            this.EnemyStatsButton.TabIndex = 49;
+            this.EnemyStatsButton.Text = "?";
+            this.EnemyStatsButton.UseVisualStyleBackColor = false;
+            this.EnemyStatsButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // NewShieldLabel
             // 
@@ -836,7 +836,7 @@
             this.NewHeadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NewHeadLabel.Visible = false;
             // 
-            // Form1
+            // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gold;
@@ -849,7 +849,7 @@
             this.Controls.Add(this.NewLegsLabel);
             this.Controls.Add(this.NewSwordLabel);
             this.Controls.Add(this.NewShieldLabel);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.EnemyStatsButton);
             this.Controls.Add(this.webVochila);
             this.Controls.Add(this.DangeonLevelLabel);
             this.Controls.Add(this.PlusCritAdditionalDamage);
@@ -903,7 +903,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.Name = "Form1";
+            this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dangeon & Stats";
             this.ResumeLayout(false);
@@ -961,7 +961,7 @@
         private System.Windows.Forms.Button PlusCritAdditionalDamage;
         private System.Windows.Forms.Label DangeonLevelLabel;
         private System.Windows.Forms.WebBrowser webVochila;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button EnemyStatsButton;
         private System.Windows.Forms.Label NewShieldLabel;
         private System.Windows.Forms.Label NewSwordLabel;
         private System.Windows.Forms.Label NewLegsLabel;

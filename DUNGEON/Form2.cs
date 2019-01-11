@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DUNGEON
 {
-    public partial class Form2 : Form
+    public partial class EnemyStatsWindow : Form
     {
-        public Form2()
+        public EnemyStatsWindow()
         {
             InitializeComponent();
             //
