@@ -174,7 +174,7 @@
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Margin = new System.Windows.Forms.Padding(2);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(122, 24);
+            this.HeadInventory.Size = new System.Drawing.Size(133, 24);
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
@@ -295,7 +295,7 @@
             // AdditionalGoldLabel
             // 
             this.AdditionalGoldLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalGoldLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AdditionalGoldLabel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalGoldLabel.Location = new System.Drawing.Point(621, 111);
             this.AdditionalGoldLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -307,7 +307,7 @@
             // LuckLabel
             // 
             this.LuckLabel.BackColor = System.Drawing.Color.Transparent;
-            this.LuckLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.LuckLabel.ForeColor = System.Drawing.Color.Black;
             this.LuckLabel.Location = new System.Drawing.Point(621, 140);
             this.LuckLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -319,7 +319,7 @@
             // AdditionalHPLabel
             // 
             this.AdditionalHPLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalHPLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AdditionalHPLabel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalHPLabel.Location = new System.Drawing.Point(621, 169);
             this.AdditionalHPLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -331,7 +331,7 @@
             // DefenceLabel
             // 
             this.DefenceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.DefenceLabel.ForeColor = System.Drawing.Color.Black;
             this.DefenceLabel.Location = new System.Drawing.Point(621, 195);
             this.DefenceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -343,7 +343,7 @@
             // BlockLabel
             // 
             this.BlockLabel.BackColor = System.Drawing.Color.Transparent;
-            this.BlockLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.BlockLabel.ForeColor = System.Drawing.Color.Black;
             this.BlockLabel.Location = new System.Drawing.Point(621, 222);
             this.BlockLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -355,7 +355,7 @@
             // PowerLabel
             // 
             this.PowerLabel.BackColor = System.Drawing.Color.Transparent;
-            this.PowerLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PowerLabel.ForeColor = System.Drawing.Color.Black;
             this.PowerLabel.Location = new System.Drawing.Point(621, 252);
             this.PowerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -367,7 +367,7 @@
             // AgilityLabel
             // 
             this.AgilityLabel.BackColor = System.Drawing.Color.Transparent;
-            this.AgilityLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.AgilityLabel.ForeColor = System.Drawing.Color.Black;
             this.AgilityLabel.Location = new System.Drawing.Point(621, 281);
             this.AgilityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -379,7 +379,7 @@
             // CritChanceLabel
             // 
             this.CritChanceLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CritChanceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CritChanceLabel.ForeColor = System.Drawing.Color.Black;
             this.CritChanceLabel.Location = new System.Drawing.Point(621, 309);
             this.CritChanceLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -391,7 +391,7 @@
             // CritAdditionalDamageLabel
             // 
             this.CritAdditionalDamageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.CritAdditionalDamageLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLabel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CritAdditionalDamageLabel.ForeColor = System.Drawing.Color.Black;
             this.CritAdditionalDamageLabel.Location = new System.Drawing.Point(621, 338);
             this.CritAdditionalDamageLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -403,7 +403,8 @@
             // AdditionalGoldLevel
             // 
             this.AdditionalGoldLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalGoldLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalGoldLevel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalGoldLevel.Location = new System.Drawing.Point(704, 111);
             this.AdditionalGoldLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdditionalGoldLevel.Name = "AdditionalGoldLevel";
@@ -414,7 +415,8 @@
             // LuckLevel
             // 
             this.LuckLevel.BackColor = System.Drawing.Color.Transparent;
-            this.LuckLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LuckLevel.ForeColor = System.Drawing.Color.Black;
             this.LuckLevel.Location = new System.Drawing.Point(704, 140);
             this.LuckLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LuckLevel.Name = "LuckLevel";
@@ -425,7 +427,8 @@
             // AdditionalHPLevel
             // 
             this.AdditionalHPLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AdditionalHPLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AdditionalHPLevel.ForeColor = System.Drawing.Color.Black;
             this.AdditionalHPLevel.Location = new System.Drawing.Point(704, 169);
             this.AdditionalHPLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdditionalHPLevel.Name = "AdditionalHPLevel";
@@ -436,7 +439,8 @@
             // DefenceLevel
             // 
             this.DefenceLevel.BackColor = System.Drawing.Color.Transparent;
-            this.DefenceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DefenceLevel.ForeColor = System.Drawing.Color.Black;
             this.DefenceLevel.Location = new System.Drawing.Point(704, 195);
             this.DefenceLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DefenceLevel.Name = "DefenceLevel";
@@ -447,7 +451,8 @@
             // BlockLevel
             // 
             this.BlockLevel.BackColor = System.Drawing.Color.Transparent;
-            this.BlockLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.BlockLevel.ForeColor = System.Drawing.Color.Black;
             this.BlockLevel.Location = new System.Drawing.Point(704, 222);
             this.BlockLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BlockLevel.Name = "BlockLevel";
@@ -458,7 +463,8 @@
             // PowerLevel
             // 
             this.PowerLevel.BackColor = System.Drawing.Color.Transparent;
-            this.PowerLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PowerLevel.ForeColor = System.Drawing.Color.Black;
             this.PowerLevel.Location = new System.Drawing.Point(704, 252);
             this.PowerLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PowerLevel.Name = "PowerLevel";
@@ -469,7 +475,8 @@
             // AgilityLevel
             // 
             this.AgilityLevel.BackColor = System.Drawing.Color.Transparent;
-            this.AgilityLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AgilityLevel.ForeColor = System.Drawing.Color.Black;
             this.AgilityLevel.Location = new System.Drawing.Point(704, 281);
             this.AgilityLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AgilityLevel.Name = "AgilityLevel";
@@ -480,7 +487,8 @@
             // CritChanceLevel
             // 
             this.CritChanceLevel.BackColor = System.Drawing.Color.Transparent;
-            this.CritChanceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritChanceLevel.ForeColor = System.Drawing.Color.Black;
             this.CritChanceLevel.Location = new System.Drawing.Point(704, 309);
             this.CritChanceLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CritChanceLevel.Name = "CritChanceLevel";
@@ -491,7 +499,8 @@
             // CritAdditionalDamageLevel
             // 
             this.CritAdditionalDamageLevel.BackColor = System.Drawing.Color.Transparent;
-            this.CritAdditionalDamageLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLevel.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CritAdditionalDamageLevel.ForeColor = System.Drawing.Color.Black;
             this.CritAdditionalDamageLevel.Location = new System.Drawing.Point(704, 338);
             this.CritAdditionalDamageLevel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.CritAdditionalDamageLevel.Name = "CritAdditionalDamageLevel";
@@ -525,7 +534,7 @@
             this.ArmorInventory.Location = new System.Drawing.Point(304, 272);
             this.ArmorInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(122, 24);
+            this.ArmorInventory.Size = new System.Drawing.Size(133, 24);
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
@@ -541,7 +550,7 @@
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(122, 24);
+            this.LegsInventory.Size = new System.Drawing.Size(133, 24);
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
@@ -557,7 +566,7 @@
             this.SwordsInventory.Location = new System.Drawing.Point(304, 388);
             this.SwordsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(122, 24);
+            this.SwordsInventory.Size = new System.Drawing.Size(133, 24);
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
@@ -573,7 +582,7 @@
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 442);
             this.ShieldsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(122, 24);
+            this.ShieldsInventory.Size = new System.Drawing.Size(133, 24);
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";

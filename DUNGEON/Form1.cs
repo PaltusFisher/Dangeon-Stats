@@ -39,7 +39,7 @@ namespace DUNGEON
             int random_koef = rnd.Next(1, 6);
             switch (random_koef)
             {
-                case 1: Game.inventory.AddHead(new Head("head ")); break;
+                case 1: Game.inventory.AddHead(new Head("headк ")); break;
                 case 2: Game.inventory.AddArmor(new Armor("armor ")); break;
                 case 3: Game.inventory.AddLeg(new Legs("legs ")); break;
                 case 4: Game.inventory.AddSword(new Sword("sword ")); break;
@@ -47,7 +47,7 @@ namespace DUNGEON
             }
             UpdateInventory(random_koef);
 
-            Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Game.hero.additionalGold + 1));
+            Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Convert.ToSingle(Game.hero.additionalGold + 100) / 100));
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
             if (Game.hero.gold >= Game.dangeon.goldToUpgrade)
                 PlusDungeonLevel.Cursor = Cursors.Hand;
@@ -67,19 +67,18 @@ namespace DUNGEON
             Game.hero.maxEXP += 10 * Game.hero.level;
             UpdateEXP();
 
-            
             //Boundaries
-            if (Game.hero.additionalGold < 3)
+            if (Game.hero.additionalGold < 500)
                 PlusAdditionalGold.Cursor = Cursors.Hand;            
             if (Game.hero.agility < 100)
                 PlusAgility.Cursor = Cursors.Hand;
             if (Game.hero.block < 40)
                 PlusBlock.Cursor = Cursors.Hand;          
-            if (Game.hero.critAdditionalDamage < 4.1f)
+            if (Game.hero.critAdditionalDamage < 450)
                 PlusCritAdditionalDamage.Cursor = Cursors.Hand;
             if (Game.hero.critChance < 60)
                 PlusCritChance.Cursor = Cursors.Hand;
-            if (Game.hero.luck < 1)
+            if (Game.hero.luck < 100)
                 PlusLuck.Cursor = Cursors.Hand;
             PlusPower.Cursor = Cursors.Hand;
             PlusDefence.Cursor = Cursors.Hand;
@@ -150,12 +149,12 @@ namespace DUNGEON
 
         private void PlusAdditionalGold_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.additionalGold < 3)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.additionalGold < 500)
             {
                 MinusSkillPoints();
 
-                Game.hero.additionalGold += 0.1f;
-                AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(Game.hero.additionalGold * 100)) + "%";
+                Game.hero.additionalGold += 10;
+                AdditionalGoldLabel.Text = "+" + Convert.ToString(Game.hero.additionalGold) + "%";
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -204,12 +203,12 @@ namespace DUNGEON
 
         private void PlusLuck_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.luck < 1)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.luck < 100)
             {
                 MinusSkillPoints();
 
-                Game.hero.luck += 0.01f;
-                LuckLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.luck * 100)) + "%";
+                Game.hero.luck += 1;
+                LuckLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.luck)) + "%";
                 LuckLevel.Text = Convert.ToString(Convert.ToInt16(LuckLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -276,12 +275,12 @@ namespace DUNGEON
 
         private void PlusCritAdditionalDamage_Click(object sender, EventArgs e)
         {
-            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.critAdditionalDamage < 4.1f)
+            if (PlusCritChance.Cursor == Cursors.Hand && Game.hero.critAdditionalDamage < 450)
             {
                 MinusSkillPoints();
 
-                Game.hero.critAdditionalDamage += 0.2f;
-                CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+                Game.hero.critAdditionalDamage += 20;
+                CritAdditionalDamageLabel.Text = Convert.ToString(100 + Game.hero.critAdditionalDamage) + "%";
                 CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
 
                 PlusCursorsController();
@@ -358,9 +357,9 @@ namespace DUNGEON
         private void UpdateLabeles()
         {
             //additional gold
-            AdditionalGoldLabel.Text = "+" + Convert.ToString(Convert.ToInt16(Game.hero.additionalGold * 100)) + "%";
+            AdditionalGoldLabel.Text = "+" + Convert.ToString(Game.hero.additionalGold) + "%";
             //luck
-            LuckLabel.Text = Convert.ToString(Convert.ToInt16(Game.hero.luck * 100)) + "%";
+            LuckLabel.Text = Convert.ToString(Game.hero.luck) + "%";
             //health
             AdditionalHPLabel.Text = "+" + Convert.ToString(Game.hero.additionalHP);
             UpdateHealth();
@@ -375,7 +374,7 @@ namespace DUNGEON
             //crit chance
             CritChanceLabel.Text = Convert.ToString(Game.hero.critChance) + "%";
             //crit damage
-            CritAdditionalDamageLabel.Text = Convert.ToString(Convert.ToInt16(100 + Game.hero.critAdditionalDamage * 100)) + "%";
+            CritAdditionalDamageLabel.Text = Convert.ToString(100 + Game.hero.critAdditionalDamage) + "%";
         }
 
         private void ColorGreen(Item item)

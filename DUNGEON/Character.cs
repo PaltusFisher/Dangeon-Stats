@@ -20,13 +20,13 @@ namespace DUNGEON
         public int agility = 10; 
 
         public int critChance = 10;
-        public float critAdditionalDamage = 0.5f;
+        public int critAdditionalDamage = 50;
 
         public void Attack(Character opponent)
         {
             int _damage = 0;
             if (rnd.Next(1, 101) <= critChance)
-                _damage += Convert.ToInt16(power * critAdditionalDamage);// + power - opponent.defence;
+                _damage += Convert.ToInt16(power * (Convert.ToSingle(critAdditionalDamage) / 100));// + power - opponent.defence;
             else
                 _damage += power - opponent.defence;
             // int _damage = power - opponent.defence;
@@ -62,9 +62,9 @@ namespace DUNGEON
 
         public int gold = 0;
 
-        public float additionalGold = 0;
+        public int additionalGold = 0;
 
-        public float luck = 0;
+        public int luck = 0;
         public int block = 0;
 
         public bool Block()
@@ -78,7 +78,7 @@ namespace DUNGEON
         {
             currentHP = maxHP;
         }
-
+       
         public void EquipItem(Item item)
         {
             //equip selected item
@@ -118,8 +118,8 @@ namespace DUNGEON
         {
             if (item != null)
             {
-                this.additionalGold -= Convert.ToSingle(item.additionalGold) / 100;
-                this.luck -= Convert.ToSingle(item.luck) / 100;
+                this.additionalGold -= item.additionalGold;
+                this.luck -= item.luck;
                 this.additionalHP -= item.HP;
                 this.maxHP -= item.HP;
                 this.defence -= item.defence;
@@ -127,14 +127,14 @@ namespace DUNGEON
                 this.power -= item.power;
                 this.agility -= item.agility;
                 this.critChance -= item.critChance;
-                this.critAdditionalDamage -= Convert.ToSingle(item.critDamage) / 100;
+                this.critAdditionalDamage -= item.critDamage;
             }
         }
 
         private void UdateEquipment(Item item)
         {
-            this.additionalGold += Convert.ToSingle(item.additionalGold) / 100;
-            this.luck += Convert.ToSingle(item.luck) / 100;
+            this.additionalGold += item.additionalGold;
+            this.luck += item.luck;
             this.additionalHP += item.HP;
             this.maxHP += item.HP;
             this.defence += item.defence;
@@ -142,7 +142,7 @@ namespace DUNGEON
             this.power += item.power;
             this.agility += item.agility;
             this.critChance += item.critChance;
-            this.critAdditionalDamage += Convert.ToSingle(item.critDamage) / 100;
+            this.critAdditionalDamage += item.critDamage;
         }
     }
 
@@ -156,7 +156,7 @@ namespace DUNGEON
             power = 3;
             agility = 0;
             critChance = 5;
-            critAdditionalDamage = 0.1f;
+            critAdditionalDamage = 10;
         }
 
         public void UpEnemy(Hero hero)
@@ -175,7 +175,7 @@ namespace DUNGEON
             power += 2 * dangeon.level;
             agility += 10 * dangeon.level;
             critChance += 4 * dangeon.level;
-            critAdditionalDamage += 0.15f * dangeon.level;
+            critAdditionalDamage += 15 * dangeon.level;
         }
     }
 }

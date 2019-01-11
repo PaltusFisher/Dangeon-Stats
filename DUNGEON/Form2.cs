@@ -25,7 +25,7 @@ namespace DUNGEON
             this.EnemyPowerLabel.Text = Convert.ToString(Game.enemies[0].power);
             this.EnemyDefenceLabel.Text = Convert.ToString(Game.enemies[0].defence);
             this.EnemyAgilityLabel.Text = Convert.ToString(Game.enemies[0].agility) + "%";
-            this.EnemyCritAdditionalDamageLabel.Text = Convert.ToString(100 + Game.enemies[0].critAdditionalDamage * 100) + "%";
+            this.EnemyCritAdditionalDamageLabel.Text = Convert.ToString(100 + Game.enemies[0].critAdditionalDamage) + "%";
             this.EnemyCritChanceLabel.Text = Convert.ToString(Game.enemies[0].critChance) + "%";
 
             Game.enemies.Clear();

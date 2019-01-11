@@ -27,8 +27,22 @@ namespace DUNGEON
 
         public Item(string name = "NullName")
         {
-            this.rang = rnd.Next(1, 5);
-            this.name = name + Convert.ToString(this.rang);
+            int luck_pointer = rnd.Next(1, 101);
+           
+            int rang1min = 95 - Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100));
+            int rang2min = 80 - Convert.ToInt16(79 * (Convert.ToSingle(Game.hero.luck) / 100));
+            int rang3min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
+   
+            if (luck_pointer < rang3min + 1)
+                this.rang = 4;
+            if (luck_pointer > rang3min && luck_pointer < rang2min + 1)
+                this.rang = 3;
+            if (luck_pointer > rang2min && luck_pointer < rang1min + 1)
+                this.rang = 2;
+            if (luck_pointer > rang1min && luck_pointer < 101)
+                this.rang = 1;                
+            
+            this.name = "rang" + Convert.ToString(this.rang) + " " + name ;
             for (int kolvo = rang; kolvo < 5; kolvo++)
                 SetStats(rnd, rnd.Next(1, 10));
         }
@@ -37,15 +51,15 @@ namespace DUNGEON
         {
             switch (countStats)
             {
-                case 1: additionalGold = rnd.Next(1, 10 * (Game.dangeon.level + 1)); break;
-                case 2: luck = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
-                case 3: HP = rnd.Next(1, 20 * (Game.dangeon.level + 1)); break;
-                case 4: defence = rnd.Next(1, 4 * (Game.dangeon.level + 1)); break;
-                case 5: blockChance = rnd.Next(1, 3 * (Game.dangeon.level + 1)); break;
-                case 6: power = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
-                case 7: agility = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
-                case 8: critChance = rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
-                case 9: critDamage = rnd.Next(1, 20 * (Game.dangeon.level + 1)); break;
+                case 1: additionalGold += rnd.Next(1, 10 * (Game.dangeon.level + 1)); break;
+                case 2: luck += rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 3: HP += rnd.Next(10, 20 * (Game.dangeon.level + 1)); break;
+                case 4: defence += rnd.Next(1, 4 * (Game.dangeon.level + 1)); break;
+                case 5: blockChance += rnd.Next(1, 3 * (Game.dangeon.level + 1)); break;
+                case 6: power += rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 7: agility += rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 8: critChance += rnd.Next(1, 5 * (Game.dangeon.level + 1)); break;
+                case 9: critDamage += rnd.Next(1, 20 * (Game.dangeon.level + 1)); break;
             }
         }
     }
