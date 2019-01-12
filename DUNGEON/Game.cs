@@ -77,12 +77,22 @@ namespace DUNGEON
             enemies[0].UpEnemy(dangeon);
         }
 
+        //GameOverWindow endForm;
         private static void GameOver()
         {
-            DialogResult result = MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
-            if (result == DialogResult.OK)
-                System.Windows.Forms.Application.Exit();
+            //EnemyStatsWindow newForm;
+
+            //if (endForm != null)
+            //    newForm.Close();
+
+            GameOverWindow endForm = new GameOverWindow();
+                endForm.Show();
+            
+            //DialogResult result = MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
+            //if (result == DialogResult.OK)
+            //    System.Windows.Forms.Application.Exit();
             //потом заменить на выбор yes no для рестарта игры
+
         }
     }
 }

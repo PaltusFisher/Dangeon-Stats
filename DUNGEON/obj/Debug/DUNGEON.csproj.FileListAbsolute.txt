@@ -21,12 +21,13 @@ C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\bin\Debug\DUNGEON.exe.config
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\bin\Debug\DUNGEON.exe
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\bin\Debug\DUNGEON.pdb
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csprojAssemblyReference.cache
-C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Form1.resources
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Properties.Resources.resources
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csproj.GenerateResource.cache
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.csproj.CoreCompileInputs.cache
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.exe
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.pdb
-C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.Form2.resources
 C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.MainWindow.resources
 C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.EnemyStatsWindow.resources
+C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.MainWindow.resources
+C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.EnemyStatsWindow.resources
+C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.GameOverWindow.resources
