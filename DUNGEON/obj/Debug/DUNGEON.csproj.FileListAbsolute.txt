@@ -31,3 +31,4 @@ C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.EnemyStatsWindo
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.MainWindow.resources
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.EnemyStatsWindow.resources
 C:\Users\Никита\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.GameOverWindow.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Debug\DUNGEON.GameOverWindow.resources
