@@ -62,6 +62,7 @@ namespace DUNGEON
                     break;
             }
             UpdateInventory(random_koef);
+            
 
             Game.hero.gold += Convert.ToInt16((30 + 10 * Game.dangeon.level) * (Convert.ToSingle(Game.hero.additionalGold + 100) / 100));
             GoldLabel.Text = Convert.ToString(Game.hero.gold);
@@ -147,6 +148,7 @@ namespace DUNGEON
                 AdditionalGoldLevel.Text = Convert.ToString(Convert.ToInt16(AdditionalGoldLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -163,6 +165,7 @@ namespace DUNGEON
                 UpdateHealth();
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -201,6 +204,7 @@ namespace DUNGEON
                 LuckLevel.Text = Convert.ToString(Convert.ToInt16(LuckLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -215,6 +219,7 @@ namespace DUNGEON
                 DefenceLevel.Text = Convert.ToString(Convert.ToInt16(DefenceLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -229,6 +234,7 @@ namespace DUNGEON
                 BlockLevel.Text = Convert.ToString(Convert.ToInt16(BlockLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -243,6 +249,7 @@ namespace DUNGEON
                 PowerLevel.Text = Convert.ToString(Convert.ToInt16(PowerLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -257,6 +264,7 @@ namespace DUNGEON
                 AgilityLevel.Text = Convert.ToString(Convert.ToInt16(AgilityLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
 
                 //webVochila.Navigate(new Uri("https://youtu.be/-vgPBeY18QU?t=80"));
             }
@@ -273,6 +281,7 @@ namespace DUNGEON
                 CritAdditionalDamageLevel.Text = Convert.ToString(Convert.ToInt16(CritAdditionalDamageLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -287,6 +296,7 @@ namespace DUNGEON
                 CritChanceLevel.Text = Convert.ToString(Convert.ToInt16(CritChanceLevel.Text) + 1);
 
                 PlusCursorsController();
+                UpdateRareChancer();
             }
         }
 
@@ -429,6 +439,7 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+            UpdateRareChancer();
         }
 
         private void ArmorInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -443,6 +454,7 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+            UpdateRareChancer();
         }
 
         private void LegsInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -456,6 +468,7 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+            UpdateRareChancer();
         }
 
         private void SwordsInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -469,6 +482,7 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+            UpdateRareChancer();
         }
 
         private void ShieldsInventory_SelectedIndexChanged(object sender, EventArgs e)
@@ -482,6 +496,7 @@ namespace DUNGEON
                     break;
                 }
             UpdateLabeles();
+            UpdateRareChancer();
         }
 
         private void ClearInventory(ComboBox box, List<Item> data)
@@ -497,6 +512,17 @@ namespace DUNGEON
                 data.Clear();
                 data.Add(_currItem);
                 UpdateInventoryDataSource(box, data, box.SelectedItem);
+        }
+
+        private void UpdateRareChancer()
+        {
+            Rang1Chance.Text = Convert.ToString(5 + Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100)));
+            Rang2Chance.Text = Convert.ToString(15 + Convert.ToInt16(35 * (Convert.ToSingle(Game.hero.luck) / 100)));
+            Rang3Chance.Text = Convert.ToString(30 - Convert.ToInt16(30 * (Convert.ToSingle(Game.hero.luck) / 100)));
+            Rang4Chance.Text = Convert.ToString(50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100)));
+
+            //
+           // test.Text = Convert.ToString(Convert.ToInt16(Rang4Chance.Text) + Convert.ToInt16(Rang3Chance.Text) + Convert.ToInt16(Rang2Chance.Text) + Convert.ToInt16(Rang1Chance.Text));
         }
 
         private void HeadInventory_MouseDown(object sender, MouseEventArgs e)

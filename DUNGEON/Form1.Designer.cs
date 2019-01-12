@@ -83,6 +83,10 @@
             this.NewLegsLabel = new System.Windows.Forms.Label();
             this.NewArmorLabel = new System.Windows.Forms.Label();
             this.NewHeadLabel = new System.Windows.Forms.Label();
+            this.Rang4Chance = new System.Windows.Forms.Label();
+            this.Rang3Chance = new System.Windows.Forms.Label();
+            this.Rang2Chance = new System.Windows.Forms.Label();
+            this.Rang1Chance = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -605,7 +609,7 @@
             this.HealthBar.Location = new System.Drawing.Point(145, 512);
             this.HealthBar.Margin = new System.Windows.Forms.Padding(2);
             this.HealthBar.Name = "HealthBar";
-            this.HealthBar.Size = new System.Drawing.Size(275, 32);
+            this.HealthBar.Size = new System.Drawing.Size(265, 32);
             this.HealthBar.Step = 1;
             this.HealthBar.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
             this.HealthBar.TabIndex = 37;
@@ -614,8 +618,8 @@
             // HealthLable
             // 
             this.HealthLable.BackColor = System.Drawing.Color.Transparent;
-            this.HealthLable.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.HealthLable.ForeColor = System.Drawing.Color.White;
+            this.HealthLable.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.HealthLable.ForeColor = System.Drawing.Color.Black;
             this.HealthLable.Location = new System.Drawing.Point(145, 492);
             this.HealthLable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.HealthLable.Name = "HealthLable";
@@ -651,7 +655,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label3.Location = new System.Drawing.Point(304, 104);
+            this.label3.Location = new System.Drawing.Point(304, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(39, 23);
@@ -836,6 +840,54 @@
             this.NewHeadLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.NewHeadLabel.Visible = false;
             // 
+            // Rang4Chance
+            // 
+            this.Rang4Chance.BackColor = System.Drawing.Color.Transparent;
+            this.Rang4Chance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Rang4Chance.ForeColor = System.Drawing.Color.Black;
+            this.Rang4Chance.Location = new System.Drawing.Point(187, 570);
+            this.Rang4Chance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Rang4Chance.Name = "Rang4Chance";
+            this.Rang4Chance.Size = new System.Drawing.Size(85, 20);
+            this.Rang4Chance.TabIndex = 55;
+            this.Rang4Chance.Text = "50%";
+            // 
+            // Rang3Chance
+            // 
+            this.Rang3Chance.BackColor = System.Drawing.Color.Transparent;
+            this.Rang3Chance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Rang3Chance.ForeColor = System.Drawing.Color.Black;
+            this.Rang3Chance.Location = new System.Drawing.Point(187, 609);
+            this.Rang3Chance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Rang3Chance.Name = "Rang3Chance";
+            this.Rang3Chance.Size = new System.Drawing.Size(85, 20);
+            this.Rang3Chance.TabIndex = 56;
+            this.Rang3Chance.Text = "30%";
+            // 
+            // Rang2Chance
+            // 
+            this.Rang2Chance.BackColor = System.Drawing.Color.Transparent;
+            this.Rang2Chance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Rang2Chance.ForeColor = System.Drawing.Color.Black;
+            this.Rang2Chance.Location = new System.Drawing.Point(347, 570);
+            this.Rang2Chance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Rang2Chance.Name = "Rang2Chance";
+            this.Rang2Chance.Size = new System.Drawing.Size(85, 20);
+            this.Rang2Chance.TabIndex = 57;
+            this.Rang2Chance.Text = "15%";
+            // 
+            // Rang1Chance
+            // 
+            this.Rang1Chance.BackColor = System.Drawing.Color.Transparent;
+            this.Rang1Chance.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Rang1Chance.ForeColor = System.Drawing.Color.Black;
+            this.Rang1Chance.Location = new System.Drawing.Point(347, 611);
+            this.Rang1Chance.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Rang1Chance.Name = "Rang1Chance";
+            this.Rang1Chance.Size = new System.Drawing.Size(85, 20);
+            this.Rang1Chance.TabIndex = 58;
+            this.Rang1Chance.Text = "5%";
+            // 
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -844,6 +896,10 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.Rang1Chance);
+            this.Controls.Add(this.Rang2Chance);
+            this.Controls.Add(this.Rang3Chance);
+            this.Controls.Add(this.Rang4Chance);
             this.Controls.Add(this.NewHeadLabel);
             this.Controls.Add(this.NewArmorLabel);
             this.Controls.Add(this.NewLegsLabel);
@@ -967,6 +1023,10 @@
         private System.Windows.Forms.Label NewLegsLabel;
         private System.Windows.Forms.Label NewArmorLabel;
         private System.Windows.Forms.Label NewHeadLabel;
+        private System.Windows.Forms.Label Rang4Chance;
+        private System.Windows.Forms.Label Rang3Chance;
+        private System.Windows.Forms.Label Rang2Chance;
+        private System.Windows.Forms.Label Rang1Chance;
     }
 }
 

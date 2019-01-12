@@ -28,18 +28,23 @@ namespace DUNGEON
         public Item(string name = "NullName")
         {
             int luck_pointer = rnd.Next(1, 101);
-           
-            int rang1min = 95 - Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100));
-            int rang2min = 80 - Convert.ToInt16(79 * (Convert.ToSingle(Game.hero.luck) / 100));
-            int rang3min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
+
+            int rang1min = 5 + Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100));
+            int rang2min = 15 + Convert.ToInt16(35 * (Convert.ToSingle(Game.hero.luck) / 100));
+            int rang3min = 30 - Convert.ToInt16(30 * (Convert.ToSingle(Game.hero.luck) / 100));
+            int rang4min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
+
+            //int rang1min = 95 - Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100));
+           // int rang2min = 80 - Convert.ToInt16(79 * (Convert.ToSingle(Game.hero.luck) / 100));
+            //int rang3min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
    
-            if (luck_pointer < rang3min + 1)
+            if (luck_pointer <= rang4min)
                 this.rang = 4;
-            if (luck_pointer > rang3min && luck_pointer < rang2min + 1)
+            if (luck_pointer > rang4min && luck_pointer <= rang3min + rang4min)
                 this.rang = 3;
-            if (luck_pointer > rang2min && luck_pointer < rang1min + 1)
+            if (luck_pointer > rang3min + rang4min && luck_pointer <= rang2min + rang3min + rang4min)
                 this.rang = 2;
-            if (luck_pointer > rang1min && luck_pointer < 101)
+            if (luck_pointer > rang2min + rang3min + rang4min && luck_pointer < 101)
                 this.rang = 1;                
             
             this.name = "rang" + Convert.ToString(this.rang) + " " + name ;
