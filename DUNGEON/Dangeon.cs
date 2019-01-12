@@ -8,11 +8,14 @@ namespace DUNGEON
 {
     public class Dangeon
     {
+        //level of dungeon 
         public  int level = 0;
 
         public int goldToUpgrade = 500;
+        //+ goldtoUpgrade
         public int additionalCost = 100;
 
+        //lvlup
         public void UpgradeDangeon()
         {
             level++;

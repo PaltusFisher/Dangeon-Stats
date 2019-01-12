@@ -11,16 +11,12 @@ namespace DUNGEON
     public static class Game
     {
         public static SoundPlayer soundPlayer;
-
-       // public static int skillPoints;
-
         public static Hero hero;
         public static Inventory inventory;
-
         public static Dangeon dangeon;
-
         public static List<Enemy> enemies;
 
+        //main objects constructor
         public static void GameInitiate()
         {
             hero = new Hero();
@@ -30,17 +26,18 @@ namespace DUNGEON
             soundPlayer = new SoundPlayer(@"Dungeon.wav");
             soundPlayer.PlayLooping();
         }
-
+        //ex-button of game
         public static void EnterDangeon()
         {
+            //new 1 enemy
             CreateEnemies();
 
+            //go on list
             foreach (Enemy enemy in enemies)
             {
                 //first move
                 if (hero.agility > enemy.agility)
                     hero.Attack(enemy);
-                
                
                 //continue battle
                 bool areAlive = true;
@@ -57,42 +54,30 @@ namespace DUNGEON
                         areAlive = false;
                 }
 
-                //check hero
+                //check death
                 if (hero.IsDead())
                 {
                     GameOver();
                     break;
                 }
             }
+            //delete enemy if hero isn`t dead
             enemies.Clear();
         }
-
+        
         private static void CreateEnemies()
         {
-            
-
-            //Test
             enemies.Add(new Enemy());
+            //UP stats from hero and dungeon lvls
             enemies[0].UpEnemy(hero);
             enemies[0].UpEnemy(dangeon);
         }
-
-        //GameOverWindow endForm;
+        //end of game
         private static void GameOver()
-        {
-            //EnemyStatsWindow newForm;
-
-            //if (endForm != null)
-            //    newForm.Close();
-
+        {  
+            //create gameover_form and show it
             GameOverWindow endForm = new GameOverWindow();
-                endForm.Show();
-            
-            //DialogResult result = MessageBox.Show("GameOver", "Game Over", MessageBoxButtons.OK);
-            //if (result == DialogResult.OK)
-            //    System.Windows.Forms.Application.Exit();
-            //потом заменить на выбор yes no для рестарта игры
-
+                endForm.Show();           
         }
     }
 }

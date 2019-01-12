@@ -768,7 +768,7 @@
             this.EnemyStatsButton.TabIndex = 49;
             this.EnemyStatsButton.Text = "?";
             this.EnemyStatsButton.UseVisualStyleBackColor = false;
-            this.EnemyStatsButton.Click += new System.EventHandler(this.button1_Click);
+            this.EnemyStatsButton.Click += new System.EventHandler(this.EnemyStatsShow_Click);
             // 
             // NewShieldLabel
             // 

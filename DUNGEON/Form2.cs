@@ -15,12 +15,12 @@ namespace DUNGEON
         public EnemyStatsWindow()
         {
             InitializeComponent();
-            //
+            //create common enemy and up his stats
             Game.enemies.Add(new Enemy());
             Game.enemies[0].UpEnemy(Game.hero);
             Game.enemies[0].UpEnemy(Game.dangeon);
-            //
 
+            //show common enemy stats
             this.EnemyHPLabel.Text = Convert.ToString(Game.enemies[0].maxHP);
             this.EnemyPowerLabel.Text = Convert.ToString(Game.enemies[0].power);
             this.EnemyDefenceLabel.Text = Convert.ToString(Game.enemies[0].defence);
@@ -28,22 +28,13 @@ namespace DUNGEON
             this.EnemyCritAdditionalDamageLabel.Text = Convert.ToString(100 + Game.enemies[0].critAdditionalDamage) + "%";
             this.EnemyCritChanceLabel.Text = Convert.ToString(Game.enemies[0].critChance) + "%";
 
+            //delete enemy
             Game.enemies.Clear();
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        //close window
+        private void close_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
+            Close();
         }
     }
 }

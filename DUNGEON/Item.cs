@@ -34,10 +34,6 @@ namespace DUNGEON
             int rang3min = 30 - Convert.ToInt16(30 * (Convert.ToSingle(Game.hero.luck) / 100));
             int rang4min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
 
-            //int rang1min = 95 - Convert.ToInt16(45 * (Convert.ToSingle(Game.hero.luck) / 100));
-           // int rang2min = 80 - Convert.ToInt16(79 * (Convert.ToSingle(Game.hero.luck) / 100));
-            //int rang3min = 50 - Convert.ToInt16(50 * (Convert.ToSingle(Game.hero.luck) / 100));
-   
             if (luck_pointer <= rang4min)
                 this.rang = 4;
             if (luck_pointer > rang4min && luck_pointer <= rang3min + rang4min)

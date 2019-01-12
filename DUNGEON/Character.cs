@@ -10,30 +10,31 @@ namespace DUNGEON
     public class Character
     {
         public Random rnd = new Random();
-
+        //Character stats
         public int defence = 2;
+        public int power = 10;
 
         public int maxHP = 100;
         public int currentHP = 100;
-
-        public int power = 10;
+    
         public int agility = 10; 
 
         public int critChance = 10;
         public int critAdditionalDamage = 50;
 
+        //func of attack on opponent with crit and defence
         public void Attack(Character opponent)
         {
             int _damage = 0;
             if (rnd.Next(1, 101) <= critChance)
-                _damage += Convert.ToInt16(power * (Convert.ToSingle(critAdditionalDamage) / 100));// + power - opponent.defence;
+                _damage += Convert.ToInt16(power * (Convert.ToSingle(critAdditionalDamage) / 100));
             else
                 _damage += power - opponent.defence;
-            // int _damage = power - opponent.defence;
+
             if (_damage > 0)
                 opponent.currentHP -= _damage;
         }
-
+        //death checker
         public bool IsDead()
         {
             if (currentHP > 0)
@@ -43,6 +44,7 @@ namespace DUNGEON
         }
     }
 
+    //Character`s legacy - main hero
     public class Hero : Character
     {
         //equipment
@@ -52,6 +54,7 @@ namespace DUNGEON
         public Sword _sword { get; private set; } = null;
         public Shield _shield { get; private set; } = null;
 
+        //individual hero`s stats
         public int skillPoints = 0;
 
         public int currentEXP = 0;
@@ -61,12 +64,13 @@ namespace DUNGEON
         public int additionalHP = 0;
 
         public int gold = 0;
-
         public int additionalGold = 0;
 
         public int luck = 0;
+
         public int block = 0;
 
+        //func of ignore damage 
         public bool Block()
         {
             if (rnd.Next(1, 101) <= block)
@@ -74,17 +78,20 @@ namespace DUNGEON
             return false;
         }
 
+        //max hp
         public void RestoreHealth()
         {
             currentHP = maxHP;
         }
-       
+
+        //equip selected item
         public void EquipItem(Item item)
         {
-            //equip selected item
+            //selected type
             if (item.GetType() == typeof(Head))
             {
                 UnEquip(_head);
+                //Equip
                 _head = (Head)item;
                 UdateEquipment(_head);
             }
@@ -113,7 +120,7 @@ namespace DUNGEON
                 UdateEquipment(_shield);
             }
         }
-
+        //- item`s stats
         private void UnEquip(Item item)
         {
             if (item != null)
@@ -130,7 +137,7 @@ namespace DUNGEON
                 this.critAdditionalDamage -= item.critDamage;
             }
         }
-
+        //+ item`s stats
         private void UdateEquipment(Item item)
         {
             this.additionalGold += item.additionalGold;
@@ -146,8 +153,10 @@ namespace DUNGEON
         }
     }
 
+    //Character`s legacy - enemy
     public class Enemy : Character
     {
+        //constructor o enemy`s stats
         public Enemy()
         {
             defence = 1;
@@ -159,6 +168,7 @@ namespace DUNGEON
             critAdditionalDamage = 10;
         }
 
+        //UP enemy stats
         public void UpEnemy(Hero hero)
         {
             maxHP += hero.level;
@@ -166,7 +176,6 @@ namespace DUNGEON
             defence += hero.level;
             power += hero.level;
         }
-
         public void UpEnemy(Dangeon dangeon)
         {
             maxHP += 2 * dangeon.level;
