@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DUNGEON
 {
-    public class Dangeon
+    public class Dungeon
     {
         //level of dungeon 
         public  int level = 0;

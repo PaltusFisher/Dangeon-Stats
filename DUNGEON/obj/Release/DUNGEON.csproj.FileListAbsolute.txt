@@ -9,3 +9,4 @@ C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.exe
 C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.pdb
 C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.MainWindow.resources
 C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.EnemyStatsWindow.resources
+C:\Users\Greexon\Desktop\Dangeon-Stats\DUNGEON\obj\Release\DUNGEON.GameOverWindow.resources

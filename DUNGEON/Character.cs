@@ -55,7 +55,7 @@ namespace DUNGEON
         public Shield _shield { get; private set; } = null;
 
         //individual hero`s stats
-        public int skillPoints = 0;
+        public int skillPoints = 10;
 
         public int currentEXP = 0;
         public int maxEXP = 50;
@@ -176,7 +176,7 @@ namespace DUNGEON
             defence += hero.level;
             power += hero.level;
         }
-        public void UpEnemy(Dangeon dangeon)
+        public void UpEnemy(Dungeon dangeon)
         {
             maxHP += 2 * dangeon.level;
             currentHP = maxHP;

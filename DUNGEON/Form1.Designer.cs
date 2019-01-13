@@ -87,6 +87,7 @@
             this.Rang3Chance = new System.Windows.Forms.Label();
             this.Rang2Chance = new System.Windows.Forms.Label();
             this.Rang1Chance = new System.Windows.Forms.Label();
+            this.MuteSoundButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // DungeonButton
@@ -120,7 +121,7 @@
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitButton.ForeColor = System.Drawing.Color.Black;
-            this.ExitButton.Location = new System.Drawing.Point(840, 26);
+            this.ExitButton.Location = new System.Drawing.Point(840, 22);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(22, 44);
@@ -139,7 +140,7 @@
             this.textBox1.Location = new System.Drawing.Point(132, 86);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 24);
+            this.textBox1.Size = new System.Drawing.Size(88, 29);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             // 
@@ -180,7 +181,7 @@
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Margin = new System.Windows.Forms.Padding(2);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(133, 24);
+            this.HeadInventory.Size = new System.Drawing.Size(133, 27);
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
@@ -542,7 +543,7 @@
             this.ArmorInventory.Location = new System.Drawing.Point(304, 272);
             this.ArmorInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(133, 24);
+            this.ArmorInventory.Size = new System.Drawing.Size(133, 27);
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
@@ -560,7 +561,7 @@
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(133, 24);
+            this.LegsInventory.Size = new System.Drawing.Size(133, 27);
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
@@ -578,7 +579,7 @@
             this.SwordsInventory.Location = new System.Drawing.Point(304, 388);
             this.SwordsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(133, 24);
+            this.SwordsInventory.Size = new System.Drawing.Size(133, 27);
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
@@ -596,7 +597,7 @@
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 442);
             this.ShieldsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(133, 24);
+            this.ShieldsInventory.Size = new System.Drawing.Size(133, 27);
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
@@ -658,7 +659,7 @@
             this.label3.Location = new System.Drawing.Point(304, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 23);
+            this.label3.Size = new System.Drawing.Size(51, 29);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -684,7 +685,7 @@
             this.SkillPoints.Name = "SkillPoints";
             this.SkillPoints.Size = new System.Drawing.Size(72, 26);
             this.SkillPoints.TabIndex = 43;
-            this.SkillPoints.Text = "0";
+            this.SkillPoints.Text = "10";
             // 
             // PlusDungeonLevel
             // 
@@ -888,14 +889,29 @@
             this.Rang1Chance.TabIndex = 58;
             this.Rang1Chance.Text = "5%";
             // 
+            // MuteSoundButton
+            // 
+            this.MuteSoundButton.BackColor = System.Drawing.Color.Transparent;
+            this.MuteSoundButton.BackgroundImage = global::DUNGEON.Properties.Resources.mute_image;
+            this.MuteSoundButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MuteSoundButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MuteSoundButton.Location = new System.Drawing.Point(96, 12);
+            this.MuteSoundButton.Name = "MuteSoundButton";
+            this.MuteSoundButton.Size = new System.Drawing.Size(30, 30);
+            this.MuteSoundButton.TabIndex = 59;
+            this.MuteSoundButton.Text = "\r\n";
+            this.MuteSoundButton.UseVisualStyleBackColor = false;
+            this.MuteSoundButton.Click += new System.EventHandler(this.MuteSoundButton_Click);
+            // 
             // MainWindow
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.Gold;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImage = global::DUNGEON.Properties.Resources.SniSITX_qgM;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(962, 684);
             this.ControlBox = false;
+            this.Controls.Add(this.MuteSoundButton);
             this.Controls.Add(this.Rang1Chance);
             this.Controls.Add(this.Rang2Chance);
             this.Controls.Add(this.Rang3Chance);
@@ -1027,6 +1043,7 @@
         private System.Windows.Forms.Label Rang3Chance;
         private System.Windows.Forms.Label Rang2Chance;
         private System.Windows.Forms.Label Rang1Chance;
+        private System.Windows.Forms.Button MuteSoundButton;
     }
 }
 

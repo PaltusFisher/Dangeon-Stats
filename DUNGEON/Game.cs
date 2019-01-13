@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
@@ -13,18 +14,34 @@ namespace DUNGEON
         public static SoundPlayer soundPlayer;
         public static Hero hero;
         public static Inventory inventory;
-        public static Dangeon dangeon;
+        public static Dungeon dangeon;
         public static List<Enemy> enemies;
+        private static bool isMuted;
 
         //main objects constructor
         public static void GameInitiate()
         {
             hero = new Hero();
             inventory = new Inventory();
-            dangeon = new Dangeon();
+            dangeon = new Dungeon();
             enemies = new List<Enemy>();
-            soundPlayer = new SoundPlayer(@"Dungeon.wav");
+            soundPlayer = new SoundPlayer(DUNGEON.Properties.Resources.Dungeon);
             soundPlayer.PlayLooping();
+            isMuted = false;
+        }
+        //Mute/Unmute sound
+        public static void MuteChange()
+        {
+            if (isMuted)
+            {
+                soundPlayer.PlayLooping();
+                isMuted = false;
+            }
+            else
+            {
+                soundPlayer.Stop();
+                isMuted = true;
+            }
         }
         //ex-button of game
         public static void EnterDangeon()

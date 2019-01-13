@@ -547,5 +547,9 @@ namespace DUNGEON
             System.Windows.Forms.Application.Exit();
         }
 
+        private void MuteSoundButton_Click(object sender, EventArgs e)
+        {
+            Game.MuteChange();
+        }
     }
 }
