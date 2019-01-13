@@ -140,7 +140,7 @@
             this.textBox1.Location = new System.Drawing.Point(132, 86);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(88, 29);
+            this.textBox1.Size = new System.Drawing.Size(88, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "name";
             // 
@@ -181,7 +181,7 @@
             this.HeadInventory.Location = new System.Drawing.Point(304, 215);
             this.HeadInventory.Margin = new System.Windows.Forms.Padding(2);
             this.HeadInventory.Name = "HeadInventory";
-            this.HeadInventory.Size = new System.Drawing.Size(133, 27);
+            this.HeadInventory.Size = new System.Drawing.Size(133, 24);
             this.HeadInventory.Sorted = true;
             this.HeadInventory.TabIndex = 5;
             this.HeadInventory.ValueMember = "name";
@@ -192,7 +192,7 @@
             // PlusAdditionalGold
             // 
             this.PlusAdditionalGold.BackColor = System.Drawing.Color.Transparent;
-            this.PlusAdditionalGold.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusAdditionalGold.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusAdditionalGold.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusAdditionalGold.FlatAppearance.BorderSize = 2;
             this.PlusAdditionalGold.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -208,7 +208,7 @@
             // PlusLuck
             // 
             this.PlusLuck.BackColor = System.Drawing.Color.Transparent;
-            this.PlusLuck.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusLuck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusLuck.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusLuck.FlatAppearance.BorderSize = 2;
             this.PlusLuck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -224,7 +224,7 @@
             // PlusAdditionalHP
             // 
             this.PlusAdditionalHP.BackColor = System.Drawing.Color.Transparent;
-            this.PlusAdditionalHP.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusAdditionalHP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusAdditionalHP.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusAdditionalHP.FlatAppearance.BorderSize = 2;
             this.PlusAdditionalHP.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -240,7 +240,7 @@
             // PlusDefence
             // 
             this.PlusDefence.BackColor = System.Drawing.Color.Transparent;
-            this.PlusDefence.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusDefence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusDefence.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusDefence.FlatAppearance.BorderSize = 2;
             this.PlusDefence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -256,7 +256,7 @@
             // PlusPower
             // 
             this.PlusPower.BackColor = System.Drawing.Color.Transparent;
-            this.PlusPower.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusPower.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusPower.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusPower.FlatAppearance.BorderSize = 2;
             this.PlusPower.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -272,7 +272,7 @@
             // PlusAgility
             // 
             this.PlusAgility.BackColor = System.Drawing.Color.Transparent;
-            this.PlusAgility.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusAgility.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusAgility.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusAgility.FlatAppearance.BorderSize = 2;
             this.PlusAgility.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -288,7 +288,7 @@
             // PlusCritChance
             // 
             this.PlusCritChance.BackColor = System.Drawing.Color.Transparent;
-            this.PlusCritChance.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusCritChance.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusCritChance.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusCritChance.FlatAppearance.BorderSize = 2;
             this.PlusCritChance.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -520,7 +520,7 @@
             // PlusBlock
             // 
             this.PlusBlock.BackColor = System.Drawing.Color.Transparent;
-            this.PlusBlock.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusBlock.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusBlock.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusBlock.FlatAppearance.BorderSize = 2;
             this.PlusBlock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -543,7 +543,7 @@
             this.ArmorInventory.Location = new System.Drawing.Point(304, 272);
             this.ArmorInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ArmorInventory.Name = "ArmorInventory";
-            this.ArmorInventory.Size = new System.Drawing.Size(133, 27);
+            this.ArmorInventory.Size = new System.Drawing.Size(133, 24);
             this.ArmorInventory.Sorted = true;
             this.ArmorInventory.TabIndex = 33;
             this.ArmorInventory.ValueMember = "name";
@@ -561,7 +561,7 @@
             this.LegsInventory.Location = new System.Drawing.Point(304, 331);
             this.LegsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.LegsInventory.Name = "LegsInventory";
-            this.LegsInventory.Size = new System.Drawing.Size(133, 27);
+            this.LegsInventory.Size = new System.Drawing.Size(133, 24);
             this.LegsInventory.Sorted = true;
             this.LegsInventory.TabIndex = 34;
             this.LegsInventory.ValueMember = "name";
@@ -579,7 +579,7 @@
             this.SwordsInventory.Location = new System.Drawing.Point(304, 388);
             this.SwordsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.SwordsInventory.Name = "SwordsInventory";
-            this.SwordsInventory.Size = new System.Drawing.Size(133, 27);
+            this.SwordsInventory.Size = new System.Drawing.Size(133, 24);
             this.SwordsInventory.Sorted = true;
             this.SwordsInventory.TabIndex = 35;
             this.SwordsInventory.ValueMember = "name";
@@ -597,7 +597,7 @@
             this.ShieldsInventory.Location = new System.Drawing.Point(304, 442);
             this.ShieldsInventory.Margin = new System.Windows.Forms.Padding(2);
             this.ShieldsInventory.Name = "ShieldsInventory";
-            this.ShieldsInventory.Size = new System.Drawing.Size(133, 27);
+            this.ShieldsInventory.Size = new System.Drawing.Size(133, 24);
             this.ShieldsInventory.Sorted = true;
             this.ShieldsInventory.TabIndex = 36;
             this.ShieldsInventory.ValueMember = "name";
@@ -659,7 +659,7 @@
             this.label3.Location = new System.Drawing.Point(304, 106);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 29);
+            this.label3.Size = new System.Drawing.Size(39, 23);
             this.label3.TabIndex = 41;
             this.label3.Text = "EXP";
             // 
@@ -720,7 +720,7 @@
             // PlusCritAdditionalDamage
             // 
             this.PlusCritAdditionalDamage.BackColor = System.Drawing.Color.Transparent;
-            this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.No;
+            this.PlusCritAdditionalDamage.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PlusCritAdditionalDamage.FlatAppearance.BorderColor = System.Drawing.Color.Gold;
             this.PlusCritAdditionalDamage.FlatAppearance.BorderSize = 2;
             this.PlusCritAdditionalDamage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
